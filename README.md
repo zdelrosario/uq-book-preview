@@ -15,6 +15,6 @@ Or use the following bibtex entry:
   volume={1},
   year={Forthcoming},
   publisher={Cambridge Scholar Press},
-  eprint={https://zdelrosario.github.io/uq-book-preview/00_frontmatter/landing-page.html}
+  eprint={https://zdelrosario.github.io/uq-book-preview}
 }
 ```
