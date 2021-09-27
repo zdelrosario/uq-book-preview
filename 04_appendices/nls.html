@@ -1,12 +1,14 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
-    <title>7.1. Nonlinear Least Squares &#8212; All Models Are Uncertain</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>17.1. Nonlinear Least Squares &#8212; All Models Are Uncertain</title>
     
-  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -18,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,38 +31,37 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/togglebutton.js"></script>
-    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
-    <script type="text/javascript" src="../_static/copybutton.js"></script>
-    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script type="text/javascript" src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script type="text/javascript">
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="7. Inverse Propagation" href="inv-propagation.html" />
-
+    <link rel="prev" title="17. Inverse Propagation" href="inv-propagation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
-
-
-
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -73,153 +70,216 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../index.html">
-  
-  
-  <h1 class="site-logo" id="site-title">All Models Are Uncertain</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">All Models Are Uncertain</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../00_frontmatter/landing-page.html">
    All Models Are Uncertain
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Orienting
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../01_orienting/orienting.html">
    1. Orienting
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../01_orienting/modeling-questions.html">
+   2. Types of Modeling Questions
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../01_orienting/curiosity-skepticism.html">
-   2. Curiosity and Skepticism: A Healthy Mindset
+   3. Curiosity and Skepticism: A Healthy Mindset
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../01_orienting/grama-intro.html">
-   3. A Grammar of Model Analysis: Grama
+   4. A Grammar of Model Analysis: Grama
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Diagnosing
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../02_diagnosing/diagnosing.html">
-   1. Diagnosing
+   5. Diagnosing
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../02_diagnosing/distributions.html">
-   2. Distributions
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../02_diagnosing/functions.html">
-   3. Functions
-  </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../02_diagnosing/model-form-error.html">
-     3.1. Model-Form Error and Validation
+    <a class="reference internal" href="../02_diagnosing/uncertainty.html">
+     5.2. Conceptual Tools for Handling Uncertainty
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02_diagnosing/distributions.html">
+   6. Distributions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_diagnosing/marginals.html">
+     6.2. Single-uncertainties: Marginal Distributions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_diagnosing/dependency.html">
+     6.3. Multiple-uncertainties: Copulas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_diagnosing/estimation.html">
+     6.4. Dealing with Limited Data: Estimation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02_diagnosing/functions.html">
+   7. Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_diagnosing/model-form-error.html">
+     7.1. Model-Form Error and Validation
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Advancing
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../03_advancing/advancing.html">
-   1. Advancing
+   8. Advancing
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Bibliography
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../zbib.html">
-   1. Bibliography
+   9. Bibliography
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Appendices
  </span>
 </p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="cases.html">
-   1. Cases
+   10. Cases
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="alloys.html">
+     10.10. Alloy Datasets
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="grama.html">
-   2. Grama
+   11. Grama Reference Materials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="eda.html">
+   12. Basics of Exploratory Data Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="pr-modeling.html">
-   3. Probability Modeling
+   13. Probability and Modeling
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="dim-reduction.html">
-   4. Dimension Reduction
+   14. Dimension Reduction
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="empirical-models.html">
-   5. Empirical Models
+   15. Empirical Models
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="fwd-propagation.html">
-   6. Forward Propagation
+   16. Forward Propagation
   </a>
  </li>
- <li class="toctree-l1 current active collapsible-parent">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="inv-propagation.html">
-   7. Inverse Propagation
+   17. Inverse Propagation
   </a>
-  <ul class="current collapse-ul">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     7.1. Nonlinear Least Squares
+     17.1. Nonlinear Least Squares
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -269,12 +329,12 @@
 
             <!-- Source interaction buttons -->
 
-
             <!-- Full screen (wrap in <a> to have style consistency -->
-            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                    title="Fullscreen mode"><i
-                        class="fas fa-expand"></i></button></a>
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
 
@@ -300,34 +360,33 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i>
-            Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#definitions-a-id-definitions-a">
-   7.1.1. Definitions
+   17.1.1. Definitions
    <a id="definitions">
    </a>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-need-for-general-purpose-optimization-a-id-challenge-opt-a">
-   7.1.2. The Need for General-purpose Optimization
+   17.1.2. The Need for General-purpose Optimization
    <a id="challenge-opt">
    </a>
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#procedure">
-     7.1.2.1. Procedure
+     17.1.2.1. Procedure
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#routine-fit-nls">
-     7.1.2.2. Routine:
+     17.1.2.2. Routine:
      <code class="docutils literal notranslate">
       <span class="pre">
        fit_nls()
@@ -339,80 +398,79 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#quick-demonstration">
-   7.1.3. Quick Demonstration
+   17.1.3. Quick Demonstration
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#uq-capabilities-linearized-and-pooled-parameter-estimation">
-     7.1.3.1. UQ Capabilities: Linearized and Pooled parameter estimation
+     17.1.3.1. UQ Capabilities: Linearized and Pooled parameter estimation
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#challenges">
-   7.1.4. Challenges
+   17.1.4. Challenges
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#challenge-premature-termination-a-id-challenge-termination-a">
-     7.1.4.1. Challenge: Premature Termination
+     17.1.4.1. Challenge: Premature Termination
      <a id="challenge-termination">
      </a>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#resolution-tighten-the-tolerances">
-     7.1.4.2. Resolution: Tighten the tolerances
+     17.1.4.2. Resolution: Tighten the tolerances
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#challenge-unidentifiable-models-a-id-challenge-unidentifiable-a">
-     7.1.4.3. Challenge: Unidentifiable Models
+     17.1.4.3. Challenge: Unidentifiable Models
      <a id="challenge-unidentifiable">
      </a>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#resolution-reformulation">
-     7.1.4.4. Resolution: Reformulation
+     17.1.4.4. Resolution: Reformulation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#challenge-local-minima-a-id-challenge-minima-a">
-     7.1.4.5. Challenge: Local Minima
+     17.1.4.5. Challenge: Local Minima
      <a id="challenge-minima">
      </a>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#partial-resolution-restarts">
-     7.1.4.6. Partial Resolution: Restarts
+     17.1.4.6. Partial Resolution: Restarts
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#partial-resolution-restrict-parameter-domain">
-     7.1.4.7. Partial Resolution: Restrict parameter domain
+     17.1.4.7. Partial Resolution: Restrict parameter domain
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#key-takeaways">
-   7.1.5. Key Takeaways
+   17.1.5. Key Takeaways
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#grama-routines-a-id-grama-a">
-   7.1.6. Grama Routines
+   17.1.6. Grama Routines
    <a id="grama">
    </a>
   </a>
  </li>
 </ul>
 
-        </nav>
-        
+            </nav>
         </div>
     </div>
 </div>
@@ -422,7 +480,7 @@
               <div>
                 
   <div class="section" id="nonlinear-least-squares">
-<span id="nls"></span><h1>7.1. Nonlinear Least Squares<a class="headerlink" href="#nonlinear-least-squares" title="Permalink to this headline">¶</a></h1>
+<span id="nls"></span><h1><span class="section-number">17.1. </span>Nonlinear Least Squares<a class="headerlink" href="#nonlinear-least-squares" title="Permalink to this headline">¶</a></h1>
 <p><strong>Learning Objectives</strong>: In this notebook, you will learn</p>
 <ul class="simple">
 <li><p>the mathematical formulation of <em>nonlinear least squares</em> (NLS)</p></li>
@@ -438,10 +496,10 @@
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">warnings</span>
-<span class="kn">from</span> <span class="nn">plotnine</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">plotnine</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="kn">from</span> <span class="nn">grama.models</span> <span class="k">import</span> <span class="n">make_trajectory_linear</span>
-<span class="kn">from</span> <span class="nn">grama.data</span> <span class="k">import</span> <span class="n">df_trajectory_windowed</span>
+<span class="kn">from</span> <span class="nn">grama.models</span> <span class="kn">import</span> <span class="n">make_trajectory_linear</span>
+<span class="kn">from</span> <span class="nn">grama.data</span> <span class="kn">import</span> <span class="n">df_trajectory_windowed</span>
 
 <span class="n">X</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">Intention</span><span class="p">()</span>
 </pre></div>
@@ -449,7 +507,7 @@
 </div>
 </div>
 <div class="section" id="definitions-a-id-definitions-a">
-<h2>7.1.1. Definitions <a id="definitions"></a><a class="headerlink" href="#definitions-a-id-definitions-a" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.1.1. </span>Definitions <a id="definitions"></a><a class="headerlink" href="#definitions-a-id-definitions-a" title="Permalink to this headline">¶</a></h2>
 <p><strong>Definition</strong>: The <em>mean squared error</em> (MSE) is defined by</p>
 <div class="math notranslate nohighlight">
 \[\text{MSE}(\theta) = \sum_{i=1}^{N_{\text{data}}} (\hat{f}_i(\theta) - f_i)^2.\]</div>
@@ -460,10 +518,10 @@
 <p>In contrast with ordinary least squares, the model <span class="math notranslate nohighlight">\(\hat{f}(\theta)\)</span> does not have any special structure. This introduces a few new challenges.</p>
 </div>
 <div class="section" id="the-need-for-general-purpose-optimization-a-id-challenge-opt-a">
-<h2>7.1.2. The Need for General-purpose Optimization <a id="challenge-opt"></a><a class="headerlink" href="#the-need-for-general-purpose-optimization-a-id-challenge-opt-a" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.1.2. </span>The Need for General-purpose Optimization <a id="challenge-opt"></a><a class="headerlink" href="#the-need-for-general-purpose-optimization-a-id-challenge-opt-a" title="Permalink to this headline">¶</a></h2>
 <p>In contrast with ordinary least squares—which has special structure that admits an analytic solution to minimize the MSE—the NLS minimization problem does not have a general analytic solution. This means one must use some form of general-purpose optimization to minimize the MSE. A generic procedure is as follows:</p>
 <div class="section" id="procedure">
-<h3>7.1.2.1. Procedure<a class="headerlink" href="#procedure" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">17.1.2.1. </span>Procedure<a class="headerlink" href="#procedure" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>Select initial guess <span class="math notranslate nohighlight">\(\theta_j\)</span> for <span class="math notranslate nohighlight">\(j=0\)</span></p></li>
 <li><p>Compute fit <span class="math notranslate nohighlight">\(\hat{f}_i(\theta_j)\)</span> for each data point</p></li>
@@ -475,7 +533,7 @@
 <p>The <a class="reference external" href="#grama">Grama</a> section below lists implementations of NLS, including the routine <code class="docutils literal notranslate"><span class="pre">gr.fit_nls()</span></code>. This general-purpose routine provides sensible defaults for <span class="math notranslate nohighlight">\(\theta_0\)</span> and an iteration strategy, but is customizable.</p>
 </div>
 <div class="section" id="routine-fit-nls">
-<h3>7.1.2.2. Routine: <code class="docutils literal notranslate"><span class="pre">fit_nls()</span></code><a class="headerlink" href="#routine-fit-nls" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">17.1.2.2. </span>Routine: <code class="docutils literal notranslate"><span class="pre">fit_nls()</span></code><a class="headerlink" href="#routine-fit-nls" title="Permalink to this headline">¶</a></h3>
 <p>The workhorse Grama routine for solving nonlinear least squares problems is <code class="docutils literal notranslate"><span class="pre">fit_nls()</span></code>. As the prefix implies this is a routine that takes a dataset and returns a Grama model. The primary benefit of <code class="docutils literal notranslate"><span class="pre">fit_nls()</span></code> (over other empirical fitting routines) is that it takes a Grama model as an <em>input</em>: This allows the user to fully specify the model structure. The routine <code class="docutils literal notranslate"><span class="pre">fit_nls()</span></code> compares the provided dataset and model, automatically determines which parameters to fit, and performs iterative minimization of the MSE to find best-fit parameter values.</p>
 <p>Under the hood <code class="docutils literal notranslate"><span class="pre">fit_nls()</span></code> calls the <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html">scipy.minimize</a> routine with the bounds provided by the model to fit. Since only a subset of scipy’s optimization routines are compatible with bounds, <code class="docutils literal notranslate"><span class="pre">fit_nls()</span></code> can only use those optimizers. As of writing (2020-11-16) those routines are <code class="docutils literal notranslate"><span class="pre">L-BFGS-B,</span> <span class="pre">TNC,</span> <span class="pre">SLSQP,</span> <span class="pre">Powell,</span></code> and <code class="docutils literal notranslate"><span class="pre">trust-constr</span></code>.</p>
 <p>You can read the documentation for <code class="docutils literal notranslate"><span class="pre">fit_nls()</span></code> for more information! Don’t forget that you can also reference this while coding to remind yourself of the routine’s arguments.</p>
@@ -489,7 +547,7 @@
 </div>
 </div>
 <div class="section" id="quick-demonstration">
-<h2>7.1.3. Quick Demonstration<a class="headerlink" href="#quick-demonstration" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.1.3. </span>Quick Demonstration<a class="headerlink" href="#quick-demonstration" title="Permalink to this headline">¶</a></h2>
 <p>To start, let’s take a look at a quick demonstration of using <code class="docutils literal notranslate"><span class="pre">fit_nls()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -556,12 +614,12 @@ eval_df() is dropping {&#39;y&#39;, &#39;x&#39;}
 </div>
 <p>A quick visual inspection of the model results indicates a good fit, but this is different from the model being <em>validated</em>. See the <a class="reference internal" href="../02_diagnosing/model-form-error.html#model-form-error"><span class="std std-ref">chapter on model-form error</span></a> for more information.</p>
 <div class="section" id="uq-capabilities-linearized-and-pooled-parameter-estimation">
-<h3>7.1.3.1. UQ Capabilities: Linearized and Pooled parameter estimation<a class="headerlink" href="#uq-capabilities-linearized-and-pooled-parameter-estimation" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">17.1.3.1. </span>UQ Capabilities: Linearized and Pooled parameter estimation<a class="headerlink" href="#uq-capabilities-linearized-and-pooled-parameter-estimation" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">fit_nls()</span></code> routine implements an approximate method for parameter uncertainty quantification based on a <em>linearized</em> model. This option is enabled by setting <code class="docutils literal notranslate"><span class="pre">uq_method=&quot;linpool&quot;</span></code>. While fitting is carried out using the full nonlinear model, a post-processing step is carried out at the optimized parameter value <span class="math notranslate nohighlight">\(\theta^*\)</span>.</p>
 <p>This statistical procedure assumes the following model</p>
 <div class="math notranslate nohighlight">
 \[f_{i, j} = \hat{f}_{i, j} + \epsilon_{i, j},\]</div>
-<p>where <span class="math notranslate nohighlight">\(i\)</span> indexes observations, <span class="math notranslate nohighlight">\(j\)</span> indexes model outputs, and <span class="math notranslate nohighlight">\(\epsilon_{i,j} \sim N(0, \sigma_j^2)\)</span> are iid. Under these assumptions the parameter are asymptotically normally distributed, with correlations related to the gradient of the function <span class="bibtex" id="id1">[rukstuhl2010introduction]</span>. Since the parameters are shared among all function outputs, the <code class="docutils literal notranslate"><span class="pre">linpool</span></code> method simply averages (pools) the variance matrices from each output.</p>
+<p>where <span class="math notranslate nohighlight">\(i\)</span> indexes observations, <span class="math notranslate nohighlight">\(j\)</span> indexes model outputs, and <span class="math notranslate nohighlight">\(\epsilon_{i,j} \sim N(0, \sigma_j^2)\)</span> are iid. Under these assumptions the parameter are asymptotically normally distributed, with correlations related to the gradient of the function <span id="id1">[]</span>. Since the parameters are shared among all function outputs, the <code class="docutils literal notranslate"><span class="pre">linpool</span></code> method simply averages (pools) the variance matrices from each output.</p>
 <p>The following example demonstrates this UQ procedure on the trajectory example: fitting the nonlinear model, estimating a distribution for the parameters, and drawing an ensemble of trajectories to illustrate the parameteric uncertainty in the resulting fit.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -614,11 +672,11 @@ eval_df() is dropping {&#39;y&#39;, &#39;x&#39;}
 </div>
 </div>
 <div class="section" id="challenges">
-<h2>7.1.4. Challenges<a class="headerlink" href="#challenges" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.1.4. </span>Challenges<a class="headerlink" href="#challenges" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
 <p>Since NLS is a general technique that one can apply to fit an arbitrary model, it is important to be alert for many <em>challenges</em> that may arise in fitting a model. The following sections details common challenges in applying NLS and some strategies to overcome those challenges.</p>
 <div class="section" id="challenge-premature-termination-a-id-challenge-termination-a">
-<h3>7.1.4.1. Challenge: Premature Termination <a id="challenge-termination"></a><a class="headerlink" href="#challenge-premature-termination-a-id-challenge-termination-a" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">17.1.4.1. </span>Challenge: Premature Termination <a id="challenge-termination"></a><a class="headerlink" href="#challenge-premature-termination-a-id-challenge-termination-a" title="Permalink to this headline">¶</a></h3>
 <p>Generally we want the <em>best</em> fit of a model, as represented by the <em>globally minimum</em> MSE. However, practical optimization algorithms are only capable of converging to within a finite <em>tolerance</em> of the true optimum. If optimization stops before it is sufficiently converged, then the model fit may not be sufficiently accurate for our purposes.</p>
 <p>To illustrate the challenges of premature optimization termination, let’s set up an example where the MSE will tend to be dramatically large. To that end, the following code sets up an exponential model.</p>
 <div class="cell docutils container">
@@ -708,7 +766,7 @@ eval_df() is dropping {&#39;a&#39;, &#39;y&#39;}
 </div>
 </div>
 <div class="section" id="resolution-tighten-the-tolerances">
-<h3>7.1.4.2. Resolution: Tighten the tolerances<a class="headerlink" href="#resolution-tighten-the-tolerances" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">17.1.4.2. </span>Resolution: Tighten the tolerances<a class="headerlink" href="#resolution-tighten-the-tolerances" title="Permalink to this headline">¶</a></h3>
 <p>A simple way to solve this issue is to tighten our convergence tolerance. The defaults for <code class="docutils literal notranslate"><span class="pre">fit_nls()</span></code> are reasonable, so simply deleting the <code class="docutils literal notranslate"><span class="pre">ftol,</span> <span class="pre">gtol</span></code> arguments will solve this issue.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -754,7 +812,7 @@ model: Decay Model (Fitted)
 <p>Premature termination is not a common issue, but if you need an extremely accurate fit you may need to adjust the solver tolerances to satisfy your use case.</p>
 </div>
 <div class="section" id="challenge-unidentifiable-models-a-id-challenge-unidentifiable-a">
-<h3>7.1.4.3. Challenge: Unidentifiable Models <a id="challenge-unidentifiable"></a><a class="headerlink" href="#challenge-unidentifiable-models-a-id-challenge-unidentifiable-a" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">17.1.4.3. </span>Challenge: Unidentifiable Models <a id="challenge-unidentifiable"></a><a class="headerlink" href="#challenge-unidentifiable-models-a-id-challenge-unidentifiable-a" title="Permalink to this headline">¶</a></h3>
 <p>A more challenging problem is when the model is <em>unidentifiable</em>: when a unique MSE-minimizing parameter value does not exist. This often happens when our model has too many parameters. The following example illustrates how this can happen with the linear-drag trajectory model.</p>
 <p>The following formulation of the trajectory problem includes both the (linear) drag coefficient <code class="docutils literal notranslate"><span class="pre">b</span></code> and the projectile mass <code class="docutils literal notranslate"><span class="pre">m</span></code>. Both of these parameters enter the model as the time constant <code class="docutils literal notranslate"><span class="pre">tau</span> <span class="pre">=</span> <span class="pre">-b/m</span></code>. The following code sets up this model using the analytic trajectory expressions.</p>
 <div class="cell docutils container">
@@ -909,7 +967,7 @@ eval_df() is dropping {&#39;y&#39;, &#39;x&#39;}
 <p>To fix this unidentifiability issue, we can <em>reformulate</em> the model.</p>
 </div>
 <div class="section" id="resolution-reformulation">
-<h3>7.1.4.4. Resolution: Reformulation<a class="headerlink" href="#resolution-reformulation" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">17.1.4.4. </span>Resolution: Reformulation<a class="headerlink" href="#resolution-reformulation" title="Permalink to this headline">¶</a></h3>
 <p>Since the parameters <code class="docutils literal notranslate"><span class="pre">b,</span> <span class="pre">m</span></code> enter only as the combination <span class="math notranslate nohighlight">\(\tau = -b/m\)</span> we can <em>reformulate</em> the model in terms of this combined parameter. The model <code class="docutils literal notranslate"><span class="pre">md_trajectory</span></code> is implemented this way; let’s re-fit the model using this reformulated version.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -943,7 +1001,7 @@ eval_df() is dropping {&#39;y&#39;, &#39;x&#39;}
 <p>Note that this version of the model does <em>not</em> issue the unidentifiable model warning; reformulating the model has resolved the identifiability issue! Furthermore the solver results indicate the optimization was successful—reformulating the model has also enabled successful fitting of the model.</p>
 </div>
 <div class="section" id="challenge-local-minima-a-id-challenge-minima-a">
-<h3>7.1.4.5. Challenge: Local Minima <a id="challenge-minima"></a><a class="headerlink" href="#challenge-local-minima-a-id-challenge-minima-a" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">17.1.4.5. </span>Challenge: Local Minima <a id="challenge-minima"></a><a class="headerlink" href="#challenge-local-minima-a-id-challenge-minima-a" title="Permalink to this headline">¶</a></h3>
 <p>Since NLS can be applied to arbitrary models, we have no guarantees about the existence of a single globally-optimal parameter value. Furthermore, since <code class="docutils literal notranslate"><span class="pre">fit_nls()</span></code> uses an iterative optimization procedure it can easily get “stuck” in a locally optimal model fit and fail to identify the globally optimal parameter value.</p>
 <p>To illustrate the issue of local minima, let’s look at a simple example of fitting a time-varying wave.</p>
 <div class="math notranslate nohighlight">
@@ -1021,7 +1079,7 @@ eval_df() is dropping {&#39;y&#39;, &#39;x&#39;}
 <p>This visual indicates that the fit is very poor; the peaks tend to line up but are frequently of incorrect magnitude. Periodic offsets in <span class="math notranslate nohighlight">\(b + 2\pi n\)</span> lead to identical frequencies but different wave magnitudes—this leads to multiple minima for the MSE which complicates NLS.</p>
 </div>
 <div class="section" id="partial-resolution-restarts">
-<h3>7.1.4.6. Partial Resolution: Restarts<a class="headerlink" href="#partial-resolution-restarts" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">17.1.4.6. </span>Partial Resolution: Restarts<a class="headerlink" href="#partial-resolution-restarts" title="Permalink to this headline">¶</a></h3>
 <p>A partial resolution is to enable the <em>multiple-restart</em> capability of <code class="docutils literal notranslate"><span class="pre">fit_nls()</span></code>; setting <code class="docutils literal notranslate"><span class="pre">n_restart</span></code> to a value greater than one uses the provided bounds / density to randomly sample initial parameter guesses <span class="math notranslate nohighlight">\(\theta_0\)</span>. The <code class="docutils literal notranslate"><span class="pre">fit_nls()</span></code> routine will automatically select the minimum MSE candidate.</p>
 <p>Note that whenever using a random algorithm (such as random restarts), it is a good idea to set the <code class="docutils literal notranslate"><span class="pre">seed</span></code> parameter to a fixed integer for reproducibility of computations. One can also vary the seed to get a different random draw.</p>
 <div class="cell docutils container">
@@ -1082,7 +1140,7 @@ Design runtime estimates unavailable; model has no timing data.
 </div>
 </div>
 <div class="section" id="partial-resolution-restrict-parameter-domain">
-<h3>7.1.4.7. Partial Resolution: Restrict parameter domain<a class="headerlink" href="#partial-resolution-restrict-parameter-domain" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">17.1.4.7. </span>Partial Resolution: Restrict parameter domain<a class="headerlink" href="#partial-resolution-restrict-parameter-domain" title="Permalink to this headline">¶</a></h3>
 <p>To fully resolve this local minimum issue we will combine multiple-restarts with a constriction of the parameter space to be considered. Below we constrict the bounds for <code class="docutils literal notranslate"><span class="pre">a</span></code> and re-fit the model.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1152,7 +1210,7 @@ Design runtime estimates unavailable; model has no timing data.
 </div>
 </div>
 <div class="section" id="key-takeaways">
-<h2>7.1.5. Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.1.5. </span>Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>NLS is a general-purpose approach to fitting a model that is nonlinear in its parameters.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">fit_nls()</span></code> Grama routine provides a framework for fitting arbitrary Grama models.</p></li>
@@ -1162,7 +1220,7 @@ Design runtime estimates unavailable; model has no timing data.
 </ul>
 </div>
 <div class="section" id="grama-routines-a-id-grama-a">
-<h2>7.1.6. Grama Routines <a id="grama"></a><a class="headerlink" href="#grama-routines-a-id-grama-a" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.1.6. </span>Grama Routines <a id="grama"></a><a class="headerlink" href="#grama-routines-a-id-grama-a" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>The <a class="reference external" href="https://github.com/zdelrosario/py_grama/blob/f8ec31640f7184560edb22b674e193d00367dfc0/grama/dfply/summary_functions.py#L231-L244">Grama routine</a> <code class="docutils literal notranslate"><span class="pre">gr.mse()</span></code> is a convenient way to compute the MSE in a data pipeline. This is useful when assessing a fitted model’s accuracy.</p></li>
 <li><p>The <a class="reference external" href="https://github.com/zdelrosario/py_grama/blob/bc008517e1a0d6b88884874ac506970bf4cc1499/grama/fit_synonyms.py#L23-L73">Grama routine</a> <code class="docutils literal notranslate"><span class="pre">gr.fit_nls()</span></code> performs NLS optimization of a model in order to find fitted parameter values and return a callable model. This is the</p></li>
@@ -1194,11 +1252,23 @@ Design runtime estimates unavailable; model has no timing data.
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="inv-propagation.html" title="previous page">7. Inverse Propagation</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="inv-propagation.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">17. </span>Inverse Propagation</p>
+            </div>
+        </a>
+    </div>
+
+</div>
         
         </div>
     </div>
@@ -1217,11 +1287,9 @@ Design runtime estimates unavailable; model has no timing data.
 
       </div>
     </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-    
-  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
-
-
-    
+  
   </body>
 </html>

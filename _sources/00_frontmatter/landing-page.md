@@ -2,15 +2,23 @@
 
 "All Models Are Uncertain: Case Studies with a Python Grammar of Model Analysis"
 
-A work-in-progress textbook by Zachary del Rosario and Gianluca Iaccarino.
+A work-in-progress textbook by Zachary del Rosario and Gianluca Iaccarino, to be published by *Cambridge Scholar Press*.
 
-## This is a draft book
+If you would like to cite this work, please use the following reference:
 
-Most of this book is empty, but we have prepared two samples chapters (also
-included in the TOC on the left). These are also provided in separate PDF form.
+> del Rosario, Z. and Iaccarino, G. (Forthcoming). *All Models are Uncertain: Case Studies with a Python Grammar of Model Analysis*. Cambridge Scholar Press.
 
-- Main chapter: [Model-Form Error and Validation](02-model-form-error)
-- Appendix entry: [Nonlinear Least Squares](04-nls)
+Or use the following bibtex entry:
+
+```bibtex
+@book{delRosario20XXmodels,
+  title={All Models are Uncertain: Case Studies with a Python Grammar of Model Analysis},
+  author={{del Rosario}, Zachary and Iaccarino, Gianluca},
+  volume={1},
+  year={Forthcoming},
+  publisher={Cambridge Scholar Press}
+}
+```
 
 ## Rationale
 

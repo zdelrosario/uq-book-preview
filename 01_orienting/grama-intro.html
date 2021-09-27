@@ -1,12 +1,14 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
-    <title>3. A Grammar of Model Analysis: Grama &#8212; All Models Are Uncertain</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4. A Grammar of Model Analysis: Grama &#8212; All Models Are Uncertain</title>
     
-  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -18,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,39 +31,38 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/togglebutton.js"></script>
-    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
-    <script type="text/javascript" src="../_static/copybutton.js"></script>
-    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script type="text/javascript" src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script type="text/javascript">
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. Diagnosing" href="../02_diagnosing/diagnosing.html" />
-    <link rel="prev" title="2. Curiosity and Skepticism: A Healthy Mindset" href="curiosity-skepticism.html" />
-
+    <link rel="next" title="5. Diagnosing" href="../02_diagnosing/diagnosing.html" />
+    <link rel="prev" title="3. Curiosity and Skepticism: A Healthy Mindset" href="curiosity-skepticism.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
-
-
-
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -74,153 +71,216 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../index.html">
-  
-  
-  <h1 class="site-logo" id="site-title">All Models Are Uncertain</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">All Models Are Uncertain</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../00_frontmatter/landing-page.html">
    All Models Are Uncertain
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Orienting
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="orienting.html">
    1. Orienting
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="modeling-questions.html">
+   2. Types of Modeling Questions
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="curiosity-skepticism.html">
-   2. Curiosity and Skepticism: A Healthy Mindset
+   3. Curiosity and Skepticism: A Healthy Mindset
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   3. A Grammar of Model Analysis: Grama
+   4. A Grammar of Model Analysis: Grama
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Diagnosing
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../02_diagnosing/diagnosing.html">
-   1. Diagnosing
+   5. Diagnosing
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../02_diagnosing/distributions.html">
-   2. Distributions
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../02_diagnosing/functions.html">
-   3. Functions
-  </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../02_diagnosing/model-form-error.html">
-     3.1. Model-Form Error and Validation
+    <a class="reference internal" href="../02_diagnosing/uncertainty.html">
+     5.2. Conceptual Tools for Handling Uncertainty
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02_diagnosing/distributions.html">
+   6. Distributions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_diagnosing/marginals.html">
+     6.2. Single-uncertainties: Marginal Distributions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_diagnosing/dependency.html">
+     6.3. Multiple-uncertainties: Copulas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_diagnosing/estimation.html">
+     6.4. Dealing with Limited Data: Estimation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02_diagnosing/functions.html">
+   7. Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_diagnosing/model-form-error.html">
+     7.1. Model-Form Error and Validation
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Advancing
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../03_advancing/advancing.html">
-   1. Advancing
+   8. Advancing
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Bibliography
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../zbib.html">
-   1. Bibliography
+   9. Bibliography
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Appendices
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../04_appendices/cases.html">
-   1. Cases
+   10. Cases
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04_appendices/alloys.html">
+     10.10. Alloy Datasets
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../04_appendices/grama.html">
-   2. Grama
+   11. Grama Reference Materials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04_appendices/eda.html">
+   12. Basics of Exploratory Data Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../04_appendices/pr-modeling.html">
-   3. Probability Modeling
+   13. Probability and Modeling
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../04_appendices/dim-reduction.html">
-   4. Dimension Reduction
+   14. Dimension Reduction
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../04_appendices/empirical-models.html">
-   5. Empirical Models
+   15. Empirical Models
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../04_appendices/fwd-propagation.html">
-   6. Forward Propagation
+   16. Forward Propagation
   </a>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../04_appendices/inv-propagation.html">
-   7. Inverse Propagation
+   17. Inverse Propagation
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../04_appendices/nls.html">
-     7.1. Nonlinear Least Squares
+     17.1. Nonlinear Least Squares
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -259,9 +319,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/01_orienting/grama-intro.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/01_orienting/grama-intro.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -270,20 +330,153 @@
 
             <!-- Source interaction buttons -->
 
-
             <!-- Full screen (wrap in <a> to have style consistency -->
-            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                    title="Fullscreen mode"><i
-                        class="fas fa-expand"></i></button></a>
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/01_orienting/grama-intro.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
 
         </div>
 
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quick-start">
+   4.1. Quick Start
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#install">
+     4.1.1. Install
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#install-anaconda-python">
+       4.1.1.1. Install Anaconda Python.
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#use-the-python-package-manager-to-install-py-grama">
+       4.1.1.2. Use the Python package manager to install py-grama
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#test-your-install">
+       4.1.1.3. Test your install
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupyter-notebooks">
+     4.1.2. Jupyter Notebooks
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#boilerplate-code">
+     4.1.3. Boilerplate code
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-demo-model">
+     4.1.4. A demo model
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overriding-the-defaults">
+     4.1.5. Overriding the defaults
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#getting-help">
+     4.1.6. Getting help
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grama-concepts">
+   4.2. Grama Concepts
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#objects-data-and-models">
+     4.2.1. Objects: Data and Models
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#verbs-four-fundamental-verbs">
+     4.2.2. Verbs: Four fundamental verbs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#functional-programming">
+     4.2.3. Functional programming
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#more-on-py-grama">
+     4.2.4. More on
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       py-grama
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-brief-case-study-assessing-structural-safety">
+   4.3. A Brief Case Study: Assessing Structural Safety
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#building-the-model">
+     4.3.1. Building the model
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analyzing-the-model">
+     4.3.2. Analyzing the model
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-general-process">
+   4.4. A general process
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -293,7 +486,1394 @@
               <div>
                 
   <div class="section" id="a-grammar-of-model-analysis-grama">
-<h1>3. A Grammar of Model Analysis: Grama<a class="headerlink" href="#a-grammar-of-model-analysis-grama" title="Permalink to this headline">¶</a></h1>
+<span id="grama-intro"></span><h1><span class="section-number">4. </span>A Grammar of Model Analysis: Grama<a class="headerlink" href="#a-grammar-of-model-analysis-grama" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<p>This chapter is about a <em>grammar of model analysis</em>. Just like English grammar, a grammar of model analysis gives rules about how objects fit together; specifically, <em>models</em>, <em>data</em>, and the <em>verbs</em> that relate them. This ruleset is designed to facilitate model analysis <em>under uncertainty</em>.</p>
+<p>These rules are <em>implemented</em> in the Python package <code class="docutils literal notranslate"><span class="pre">py-grama</span></code>. Using the <code class="docutils literal notranslate"><span class="pre">py-grama</span></code> package, you will be able to reproduce <em>all</em> of the case studies in this book. This means you can immediately take the code in this book and start applying it to your own studies! The <code class="docutils literal notranslate"><span class="pre">py-grama</span></code> package is free and open source software, hosted on GitHub at this url: <a class="reference external" href="https://github.com/zdelrosario/py_grama">https://github.com/zdelrosario/py_grama</a>.</p>
+<p><strong>Learning Objectives</strong> In this chapter, you will learn</p>
+<ul class="simple">
+<li><p>how to install the <code class="docutils literal notranslate"><span class="pre">py-grama</span></code> Python package</p></li>
+<li><p>key concepts used in <code class="docutils literal notranslate"><span class="pre">py-grama</span></code></p></li>
+<li><p>the basics of using <code class="docutils literal notranslate"><span class="pre">py-grama</span></code> to do model analysis under uncertainty, through a quick case study</p></li>
+</ul>
+<p>To best-use this book, you should follow the Quick Start instructions below to install <code class="docutils literal notranslate"><span class="pre">py-grama</span></code> and get familiar with the software.</p>
+<div class="section" id="quick-start">
+<h2><span class="section-number">4.1. </span>Quick Start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>This quick start guide will take you through installing <code class="docutils literal notranslate"><span class="pre">py-grama</span></code>, loading in a simple model, and analyzing with some exploratory model analysis tools. The purpose of this quick start is <em>not</em> to solve a scientific problem, but rather to introduce the <code class="docutils literal notranslate"><span class="pre">py-grama</span></code> toolkit with a very simple model.</p>
+<div class="section" id="install">
+<h3><span class="section-number">4.1.1. </span>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h3>
+<p>Follow these instructions to install Python and the <code class="docutils literal notranslate"><span class="pre">py-grama</span></code> package.</p>
+<div class="section" id="install-anaconda-python">
+<h4><span class="section-number">4.1.1.1. </span>Install Anaconda Python.<a class="headerlink" href="#install-anaconda-python" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://www.anaconda.com/distribution/">Anaconda</a> is a way to install Python that includes many tools for scientific computing. We recommend starting from Anaconda to help take care of dependencies.</p>
+</div>
+<div class="section" id="use-the-python-package-manager-to-install-py-grama">
+<h4><span class="section-number">4.1.1.2. </span>Use the Python package manager to install py-grama<a class="headerlink" href="#use-the-python-package-manager-to-install-py-grama" title="Permalink to this headline">¶</a></h4>
+<p>Open your <a class="reference external" href="https://docs.anaconda.com/anaconda/user-guide/getting-started/#cli-hello">Anaconda prompt</a>, type the following line into your prompt, and hit return (enter).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install py-grama
+</pre></div>
+</div>
+<p>This will automatically download Grama and install its dependencies.</p>
+<div class="admonition-prompt-vs-python admonition">
+<p class="admonition-title">Prompt vs Python</p>
+<p>Throughout this book, we will use the symbol $ to denote code you should run in your Anaconda prompt. This will be infrequent, but important to notice!</p>
+</div>
+</div>
+<div class="section" id="test-your-install">
+<h4><span class="section-number">4.1.1.3. </span>Test your install<a class="headerlink" href="#test-your-install" title="Permalink to this headline">¶</a></h4>
+<p>Start a Python terminal (Open <a class="reference external" href="https://docs.anaconda.com/anaconda/user-guide/getting-started/#cli-hello">Anaconda prompt</a>, and use the command <code class="docutils literal notranslate"><span class="pre">python</span></code>) and run the code:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">grama</span> <span class="k">as</span> <span class="nn">gr</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If this runs without error, then you have successfully installed Grama!</p>
+</div>
+</div>
+<div class="section" id="jupyter-notebooks">
+<h3><span class="section-number">4.1.2. </span>Jupyter Notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this headline">¶</a></h3>
+<p>Above, you ran Python code in a <em>terminal</em>; this is helpful for using Python like a calculator, but does not allow you to save your work. Python code is sometimes saved in <em>scripts</em>; these are machine-readable files with the <code class="docutils literal notranslate"><span class="pre">.py</span></code> extension. Scripts are great for reusable code, but we prefer Jupyter notebooks for organizing studies involving equations, figures, and documentation.</p>
+<p>Jupyter notebooks are great for writing scientific reports; in fact, the chapters of this book were written as Jupyter notebooks <a class="footnote-reference brackets" href="#jb" id="id1">1</a>!</p>
+<p>To start Jupyter, open your anaconda prompt and run the command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ jupyter lab
+</pre></div>
+</div>
+<p>This will open a page in your web browser with the JupyterLab interface. The JupyterLab documentation has more information; in particular, this <a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html">overview page</a> has a good introduction to using Jupyter. We <em>highly</em> recommend watching at least an introductory tutorial to learn how to use Jupyter notebooks.</p>
+<div class="tip admonition">
+<p class="admonition-title">Follow along!</p>
+<p>To get the most out of this book, we <strong>highly</strong> recommend you follow along with this Quick Start! Fire up a Jupyter notebook and try the commands below.</p>
+</div>
+</div>
+<div class="section" id="boilerplate-code">
+<h3><span class="section-number">4.1.3. </span>Boilerplate code<a class="headerlink" href="#boilerplate-code" title="Permalink to this headline">¶</a></h3>
+<p>To set up <code class="docutils literal notranslate"><span class="pre">py-grama</span></code> in a Jupyter notebook, you must run the following code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Boilerplate code for setting up py-grama</span>
+<span class="kn">import</span> <span class="nn">grama</span> <span class="k">as</span> <span class="nn">gr</span>   <span class="c1"># This imports the py-grama package</span>
+<span class="n">DF</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">Intention</span><span class="p">()</span>  <span class="c1"># This sets up the DataFrame &quot;pronoun&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This code loads <code class="docutils literal notranslate"><span class="pre">py-grama</span></code> and sets up some key infrastructure for the package.</p>
+<div class="admonition-package-prefix admonition">
+<p class="admonition-title">Package prefix</p>
+<p>Note that the call to <code class="docutils literal notranslate"><span class="pre">Intention()</span></code> uses the <code class="docutils literal notranslate"><span class="pre">gr</span></code> prefix we set with <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">grama</span> <span class="pre">as</span> <span class="pre">gr</span></code>. This is how we access <em>all</em> functions and objects in <code class="docutils literal notranslate"><span class="pre">py-grama</span></code>, unless we do <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">grama</span> <span class="pre">import</span> <span class="pre">something</span> <span class="pre">as</span> <span class="pre">new_name</span></code>.</p>
+</div>
+<p>Next, we’ll go through a quick demo of <code class="docutils literal notranslate"><span class="pre">py-grama</span></code>.</p>
+</div>
+<div class="section" id="a-demo-model">
+<h3><span class="section-number">4.1.4. </span>A demo model<a class="headerlink" href="#a-demo-model" title="Permalink to this headline">¶</a></h3>
+<p>Run the following code to load a built-in <code class="docutils literal notranslate"><span class="pre">py-grama</span></code> model and print a summary.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">grama.models</span> <span class="kn">import</span> <span class="n">make_test</span>
+<span class="n">md_test</span> <span class="o">=</span> <span class="n">make_test</span><span class="p">()</span>
+<span class="n">md_test</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>model: None
+
+  inputs:
+    var_det:
+      x2: [-1, 1]
+
+    var_rand:
+      x0: (+0) uniform, {&#39;loc&#39;: -1, &#39;scale&#39;: 2}
+      x1: (+0) uniform, {&#39;loc&#39;: -1, &#39;scale&#39;: 2}
+
+    copula:
+      Independence copula
+
+  functions:
+      f0: [&#39;x0&#39;, &#39;x1&#39;, &#39;x2&#39;] -&gt; [&#39;y0&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>We’ll discuss these elements of a model more below; for now, note that we have three inputs <code class="docutils literal notranslate"><span class="pre">['x0',</span> <span class="pre">'x1',</span> <span class="pre">'x2']</span></code> that map to one output <code class="docutils literal notranslate"><span class="pre">['y0']</span></code>. We can get a sense for how the model behaves by constructing a <em>sinew plot</em>, as the following code demonstrates.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">md_test</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">ev_sinews</span><span class="p">(</span><span class="n">df_det</span><span class="o">=</span><span class="s2">&quot;swp&quot;</span><span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">pt_auto</span><span class="p">()</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Calling plot_sinew_outputs....
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x7fa11cb8fc10&gt;
+</pre></div>
+</div>
+<img alt="../_images/grama-intro_12_2.png" src="../_images/grama-intro_12_2.png" />
+</div>
+</div>
+<p>Note that the resulting plot has three columns and one row; these correspond to the three inputs (columns and horizontal axes) and one output (rows and vertical axes). Each column of this plot shows a “sweep” along a single input while holding the other inputs constant. Since model behavior can change depending on the held-constant inputs, the process repeats for a variety of starting conditions, resulting in multiple lines in each panel.</p>
+<div class="tip admonition">
+<p class="admonition-title">All linear?</p>
+<p>Interpreting the plot above, it seems that the output <code class="docutils literal notranslate"><span class="pre">'y0'</span></code> is linear in all of its inputs: no matter where we start, moving along one of the inputs results in a linear trend for the output. Maybe we got lucky? With more sweeps, would we see different behavior?</p>
+</div>
+</div>
+<div class="section" id="overriding-the-defaults">
+<h3><span class="section-number">4.1.5. </span>Overriding the defaults<a class="headerlink" href="#overriding-the-defaults" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">py-grama</span></code> package is designed around providing <em>sensible defaults</em> to get you started with each function, but you can override these defaults when necessary. For instance, the following code plots more sweeps by overriding the default <code class="docutils literal notranslate"><span class="pre">n_sweeps</span> <span class="pre">=</span> <span class="pre">10</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">md_test</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">ev_sinews</span><span class="p">(</span>
+        <span class="n">df_det</span><span class="o">=</span><span class="s2">&quot;swp&quot;</span><span class="p">,</span>
+        <span class="n">n_sweeps</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">pt_auto</span><span class="p">()</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Calling plot_sinew_outputs....
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x7fa11f49d2d0&gt;
+</pre></div>
+</div>
+<img alt="../_images/grama-intro_15_2.png" src="../_images/grama-intro_15_2.png" />
+</div>
+</div>
+<p>Note that more sweeps (larger <code class="docutils literal notranslate"><span class="pre">n_sweeps</span></code>) will tend to require more compute time <a class="footnote-reference brackets" href="#n-sweeps" id="id2">2</a>. This might be easy to afford if your model is simple, but can be quite expensive as your model grows more complicated.</p>
+<div class="warning admonition">
+<p class="admonition-title">Probably linear</p>
+<p>Interpreting the plot above, even with more sweeps the output <code class="docutils literal notranslate"><span class="pre">'y0'</span></code> still seems to be linear in all of its inputs. This is hardly <em>proof</em> that <code class="docutils literal notranslate"><span class="pre">'y0'</span></code> is linear in all its inputs, but the evidence certainly seems convincing for now.</p>
+</div>
+</div>
+<div class="section" id="getting-help">
+<h3><span class="section-number">4.1.6. </span>Getting help<a class="headerlink" href="#getting-help" title="Permalink to this headline">¶</a></h3>
+<p>No programmer memorizes <em>everything</em> in a software package! Competent programmers regularly consult <em>documentation</em> to remind themselves how to use a function, or to learn about a new function.</p>
+<p>In Python, you can use the <code class="docutils literal notranslate"><span class="pre">help()</span></code> command to get more information on a function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">gr</span><span class="o">.</span><span class="n">eval_sinews</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on curry in module grama.eval_random:
+
+eval_sinews(model=&#39;__no__default__&#39;, n_density=10, n_sweeps=3, seed=None, df_det=None, varname=&#39;sweep_var&#39;, indname=&#39;sweep_ind&#39;, append=True, skip=False)
+    Sweep study
+    
+    Perform coordinate sweeps over each model random variable (&quot;sinew&quot; design).
+    Use random starting points drawn from the joint density.
+    
+    Use gr.plot_auto() to construct a quick visualization of the output
+    dataframe. Use `skip` version to visualize the design, and non-skipped
+    version to visualize the results.
+    
+    Args:
+        model (gr.Model): Model to evaluate
+        n_density (numeric): Number of points along each sweep
+        n_sweeps (numeric): Number of sweeps per-random variable
+        seed (int): Random seed to use
+        df_det (DataFrame): Deterministic levels for evaluation;
+            use &quot;nom&quot; for nominal deterministic levels,
+            use &quot;swp&quot; to sweep deterministic variables
+        varname (str): Column name to give for sweep variable; default=&quot;sweep_var&quot;
+        indname (str): Column name to give for sweep index; default=&quot;sweep_ind&quot;
+        append (bool): Append results to conservative inputs?
+        skip (bool): Skip evaluation of the functions?
+    
+    Returns:
+        DataFrame: Results of evaluation or unevaluated design
+    
+    Examples:
+    
+        &gt;&gt;&gt; import grama as gr
+        &gt;&gt;&gt; md = gr.make_cantilever_beam()
+        &gt;&gt;&gt; # Skip evaluation, vis. design
+        &gt;&gt;&gt; df_design = md &gt;&gt; gr.ev_sinews(df_det=&quot;nom&quot;, skip=True)
+        &gt;&gt;&gt; df_design &gt;&gt; gr.pt_auto()
+        &gt;&gt;&gt; # Vis results
+        &gt;&gt;&gt; df_sinew = md &gt;&gt; gr.ev_sinews(df_det=&quot;nom&quot;)
+        &gt;&gt;&gt; df_sinew &gt;&gt; gr.pt_auto()
+</pre></div>
+</div>
+</div>
+</div>
+<p>Reading a function’s documentation can be overwhelming at first, but with practice you can quickly find a lot of useful information:</p>
+<ul class="simple">
+<li><p>The line with <code class="docutils literal notranslate"><span class="pre">eval_sinews(...)</span></code> is the <em>function signature</em>; this shows the function with all of its possible arguments.</p></li>
+<li><p>The paragraphs that follow the signature describe the function in plain language.</p></li>
+<li><p>The lines under <code class="docutils literal notranslate"><span class="pre">Args:</span></code> detail the arguments to the function. The lines are of the form <code class="docutils literal notranslate"><span class="pre">name</span> <span class="pre">(type):</span> <span class="pre">Details</span></code>, where</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> is the name of the argument</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> is the expected datatype of the argument</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Details</span></code> follow in plain-text. If an argument only takes particular values, the <code class="docutils literal notranslate"><span class="pre">Details</span></code> should tell you about this</p></li>
+</ul>
+</li>
+<li><p>The line under <code class="docutils literal notranslate"><span class="pre">Returns:</span></code> details the returned object (if any), including its datatype.</p></li>
+<li><p>Function documentation often includes <code class="docutils literal notranslate"><span class="pre">Examples:</span></code>; look at this section for some real-code examples of the function’s use. This is particularly useful, as you can see what other objects and functions this tool is used with.</p></li>
+</ul>
+<div class="admonition-documentation-in-jupyter admonition">
+<p class="admonition-title">Documentation in Jupyter</p>
+<p>Note that in Jupyter, you can quickly reference the documentation for a function by placing your cursor over a function you’d like to reference, and pressing the keys <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Tab</span></code>. Try this in your own Jupyter notebook!</p>
+</div>
+</div>
+</div>
+<div class="section" id="grama-concepts">
+<h2><span class="section-number">4.2. </span>Grama Concepts<a class="headerlink" href="#grama-concepts" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>Now that we’ve seen how <code class="docutils literal notranslate"><span class="pre">py-grama</span></code> works, let’s look closer at the concepts behind <code class="docutils literal notranslate"><span class="pre">py-grama</span></code>. The <code class="docutils literal notranslate"><span class="pre">py-grama</span></code> package was designed around a few simple ideas: two primary kinds of objects (data and models) and four kinds of verbs.</p>
+<div class="section" id="objects-data-and-models">
+<h3><span class="section-number">4.2.1. </span>Objects: Data and Models<a class="headerlink" href="#objects-data-and-models" title="Permalink to this headline">¶</a></h3>
+<p><em>Data (<code class="docutils literal notranslate"><span class="pre">df</span></code>)</em></p>
+<p>Data in <code class="docutils literal notranslate"><span class="pre">py-grama</span></code> is organized into <a class="reference external" href="https://pandas.pydata.org/">Pandas</a> DataFrames. A DataFrame is a digital table, with named columns that organize observations on variables. It is a <em>convention</em> when using <code class="docutils literal notranslate"><span class="pre">py-grama</span></code> to name your DataFrames with the <code class="docutils literal notranslate"><span class="pre">df_</span></code> prefix followed by a descriptive name, for instance <code class="docutils literal notranslate"><span class="pre">df_train</span></code> for a set of training data.</p>
+<p>The code we saw above generated a DataFrame, which was then visualized using the <code class="docutils literal notranslate"><span class="pre">gr.pt_auto()</span></code> tool. If we disable the plotting line with a comment, we can inspect the data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_results</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">md_test</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">ev_sinews</span><span class="p">(</span><span class="n">df_det</span><span class="o">=</span><span class="s2">&quot;swp&quot;</span><span class="p">)</span>
+<span class="c1">#     &gt;&gt; gr.pt_auto()</span>
+<span class="p">)</span>
+<span class="n">df_results</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x0</th>
+      <th>x1</th>
+      <th>x2</th>
+      <th>sweep_var</th>
+      <th>sweep_ind</th>
+      <th>y0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-1.000000</td>
+      <td>-0.444582</td>
+      <td>-0.342595</td>
+      <td>x0</td>
+      <td>0</td>
+      <td>-1.787177</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-0.777778</td>
+      <td>-0.444582</td>
+      <td>-0.342595</td>
+      <td>x0</td>
+      <td>0</td>
+      <td>-1.564954</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-0.555556</td>
+      <td>-0.444582</td>
+      <td>-0.342595</td>
+      <td>x0</td>
+      <td>0</td>
+      <td>-1.342732</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-0.333333</td>
+      <td>-0.444582</td>
+      <td>-0.342595</td>
+      <td>x0</td>
+      <td>0</td>
+      <td>-1.120510</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-0.111111</td>
+      <td>-0.444582</td>
+      <td>-0.342595</td>
+      <td>x0</td>
+      <td>0</td>
+      <td>-0.898288</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td>-0.791376</td>
+      <td>-0.501520</td>
+      <td>0.111111</td>
+      <td>x2</td>
+      <td>2</td>
+      <td>-1.181785</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>-0.791376</td>
+      <td>-0.501520</td>
+      <td>0.333333</td>
+      <td>x2</td>
+      <td>2</td>
+      <td>-0.959563</td>
+    </tr>
+    <tr>
+      <th>87</th>
+      <td>-0.791376</td>
+      <td>-0.501520</td>
+      <td>0.555556</td>
+      <td>x2</td>
+      <td>2</td>
+      <td>-0.737340</td>
+    </tr>
+    <tr>
+      <th>88</th>
+      <td>-0.791376</td>
+      <td>-0.501520</td>
+      <td>0.777778</td>
+      <td>x2</td>
+      <td>2</td>
+      <td>-0.515118</td>
+    </tr>
+    <tr>
+      <th>89</th>
+      <td>-0.791376</td>
+      <td>-0.501520</td>
+      <td>1.000000</td>
+      <td>x2</td>
+      <td>2</td>
+      <td>-0.292896</td>
+    </tr>
+  </tbody>
+</table>
+<p>90 rows × 6 columns</p>
+</div></div></div>
+</div>
+<p>Note that the DataFrame <code class="docutils literal notranslate"><span class="pre">df_results</span></code> contains both numeric columns (such as <code class="docutils literal notranslate"><span class="pre">df_results.x1</span></code>) and string columns (such as <code class="docutils literal notranslate"><span class="pre">df_results.sweep_var</span></code>). We can also see some basic-but-useful facts, such as the size (90 rows x 6 columns).</p>
+<p>On their own, data are not immediately useful. We will see a variety of <em>transformation</em> verbs we can use in <code class="docutils literal notranslate"><span class="pre">py-grama</span></code> to work with data, and we will use data to inform and even <em>fit</em> models.</p>
+<p>The data we work with can come from a physical experiment (loaded from disk) or from a simulation (generated by a model). Either way, it will be packaged in a Pandas DataFrame. This ensures we can use consistent tools to work with data, regardless of the origin.</p>
+<p><em>Models (<code class="docutils literal notranslate"><span class="pre">md</span></code>)</em></p>
+<p>Models in <code class="docutils literal notranslate"><span class="pre">py-grama</span></code> are represented by a special <code class="docutils literal notranslate"><span class="pre">gr.Model</span></code> Python class. A model is essentially a capsule containing functions that map inputs to outputs, and information about the inputs. We saw some of this information summarized when we printed <code class="docutils literal notranslate"><span class="pre">md_test</span></code> above.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">md_test</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>model: None
+
+  inputs:
+    var_det:
+      x2: [-1, 1]
+
+    var_rand:
+      x0: (+0) uniform, {&#39;loc&#39;: -1, &#39;scale&#39;: 2}
+      x1: (+0) uniform, {&#39;loc&#39;: -1, &#39;scale&#39;: 2}
+
+    copula:
+      Independence copula
+
+  functions:
+      f0: [&#39;x0&#39;, &#39;x1&#39;, &#39;x2&#39;] -&gt; [&#39;y0&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Reading these lines, we can see the key information about the model summarized as text:</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">inputs</span></code> organize the model inputs into two categories:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">var_det</span></code> are the <em>deterministic</em> variables; these are assumed to be <em>perfectly known</em>, and <em>must</em> be set in order to run the model. Deterministic variables are reported with their bounds</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">var_rand</span></code> are the <em>random</em> variables; these are assumed to be <em>fundamentally unknowable</em>, and can be <em>sampled</em> according to their distribution. Random variables are reported with their distribution type and parameters.</p></li>
+</ul>
+</li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">copula</span></code> describes the relationship between random variables. In the example above, the random variables are assumed to be mutually independent.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">functions</span></code> list all of the mappings from inputs to outputs.</p>
+<ul>
+<li><p>The example above has just one function <code class="docutils literal notranslate"><span class="pre">f0</span></code>, which maps all of its inputs to the single output <code class="docutils literal notranslate"><span class="pre">y0</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+<p>In <code class="docutils literal notranslate"><span class="pre">py-grama</span></code>, models are used to represent scenarios with quantified uncertainties. We can use models to run simulations (generate synthetic data), to propagate uncertainty, or even as a template to fit a model to data.</p>
+</div>
+<div class="section" id="verbs-four-fundamental-verbs">
+<h3><span class="section-number">4.2.2. </span>Verbs: Four fundamental verbs<a class="headerlink" href="#verbs-four-fundamental-verbs" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">py-grama</span></code> package focuses on data and model objects, and provides four kinds of <em>verbs</em> that inter-relate the two object types. The relationship between these objects and verbs constitutes the <em>grammar</em> of this grammar of model analysis.</p>
+<p>In short, the four verbs relate data and models according to Figure <a class="reference internal" href="#verb-classes"><span class="std std-numref">Fig. 4.1</span></a>.</p>
+<div class="figure align-default" id="verb-classes">
+<img alt="../_images/verb-classes-bw.png" src="../_images/verb-classes-bw.png" />
+<p class="caption"><span class="caption-number">Fig. 4.1 </span><span class="caption-text">The <code class="docutils literal notranslate"><span class="pre">py-grama</span></code> verbs, as they relate to data and models.</span><a class="headerlink" href="#verb-classes" title="Permalink to this image">¶</a></p>
+</div>
+<p>In greater detail, the four verbs are:</p>
+<ul class="simple">
+<li><p>A <em>transformation</em> (<code class="docutils literal notranslate"><span class="pre">tran_</span></code>) transforms one DataFrame into another DataFrame. We might want a transformation to perform some simple calculation (like converting from Fahrenheit to Celsius), to reshape a dataset, to convert from one datatype to another, and so on.</p></li>
+<li><p>An <em>evaluation</em> (<code class="docutils literal notranslate"><span class="pre">eval_</span></code>) uses a Model to generate a DataFrame. Evaluation routines are used to run a variety of simulations, such as a simple planned run (<code class="docutils literal notranslate"><span class="pre">gr.eval_df()</span></code>), a Monte Carlo simulation (<code class="docutils literal notranslate"><span class="pre">gr.eval_monte_carlo()</span></code>), or a more advanced reliability-assessment technique (e.g. <code class="docutils literal notranslate"><span class="pre">gr.eval_form_pma()</span></code>).</p></li>
+<li><p>A <em>fit</em> (<code class="docutils literal notranslate"><span class="pre">fit_</span></code>) uses a training DataFrame to generate a Model. We could start with a user-defined model and fit its free parameters (<code class="docutils literal notranslate"><span class="pre">gr.fit_nls()</span></code>), or use a purely empirical approach to modeling the data (e.g. <code class="docutils literal notranslate"><span class="pre">gr.fit_gp()</span></code>).</p></li>
+<li><p>A <em>composition</em> (<code class="docutils literal notranslate"><span class="pre">comp_</span></code>) is used to modify an existing Model. Composition routines are generally used in the model-building phase of a study, though we can also use them to make small adjustments to a model.</p></li>
+</ul>
+<p>Like any language, there are also some exceptional verbs:</p>
+<ul class="simple">
+<li><p>Plotting routines (<code class="docutils literal notranslate"><span class="pre">plot_</span></code>) are used to visualize data. You are of course free to plot your data however you like, but know that the magic <code class="docutils literal notranslate"><span class="pre">gr.plot_auto()</span></code> routine is available to provide a quick visualization for many of the outputs of <code class="docutils literal notranslate"><span class="pre">eval_</span></code> verbs.</p></li>
+</ul>
+<p>The following table summarizes the verbs in terms of their prefixes and input-output datatypes.</p>
+<table class="colwidths-auto table" id="tab-verbs">
+<caption><span class="caption-number">Table 4.1 </span><span class="caption-text">Table of verbs and prefixes.</span><a class="headerlink" href="#tab-verbs" title="Permalink to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Verb</p></th>
+<th class="head"><p>Short</p></th>
+<th class="head"><p>In</p></th>
+<th class="head"><p>Out</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tran_</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tf_</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">df</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">df</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">eval_</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ev_</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">md</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">df</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">fit_</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ft_</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">df</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">md</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">comp_</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">cp_</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">md</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">md</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">plot_</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pt_</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">df</span></code></p></td>
+<td><p>–</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition-recognizing-a-new-verb admonition">
+<p class="admonition-title">Recognizing a new verb</p>
+<p>The verb prefixes <code class="docutils literal notranslate"><span class="pre">tran_</span></code> (<code class="docutils literal notranslate"><span class="pre">tf_</span></code>), <code class="docutils literal notranslate"><span class="pre">eval_</span></code> (<code class="docutils literal notranslate"><span class="pre">ev_</span></code>), <code class="docutils literal notranslate"><span class="pre">fit_</span></code> (<code class="docutils literal notranslate"><span class="pre">ft_</span></code>), and <code class="docutils literal notranslate"><span class="pre">comp_</span></code> (<code class="docutils literal notranslate"><span class="pre">cp_</span></code>) are <em>signifiers</em> to help you recognize something about a verb just by looking at it. Remember that the prefix will tell you the type of the verb’s first input, and the type of its return value.</p>
+</div>
+</div>
+<div class="section" id="functional-programming">
+<h3><span class="section-number">4.2.3. </span>Functional programming<a class="headerlink" href="#functional-programming" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">py-grama</span></code> package also provides some special syntax for <em>functional programming</em>-style computational pipelines. One of the advantages of this style of programming is that we can eliminate <em>intermediate variable names</em>. For instance, consider the following <em>imperative</em>-style code:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Build the model</span>
+<span class="n">md_temporary</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="s2">&quot;Temporary model&quot;</span><span class="p">)</span>
+<span class="n">md_temporary</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">comp_function</span><span class="p">(</span>
+    <span class="n">md_temporary</span><span class="p">,</span>
+    <span class="n">fun</span><span class="o">=</span><span class="k">lambda</span> <span class="n">X</span><span class="p">:</span> <span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">X</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+    <span class="n">var</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">out</span><span class="o">=</span><span class="mi">1</span>
+<span class="p">)</span>
+<span class="n">md_temporary</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">comp_bounds</span><span class="p">(</span>
+    <span class="n">md_temporary</span><span class="p">,</span>
+    <span class="n">x0</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="n">x1</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="c1">## Generate results</span>
+<span class="n">df_temporary</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">eval_sinews</span><span class="p">(</span>
+    <span class="n">md_temporary</span><span class="p">,</span>
+    <span class="n">df_det</span><span class="o">=</span><span class="s2">&quot;swp&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1">## Visualize</span>
+<span class="n">gr</span><span class="o">.</span><span class="n">plot_auto</span><span class="p">(</span><span class="n">df_temporary</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Calling plot_sinew_outputs....
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x7fa11e25b850&gt;
+</pre></div>
+</div>
+<img alt="../_images/grama-intro_30_2.png" src="../_images/grama-intro_30_2.png" />
+</div>
+</div>
+<p>Now compare with <em>functional</em>-style code:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">gr</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="s2">&quot;Temporary model&quot;</span><span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">cp_function</span><span class="p">(</span>
+        <span class="n">fun</span><span class="o">=</span><span class="k">lambda</span> <span class="n">X</span><span class="p">:</span> <span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">X</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+        <span class="n">var</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">out</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">cp_bounds</span><span class="p">(</span>
+        <span class="n">x0</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+        <span class="n">x1</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">ev_sinews</span><span class="p">(</span><span class="n">df_det</span><span class="o">=</span><span class="s2">&quot;swp&quot;</span><span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">pt_auto</span><span class="p">()</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Calling plot_sinew_outputs....
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x7fa11e5f8ad0&gt;
+</pre></div>
+</div>
+<img alt="../_images/grama-intro_32_2.png" src="../_images/grama-intro_32_2.png" />
+</div>
+</div>
+<p>The functional-style code is more compact and does not require us to set intermediate variable names. However, it can be confusing to read—at first.</p>
+<p>One idea that helps make functional-style code more readable is to think of the <em>pipe operator</em> <code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span></code> as the phrase “and then”. This makes the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">gr</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">cp_function</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">cp_bounds</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">ev_sinews</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Read more like natural language:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">Create</span> <span class="n">a</span> <span class="n">model</span>
+    <span class="ow">and</span> <span class="n">then</span> <span class="n">compose</span> <span class="k">with</span> <span class="n">a</span> <span class="n">function</span>
+    <span class="ow">and</span> <span class="n">then</span> <span class="n">compose</span> <span class="k">with</span> <span class="n">bounds</span>
+    <span class="ow">and</span> <span class="n">then</span> <span class="n">evaluate</span> <span class="n">sinews</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition-short-prefixes-for-functional-style-code admonition">
+<p class="admonition-title">Short-prefixes for functional-style code</p>
+<p>Note also that the short two-letter prefixes (e.g. <code class="docutils literal notranslate"><span class="pre">ev_</span></code>) are used for functional-style code, as opposed to the long forms of the prefix (e.g. <code class="docutils literal notranslate"><span class="pre">eval_</span></code>). If you find that your code throws errors, make sure you’re using the correct form of the prefix!</p>
+</div>
+</div>
+<div class="section" id="more-on-py-grama">
+<h3><span class="section-number">4.2.4. </span>More on <code class="docutils literal notranslate"><span class="pre">py-grama</span></code><a class="headerlink" href="#more-on-py-grama" title="Permalink to this headline">¶</a></h3>
+<p>This concludes the brief tour of <code class="docutils literal notranslate"><span class="pre">py-grama</span></code>. For more information, you can read the <a class="reference internal" href="../04_appendices/grama.html#grama-ref"><span class="std std-ref">Grama Reference</span></a> appendix entry, and the official documentation, hosted at <a class="reference external" href="https://py-grama.readthedocs.io/en/latest/">https://py-grama.readthedocs.io/en/latest/</a>.</p>
+</div>
+</div>
+<div class="section" id="a-brief-case-study-assessing-structural-safety">
+<h2><span class="section-number">4.3. </span>A Brief Case Study: Assessing Structural Safety<a class="headerlink" href="#a-brief-case-study-assessing-structural-safety" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>We end this chapter with an example of using <code class="docutils literal notranslate"><span class="pre">py-grama</span></code> to analyze the safety of a structural plate, subject to compressive forces. Plates are common in many kinds of structures; for instance, the skin of an airplane wing is designed to take some of the bending loads due to lift generation. If one of these skin panels <em>buckles</em>, it will crumple and potentially lead to unsafe deformation of the wing. However, variability in manufacturing means no two plates will perform exactly the same. We will analyze the safety of plates under buckling by performing a reliability analysis—assessing the probability of failure.</p>
+<p>All scientific and engineering projects should have some sort of <em>goal</em>; the case studies in this book are no different.</p>
+<div class="admonition-goals-for-this-case-study admonition">
+<p class="admonition-title">Goals for this case study</p>
+<p>In studying these plates, our <strong>goal</strong> is to determine an appropriate thickness of plate that will support a desired compressive load of 1 ksi with a low chance of buckling. For this study, we seek a failure rate less than 1 in a 100.</p>
+</div>
+<p>First, we set up the case study by importing some data on aluminum plate material properties, and load a package to visualize the data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">plotnine</span> <span class="k">as</span> <span class="nn">pt</span>           <span class="c1"># For visualizing data</span>
+<span class="kn">from</span> <span class="nn">grama.data</span> <span class="kn">import</span> <span class="n">df_stang</span> <span class="c1"># Dataset for modeling</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition-install-plotnine admonition">
+<p class="admonition-title">Install plotnine</p>
+<p>If you do not have <code class="docutils literal notranslate"><span class="pre">plotnine</span></code> installed, you can install it from Anaconda prompt with the command <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">plotnine</span></code>.</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Representative data</p>
+<p>In order for data to be appropriate for our study, they must be <strong>representative</strong> of the manufacturing process we will use to produce the plates. (It can’t just be any old data!) In this case study, we will assume the data come from our desired manufacturing process.</p>
+</div>
+<p>Let’s inspect the data we just loaded.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_stang</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>thick</th>
+      <th>alloy</th>
+      <th>E</th>
+      <th>mu</th>
+      <th>ang</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>10600</td>
+      <td>0.321</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>10600</td>
+      <td>0.323</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.032</td>
+      <td>al_24st</td>
+      <td>10400</td>
+      <td>0.329</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.032</td>
+      <td>al_24st</td>
+      <td>10300</td>
+      <td>0.319</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.064</td>
+      <td>al_24st</td>
+      <td>10500</td>
+      <td>0.323</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>0.064</td>
+      <td>al_24st</td>
+      <td>10400</td>
+      <td>0.327</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>72</th>
+      <td>0.064</td>
+      <td>al_24st</td>
+      <td>10500</td>
+      <td>0.320</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td>0.081</td>
+      <td>al_24st</td>
+      <td>9900</td>
+      <td>0.314</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>74</th>
+      <td>0.081</td>
+      <td>al_24st</td>
+      <td>10000</td>
+      <td>0.316</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>75</th>
+      <td>0.081</td>
+      <td>al_24st</td>
+      <td>9900</td>
+      <td>0.314</td>
+      <td>90</td>
+    </tr>
+  </tbody>
+</table>
+<p>76 rows × 5 columns</p>
+</div></div></div>
+</div>
+<p>These are observations on the elasticity <code class="docutils literal notranslate"><span class="pre">E</span></code> (ksi) and Poisson ratio <code class="docutils literal notranslate"><span class="pre">mu</span></code> (-) of a rolled aluminum alloy, with multiple specimens prepared and tested <span id="id3">[<a class="reference internal" href="../zbib.html#id18">SGN46</a>]</span>. Elasticity is a measure of “stiffness” of a material <a class="footnote-reference brackets" href="#stretch" id="id4">3</a>; the higher the <code class="docutils literal notranslate"><span class="pre">E</span></code> value, the more force it takes to stretch a part. The Poisson ratio is sometimes called the volume contraction ratio; by way of example, when stretching a rubber band, the band will tend to get thinner in the middle. The Poisson ratio of a material determines how much thinner a part will tend to get when stretched. These two properties affect the buckling strength of a plate; we’ll see this when we study the buckling equation below.</p>
+<p>However, before we study buckling, we will use these data to build a model for the <em>uncertainty</em> in the material properties.</p>
+<div class="section" id="building-the-model">
+<h3><span class="section-number">4.3.1. </span>Building the model<a class="headerlink" href="#building-the-model" title="Permalink to this headline">¶</a></h3>
+<p>When building a model from data, we should first inspect the data to make sure the data are trustworthy. This process will help us check our assumptions and data quality.</p>
+<div class="tip admonition">
+<p class="admonition-title">Properties are thickness-independent?</p>
+<p>Material properties such as elasticity and the Poisson ratio are generally thought to be thickness-independent. If this is the case, then we don’t need to worry too much about relating the material properties to the chosen plate thickness, which will greatly simplify modeling. However, we should check this assumption using our data!</p>
+</div>
+<p>The following plot shows Poisson ratio against elasticity, with the thickness of each specimen denoted by the shapes of the points.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_stang</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_mutate</span><span class="p">(</span><span class="n">thick</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">as_factor</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">thick</span><span class="p">))</span>
+    <span class="o">&gt;&gt;</span> <span class="n">pt</span><span class="o">.</span><span class="n">ggplot</span><span class="p">(</span><span class="n">pt</span><span class="o">.</span><span class="n">aes</span><span class="p">(</span><span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="s2">&quot;thick&quot;</span><span class="p">))</span>
+    <span class="o">+</span> <span class="n">pt</span><span class="o">.</span><span class="n">geom_point</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="o">+</span> <span class="n">pt</span><span class="o">.</span><span class="n">theme_minimal</span><span class="p">()</span>
+    <span class="o">+</span> <span class="n">pt</span><span class="o">.</span><span class="n">theme</span><span class="p">(</span><span class="n">figure_size</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: is_categorical is deprecated and will be removed in a future version.  Use is_categorical_dtype instead
+Warning: Using shapes for an ordinal variable is not advised.
+</pre></div>
+</div>
+<img alt="../_images/grama-intro_41_1.png" src="../_images/grama-intro_41_1.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8770623694533)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>This plot implies that the material properties are <em>not</em> thickness independent! However, the patterns in the data are rather suspicious….</p>
+<div class="warning admonition">
+<p class="admonition-title">Outliers</p>
+<p>Based on the figure above, the specimens of thickness <code class="docutils literal notranslate"><span class="pre">0.081</span></code> (in) are suspicious; these observations are well-separated from all the other cases. Reviewing the original publication that reported these data <span id="id5">[<a class="reference internal" href="../zbib.html#id18">SGN46</a>]</span>, it turns out that the thickest specimens were characterized with a different measurement procedure than the thinner specimens. This suggests that the measurements of the thickest specimens might not be compatible with the measurements of the thinnest specimens.</p>
+</div>
+<p>Let’s filter out the thickest specimens and see if the remaining observations are relatively consistent.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_filtered</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">df_stang</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_filter</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">thick</span> <span class="o">&lt;</span> <span class="mf">0.081</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="p">(</span>
+    <span class="n">df_filtered</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_mutate</span><span class="p">(</span><span class="n">thick</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">as_factor</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">thick</span><span class="p">))</span>
+    <span class="o">&gt;&gt;</span> <span class="n">pt</span><span class="o">.</span><span class="n">ggplot</span><span class="p">(</span><span class="n">pt</span><span class="o">.</span><span class="n">aes</span><span class="p">(</span><span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="s2">&quot;thick&quot;</span><span class="p">))</span>
+    <span class="o">+</span> <span class="n">pt</span><span class="o">.</span><span class="n">geom_point</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="o">+</span> <span class="n">pt</span><span class="o">.</span><span class="n">theme_minimal</span><span class="p">()</span>
+    <span class="o">+</span> <span class="n">pt</span><span class="o">.</span><span class="n">theme</span><span class="p">(</span><span class="n">figure_size</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: is_categorical is deprecated and will be removed in a future version.  Use is_categorical_dtype instead
+Warning: Using shapes for an ordinal variable is not advised.
+</pre></div>
+</div>
+<img alt="../_images/grama-intro_43_1.png" src="../_images/grama-intro_43_1.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8770626969337)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The remaining observations are fairly consistent, even across different thicknesses. Given what we know, we will advance by ignoring the thickest specimen data, and limit our attention to plates studied in the remaining data. This leaves us with plates roughly between 1/48” and 1/16” in thickness.</p>
+<div class="tip admonition">
+<p class="admonition-title">Talk to experts!</p>
+<p>If we were in the business of manufacturing plates, this would be an <em>excellent</em> time to go have a chat with the materials and process (M&amp;P) engineers about their experiments. We would ask about the two different characterization procedures, and ask for their opinion on how to use the data to inform our structural reliability analysis. We assumed the thickest specimens were less trustworthy, but their expert opinion might be different.</p>
+</div>
+<p>Now that we have a subset of data that we <em>trust</em>, we can proceed to build a probabilistic model for the uncertainty in material properties. As we’ll see in Chapter TODO, we will need a model (rather than just data) in order to study the very small failure probabilities that we seek. The following code fits a joint distribution for <code class="docutils literal notranslate"><span class="pre">E,</span> <span class="pre">mu</span></code> based on the filtered data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">md_aluminum</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">gr</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="s2">&quot;Plate aluminum material properties&quot;</span><span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">cp_marginals</span><span class="p">(</span>
+        <span class="n">E</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">marg_named</span><span class="p">(</span><span class="n">df_filtered</span><span class="o">.</span><span class="n">E</span><span class="p">,</span> <span class="s2">&quot;lognorm&quot;</span><span class="p">),</span>
+        <span class="n">mu</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">marg_named</span><span class="p">(</span><span class="n">df_filtered</span><span class="o">.</span><span class="n">mu</span><span class="p">,</span> <span class="s2">&quot;beta&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">cp_copula_gaussian</span><span class="p">(</span>
+        <span class="n">df_data</span><span class="o">=</span><span class="n">df_filtered</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="n">md_aluminum</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>model: Plate aluminum material properties
+
+  inputs:
+    var_det:
+
+    var_rand:
+      E: (+0) lognorm, {&#39;s&#39;: 7.36048659652516, &#39;loc&#39;: 10299.999999999998, &#39;scale&#39;: 4.90067731859436}
+      mu: (+0) beta, {&#39;a&#39;: 6.906673364779303, &#39;b&#39;: 0.6456702700075123, &#39;loc&#39;: 0.2616870498769197, &#39;scale&#39;: 0.06931295012308032}
+
+    copula:
+      Gaussian copula with correlations:
+  var1 var2      corr
+0   mu    E  0.103391
+
+  functions:
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">A reasonable fit?</p>
+<p>We chose a couple of marginal distribution shapes above: lognormal for <code class="docutils literal notranslate"><span class="pre">E</span></code> and beta for <code class="docutils literal notranslate"><span class="pre">mu</span></code>. How well do these choices represent the original data?</p>
+</div>
+<p>To assess the model fit, visualize the original Experimental data against Synthetic realizations from our distribution model.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">md_aluminum</span>
+    <span class="c1">## Draw realizations from distribution</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">ev_monte_carlo</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mf">1e3</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">101</span><span class="p">,</span> <span class="n">df_det</span><span class="o">=</span><span class="s2">&quot;nom&quot;</span><span class="p">,</span> <span class="n">skip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_mutate</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="s2">&quot;Synthetic&quot;</span><span class="p">)</span>
+    <span class="c1">## Add in the experimental data</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_bind_rows</span><span class="p">(</span>
+        <span class="n">df_filtered</span>
+        <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_mutate</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="s2">&quot;Experimental&quot;</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="c1">## Compare the synthetic and experimental data</span>
+    <span class="o">&gt;&gt;</span> <span class="n">pt</span><span class="o">.</span><span class="n">ggplot</span><span class="p">(</span><span class="n">pt</span><span class="o">.</span><span class="n">aes</span><span class="p">(</span><span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;source&quot;</span><span class="p">))</span>
+    <span class="o">+</span> <span class="n">pt</span><span class="o">.</span><span class="n">geom_point</span><span class="p">()</span>
+    <span class="o">+</span> <span class="n">pt</span><span class="o">.</span><span class="n">scale_color_manual</span><span class="p">(</span>
+        <span class="n">values</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">Experimental</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">Synthetic</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">),</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Source&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="o">+</span> <span class="n">pt</span><span class="o">.</span><span class="n">theme_minimal</span><span class="p">()</span>
+    <span class="o">+</span> <span class="n">pt</span><span class="o">.</span><span class="n">theme</span><span class="p">(</span><span class="n">figure_size</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+    <span class="o">+</span> <span class="n">pt</span><span class="o">.</span><span class="n">labs</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Elasticity&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Poisson ratio&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Model V1&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eval_monte_carlo() is rounding n...
+Design runtime estimates unavailable; model has no timing data.
+</pre></div>
+</div>
+<img alt="../_images/grama-intro_48_1.png" src="../_images/grama-intro_48_1.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8770623783093)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Extreme outliers in elasticity!</p>
+<p>The chosen shape for the elasticity <code class="docutils literal notranslate"><span class="pre">E</span></code> produes extreme outliers that do not appear in the original data. We have no evidence to support such extreme tail behavior. We should change the marginal for <code class="docutils literal notranslate"><span class="pre">E</span></code>.</p>
+</div>
+<p>Update the model to use a marginal shape for <code class="docutils literal notranslate"><span class="pre">E</span></code> with less extreme tail behavior. Let’s repeat the comparison to check our updated model.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">md_aluminum_v2</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">gr</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="s2">&quot;Plate aluminum material properties&quot;</span><span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">cp_marginals</span><span class="p">(</span>
+        <span class="n">E</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">marg_named</span><span class="p">(</span><span class="n">df_filtered</span><span class="o">.</span><span class="n">E</span><span class="p">,</span> <span class="s2">&quot;norm&quot;</span><span class="p">),</span>
+        <span class="n">mu</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">marg_named</span><span class="p">(</span><span class="n">df_filtered</span><span class="o">.</span><span class="n">mu</span><span class="p">,</span> <span class="s2">&quot;beta&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">cp_copula_gaussian</span><span class="p">(</span>
+        <span class="n">df_data</span><span class="o">=</span><span class="n">df_filtered</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+
+<span class="p">(</span>
+    <span class="n">md_aluminum_v2</span>
+    <span class="c1">## Draw realizations from distribution</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">ev_monte_carlo</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mf">1e3</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">101</span><span class="p">,</span> <span class="n">df_det</span><span class="o">=</span><span class="s2">&quot;nom&quot;</span><span class="p">,</span> <span class="n">skip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_mutate</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="s2">&quot;Synthetic&quot;</span><span class="p">)</span>
+    <span class="c1">## Add in the experimental data</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_bind_rows</span><span class="p">(</span>
+        <span class="n">df_filtered</span>
+        <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_mutate</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="s2">&quot;Experimental&quot;</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="c1">## Compare the synthetic and experimental data</span>
+    <span class="o">&gt;&gt;</span> <span class="n">pt</span><span class="o">.</span><span class="n">ggplot</span><span class="p">(</span><span class="n">pt</span><span class="o">.</span><span class="n">aes</span><span class="p">(</span><span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;source&quot;</span><span class="p">))</span>
+    <span class="o">+</span> <span class="n">pt</span><span class="o">.</span><span class="n">geom_point</span><span class="p">()</span>
+    <span class="o">+</span> <span class="n">pt</span><span class="o">.</span><span class="n">scale_color_manual</span><span class="p">(</span>
+        <span class="n">values</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">Experimental</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">Synthetic</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">),</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Source&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="o">+</span> <span class="n">pt</span><span class="o">.</span><span class="n">theme_minimal</span><span class="p">()</span>
+    <span class="o">+</span> <span class="n">pt</span><span class="o">.</span><span class="n">theme</span><span class="p">(</span><span class="n">figure_size</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+    <span class="o">+</span> <span class="n">pt</span><span class="o">.</span><span class="n">labs</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Elasticity&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Poisson ratio&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Model V2&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eval_monte_carlo() is rounding n...
+Design runtime estimates unavailable; model has no timing data.
+</pre></div>
+</div>
+<img alt="../_images/grama-intro_50_1.png" src="../_images/grama-intro_50_1.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8770627030725)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>This looks much more reasonable! The Synthetic and Experimental data exhibit much more similar variability.</p>
+<div class="tip admonition">
+<p class="admonition-title">“Gridded” experimental values…</p>
+<p>Note that the experimental values seem to lie on a grid: It appears the elasticity values have been rounded to the nearest hundred ksi. The standard deviation of the observed values is around 123 ksi, while the standard deviation of the rounding (assuming a uniform distribution) is <span class="math notranslate nohighlight">\(100 / \sqrt{12} \approx 29\)</span>. This means we are under-accounting for the variability in the data by a small amount. For our purposes this is not likely to cause a severe issue, but for more precise calculations—say, a more strict reliability requirement—this is a factor worth considering.</p>
+</div>
+<p>Now that we have a reasonable model for the material properties, we can turn our attention to mapping these inputs to the buckling behavior of the plate. Buckling is analyzed in terms of the <em>critical buckling stress</em> <span class="math notranslate nohighlight">\(\sigma\)</span> of a particular part. The larger this stress, the greater capacity the part has to withstand a buckling load.</p>
+<p>The critical buckling stress for a plate in compression is a classic result from structural mechanics <span id="id6">[<a class="reference internal" href="../zbib.html#id19">Pee11</a>]</span>, given by</p>
+<div class="math notranslate nohighlight">
+\[\sigma_{\text{buckling}} = \frac{\pi^2 E}{12(1 - \mu^2)}\left(\frac{t}{a}\right)^2,\]</div>
+<p>with symbols disambiguated in the table below.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Symbol</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(E\)</span></p></td>
+<td><p>Aluminum elasticity</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\mu\)</span></p></td>
+<td><p>Aluminum Poisson ratio</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(t\)</span></p></td>
+<td><p>Plate thickness</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(a\)</span></p></td>
+<td><p>Plate length</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\sigma_{\text{buckling}}\)</span></p></td>
+<td><p>Buckling stress</p></td>
+</tr>
+</tbody>
+</table>
+<div class="tip admonition">
+<p class="admonition-title">Anticipate your sanity checks</p>
+<p>Based on the equation above—and based on general physical intuition—we should have some expectations about the output’s behavior with its inputs. For instance, we would expect the buckling stress to get larger with a larger thickness: a thicker plate is harder to buckle. Conversely, we would expect a longer plate to buckle more easily, leading to a smaller buckling stress.</p>
+</div>
+<p>We can implement this function and add it to our <code class="docutils literal notranslate"><span class="pre">py-grama</span></code> model. The code below does this.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">md_plate</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">md_aluminum_v2</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">cp_vec_function</span><span class="p">(</span>
+        <span class="n">fun</span><span class="o">=</span><span class="k">lambda</span> <span class="n">df</span><span class="p">:</span> <span class="n">gr</span><span class="o">.</span><span class="n">df_make</span><span class="p">(</span>
+            <span class="n">sigma_buckle</span><span class="o">=</span><span class="mf">3.14159</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">df</span><span class="o">.</span><span class="n">E</span>
+                        <span class="o">/</span> <span class="mi">12</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">df</span><span class="o">.</span><span class="n">mu</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+                        <span class="o">*</span> <span class="n">df</span><span class="o">.</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="n">df</span><span class="o">.</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span>
+        <span class="p">),</span>
+        <span class="n">var</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;t&quot;</span><span class="p">],</span>
+        <span class="n">out</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;sigma_buckle&quot;</span><span class="p">],</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Buckling strength&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">cp_bounds</span><span class="p">(</span>
+        <span class="n">a</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
+        <span class="n">t</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">48</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">16</span><span class="p">),</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="n">md_plate</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>model: Plate aluminum material properties
+
+  inputs:
+    var_det:
+      t: [0.020833333333333332, 0.0625]
+      a: [2, 6]
+
+    var_rand:
+      E: (+0) norm, {&#39;loc&#39;: 10494.444444444445, &#39;scale&#39;: 122.34841969747357}
+      mu: (+0) beta, {&#39;a&#39;: 6.906673364779303, &#39;b&#39;: 0.6456702700075123, &#39;loc&#39;: 0.2616870498769197, &#39;scale&#39;: 0.06931295012308032}
+
+    copula:
+      Gaussian copula with correlations:
+  var1 var2      corr
+0   mu    E  0.030156
+
+  functions:
+      Buckling strength: [&#39;E&#39;, &#39;mu&#39;, &#39;a&#39;, &#39;t&#39;] -&gt; [&#39;sigma_buckle&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>When implementing a model, it is a good idea to use sinews as a sanity-check. We do so below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">md_plate</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">ev_sinews</span><span class="p">(</span><span class="n">df_det</span><span class="o">=</span><span class="s2">&quot;swp&quot;</span><span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">pt_auto</span><span class="p">()</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Calling plot_sinew_outputs....
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x7fa121a0d6d0&gt;
+</pre></div>
+</div>
+<img alt="../_images/grama-intro_55_2.png" src="../_images/grama-intro_55_2.png" />
+</div>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Sinews indicate an incorrect model!</p>
+<p>This sinew plot doesn’t match the intuition we stated above! As we increase the length <code class="docutils literal notranslate"><span class="pre">a</span></code> the plate becomes <em>harder</em> to buckle (the buckling stress increases), while when we make the plate thicker the plate becomes <em>easier</em> to buckle (buckling stress decreases).</p>
+</div>
+<p>By sanity-checking the model with a sinew plot, we can see that the model has incorrect behavior. Reviewing the code above, it seems the <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(t\)</span> terms are swapped. We can fix that easily and re-run the sweeps.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">md_plate_v2</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">md_aluminum_v2</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">cp_vec_function</span><span class="p">(</span>
+        <span class="n">fun</span><span class="o">=</span><span class="k">lambda</span> <span class="n">df</span><span class="p">:</span> <span class="n">gr</span><span class="o">.</span><span class="n">df_make</span><span class="p">(</span>
+            <span class="n">sigma_buckle</span><span class="o">=</span><span class="mf">3.14159</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">df</span><span class="o">.</span><span class="n">E</span>
+                        <span class="o">/</span> <span class="mi">12</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">df</span><span class="o">.</span><span class="n">mu</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+                        <span class="o">*</span> <span class="n">df</span><span class="o">.</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="n">df</span><span class="o">.</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span>
+        <span class="p">),</span>
+        <span class="n">var</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;t&quot;</span><span class="p">],</span>
+        <span class="n">out</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;sigma_buckle&quot;</span><span class="p">],</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Buckling strength&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">cp_bounds</span><span class="p">(</span>
+        <span class="n">a</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
+        <span class="n">t</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">48</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">16</span><span class="p">),</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+
+<span class="p">(</span>
+    <span class="n">md_plate_v2</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">ev_sinews</span><span class="p">(</span><span class="n">df_det</span><span class="o">=</span><span class="s2">&quot;swp&quot;</span><span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">pt_auto</span><span class="p">()</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Calling plot_sinew_outputs....
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x7fa11f1c6090&gt;
+</pre></div>
+</div>
+<img alt="../_images/grama-intro_57_2.png" src="../_images/grama-intro_57_2.png" />
+</div>
+</div>
+<p>This matches our intuition, and provides a quantitative comparison between the inputs. Note that the range of critical buckling values is quite small in the material property panels, while the ranges associated with the plate thickness and length are much wider. This implies that we can adjust the plate dimensions to achieve our desired safety goal, as the buckling behavior is much more sensitive to the plate geometry than material properties.</p>
+<div class="warning admonition">
+<p class="admonition-title">Unstated part of the goal</p>
+<p>Note that we had to specify bounds for the <em>length</em> of the plate to run the sweep. We didn’t specify a plate length above in our goal! To correct this oversight, let’s update our goal to specify plates <span class="math notranslate nohighlight">\(6\)</span> inches in length.</p>
+</div>
+<p>Finally, to complete our modeling, we will incorporate the target load of <span class="math notranslate nohighlight">\(1\)</span> ksi by defining a <em>limit state function</em> <span id="id7">[<a class="reference internal" href="../zbib.html#id21">DM05</a>]</span></p>
+<div class="math notranslate nohighlight">
+\[g_{\text{buckle}} = \sigma_{\text{buckle}} - \sigma_{\text{applied}},\]</div>
+<p>with <span class="math notranslate nohighlight">\(\sigma_{\text{applied}} = 1\)</span> ksi. The limit state function <span class="math notranslate nohighlight">\(g\)</span> standardizes the interpretation of our quantitative failure model: Cases where <span class="math notranslate nohighlight">\(g &gt; 0\)</span> correspond to safe operation, while <span class="math notranslate nohighlight">\(g \leq 0\)</span> correspond to failure.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">md_buckling</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">md_plate_v2</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">cp_vec_function</span><span class="p">(</span>
+        <span class="n">fun</span><span class="o">=</span><span class="k">lambda</span> <span class="n">df</span><span class="p">:</span> <span class="n">gr</span><span class="o">.</span><span class="n">df_make</span><span class="p">(</span>
+            <span class="n">g_buckle</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">sigma_buckle</span> <span class="o">-</span> <span class="mf">1.0</span>
+        <span class="p">),</span>
+        <span class="n">var</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;sigma_buckle&quot;</span><span class="p">],</span>
+        <span class="n">out</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;g_buckle&quot;</span><span class="p">],</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Limit state&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="n">md_buckling</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>model: Plate aluminum material properties
+
+  inputs:
+    var_det:
+      t: [0.020833333333333332, 0.0625]
+      a: [2, 6]
+
+    var_rand:
+      E: (+0) norm, {&#39;loc&#39;: 10494.444444444445, &#39;scale&#39;: 122.34841969747357}
+      mu: (+0) beta, {&#39;a&#39;: 6.906673364779303, &#39;b&#39;: 0.6456702700075123, &#39;loc&#39;: 0.2616870498769197, &#39;scale&#39;: 0.06931295012308032}
+
+    copula:
+      Gaussian copula with correlations:
+  var1 var2      corr
+0   mu    E  0.030156
+
+  functions:
+      Buckling strength: [&#39;E&#39;, &#39;mu&#39;, &#39;a&#39;, &#39;t&#39;] -&gt; [&#39;sigma_buckle&#39;]
+      Limit state: [&#39;sigma_buckle&#39;] -&gt; [&#39;g_buckle&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we have a complete model with which to conduct our analysis.</p>
+</div>
+<div class="section" id="analyzing-the-model">
+<h3><span class="section-number">4.3.2. </span>Analyzing the model<a class="headerlink" href="#analyzing-the-model" title="Permalink to this headline">¶</a></h3>
+<p>We are interested in determining a plate thickness that gives a chance of failure less than 1 in 100. To estimate the probability of failure (POF), we will use a Monte Carlo simulation technique (Chapter TODO) with the probabilistic model we just constructed.</p>
+<p>To start, we will analyze a plate with thickness <span class="math notranslate nohighlight">\(1/48\)</span>”; the lower end of sizes considered in our dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">md_buckling</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">ev_monte_carlo</span><span class="p">(</span>
+        <span class="n">n</span><span class="o">=</span><span class="mf">1e2</span><span class="p">,</span>
+        <span class="n">seed</span><span class="o">=</span><span class="mi">101</span><span class="p">,</span>
+        <span class="n">df_det</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">df_make</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">48</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_summarize</span><span class="p">(</span>
+        <span class="n">pof_lo</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">binomial_ci</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">g_buckle</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="s2">&quot;lo&quot;</span><span class="p">),</span>
+        <span class="n">pof_est</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">g_buckle</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">),</span>
+        <span class="n">pof_up</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">binomial_ci</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">g_buckle</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="s2">&quot;up&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eval_monte_carlo() is rounding n...
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>pof_lo</th>
+      <th>pof_est</th>
+      <th>pof_up</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.963007</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Clearly, the probability of failure is <em>much</em> higher than our desired <span class="math notranslate nohighlight">\(0.01\)</span>! Let’s try the other end of the range with a thickness of <span class="math notranslate nohighlight">\(1/16\)</span>”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">md_buckling</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">ev_monte_carlo</span><span class="p">(</span>
+        <span class="n">n</span><span class="o">=</span><span class="mf">1e2</span><span class="p">,</span>
+        <span class="n">seed</span><span class="o">=</span><span class="mi">101</span><span class="p">,</span>
+        <span class="n">df_det</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">df_make</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">16</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_summarize</span><span class="p">(</span>
+        <span class="n">pof_lo</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">binomial_ci</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">g_buckle</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="s2">&quot;lo&quot;</span><span class="p">),</span>
+        <span class="n">pof_est</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">g_buckle</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">),</span>
+        <span class="n">pof_up</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">binomial_ci</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">g_buckle</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="s2">&quot;up&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eval_monte_carlo() is rounding n...
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>pof_lo</th>
+      <th>pof_est</th>
+      <th>pof_up</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.036993</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>The estimated probability of failure <code class="docutils literal notranslate"><span class="pre">pof_est</span></code> is zero! That certainly satisfies our goal of <code class="docutils literal notranslate"><span class="pre">pof</span> <span class="pre">&lt;</span> <span class="pre">0.01</span></code>, but it seems fishy….</p>
+<div class="warning admonition">
+<p class="admonition-title">Calculation tolerances</p>
+<p>The Monte Carlo approach gives us an estimate for our target quantity, but also a <em>confidence interval</em> (CI). A CI gives us a possible range where the true value may land. The CI we see above violates our constraint (<code class="docutils literal notranslate"><span class="pre">pof_up</span> <span class="pre">&gt;</span> <span class="pre">0.01</span></code>), which indicates our simulation needs more refinement to provide a more trustworthy answer.</p>
+</div>
+<p>We can refine our simulation by increasing the sample size <code class="docutils literal notranslate"><span class="pre">n</span></code> in our Monte Carlo evaluation. A rough rule-of-thumb when estimating low-probability events is to use a sample size of <span class="math notranslate nohighlight">\(n = 20 / p\)</span>, where <span class="math notranslate nohighlight">\(p\)</span> is our best-guess for the small probability. Since we’re targeting a failure rate of 1 in 100, we’ll set <span class="math notranslate nohighlight">\(p = 0.01\)</span> and apply the heuristic.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">md_buckling</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">ev_monte_carlo</span><span class="p">(</span>
+        <span class="n">n</span><span class="o">=</span><span class="mi">20</span> <span class="o">/</span> <span class="mf">0.01</span><span class="p">,</span>
+        <span class="n">seed</span><span class="o">=</span><span class="mi">101</span><span class="p">,</span>
+        <span class="n">df_det</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">df_make</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">16</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_summarize</span><span class="p">(</span>
+        <span class="n">pof_lo</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">binomial_ci</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">g_buckle</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="s2">&quot;lo&quot;</span><span class="p">),</span>
+        <span class="n">pof_est</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">g_buckle</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">),</span>
+        <span class="n">pof_up</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">binomial_ci</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">g_buckle</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="s2">&quot;up&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eval_monte_carlo() is rounding n...
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>pof_lo</th>
+      <th>pof_est</th>
+      <th>pof_up</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>8.673617e-19</td>
+      <td>0.0</td>
+      <td>0.009512</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Success! We have refined our results and found a thickness that confidently satisfies our POF constraint. This achieves our goal, and finishes the case study. <span class="math notranslate nohighlight">\(\square.\)</span></p>
+<div class="tip admonition">
+<p class="admonition-title">Going further</p>
+<p>We found <em>a</em> thickness that satisfies our POF constraint, but we could go further by seeking an <em>optimal</em> thickness that meets the same constraint. In Chapter TODO we will see a more detailed formulation that uses the reliability properties we estimated here within a design optimization.</p>
+</div>
+</div>
+</div>
+<div class="section" id="a-general-process">
+<h2><span class="section-number">4.4. </span>A general process<a class="headerlink" href="#a-general-process" title="Permalink to this headline">¶</a></h2>
+<p>The brief case study above suggests an interative process you can use to approach model analysis under uncertainty:</p>
+<ul class="simple">
+<li><p>Define your <strong>goals</strong> for your study. Use these goals to focus your work, but remain open to adjusting your goals if necessary.</p>
+<ul>
+<li><p>This might include making your goal more specific, as we did with specifying a plate length above.</p></li>
+</ul>
+</li>
+<li><p>Iteratively <strong>build</strong> a model for your study. This includes specifying the functions, the inputs, and a description of the inputs with bounds or a joint density.</p>
+<ul>
+<li><p>The ideal approach is to use representative data to inform your model. We used a dataset of measured aluminum properties above.</p></li>
+<li><p>If data are not available, consulting literature is an acceptable way to build your model. We used a classic reference to arrive at the buckling function above.</p></li>
+<li><p>You will likely discover surprises along the way, as we saw with the thickest plate specimens above. These may necessitate follow-up studies or reasonable assumptions.</p></li>
+</ul>
+</li>
+<li><p>Iteratively <strong>analyze</strong> your model to provide a trustworthy results that support your goal.</p>
+<ul>
+<li><p>You will likely have to iterate on your methods to arrive at trustworthy results, as we saw with refining the Monte Carlo simulation above.</p></li>
+</ul>
+</li>
+</ul>
+<p>Throughout the whole process, use the dual modes of curiosity and skepticism to guide your process.</p>
+<!-- footnote definitions -->
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="jb"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>We are thankful to the folks at the <a class="reference external" href="https://jupyterbook.org/intro.html">Jupyter Book</a> project, whose work enabled this Python-powered textbook!</p>
+</dd>
+<dt class="label" id="n-sweeps"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Formally, the computational complexity is linear in <code class="docutils literal notranslate"><span class="pre">n_sweeps</span></code>.</p>
+</dd>
+<dt class="label" id="stretch"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
+<dd><p>More formally, elasticity is a material property while stiffness is a property of a structure. Elasticity is thought to be a material property, while stiffness is a function of both the material elastic properties, and the geometry of the structure being studied.</p>
+</dd>
+</dl>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -319,12 +1899,32 @@
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="curiosity-skepticism.html" title="previous page">2. Curiosity and Skepticism: A Healthy Mindset</a>
-    <a class='right-next' id="next-link" href="../02_diagnosing/diagnosing.html" title="next page">1. Diagnosing</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="curiosity-skepticism.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">3. </span>Curiosity and Skepticism: A Healthy Mindset</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../02_diagnosing/diagnosing.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">5. </span>Diagnosing</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>
@@ -343,11 +1943,9 @@
 
       </div>
     </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-    
-  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
-
-
-    
+  
   </body>
 </html>

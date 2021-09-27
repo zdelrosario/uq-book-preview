@@ -1,12 +1,14 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
-    <title>3.1. Model-Form Error and Validation &#8212; All Models Are Uncertain</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7.1. Model-Form Error and Validation &#8212; All Models Are Uncertain</title>
     
-  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -18,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,39 +31,38 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/togglebutton.js"></script>
-    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
-    <script type="text/javascript" src="../_static/copybutton.js"></script>
-    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script type="text/javascript" src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script type="text/javascript">
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. Advancing" href="../03_advancing/advancing.html" />
-    <link rel="prev" title="3. Functions" href="functions.html" />
-
+    <link rel="next" title="8. Advancing" href="../03_advancing/advancing.html" />
+    <link rel="prev" title="7. Functions" href="functions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
-
-
-
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -74,153 +71,216 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../index.html">
-  
-  
-  <h1 class="site-logo" id="site-title">All Models Are Uncertain</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">All Models Are Uncertain</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../00_frontmatter/landing-page.html">
    All Models Are Uncertain
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Orienting
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../01_orienting/orienting.html">
    1. Orienting
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../01_orienting/modeling-questions.html">
+   2. Types of Modeling Questions
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../01_orienting/curiosity-skepticism.html">
-   2. Curiosity and Skepticism: A Healthy Mindset
+   3. Curiosity and Skepticism: A Healthy Mindset
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../01_orienting/grama-intro.html">
-   3. A Grammar of Model Analysis: Grama
+   4. A Grammar of Model Analysis: Grama
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Diagnosing
  </span>
 </p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="diagnosing.html">
-   1. Diagnosing
+   5. Diagnosing
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="distributions.html">
-   2. Distributions
-  </a>
- </li>
- <li class="toctree-l1 current active collapsible-parent">
-  <a class="reference internal" href="functions.html">
-   3. Functions
-  </a>
-  <ul class="current collapse-ul">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     3.1. Model-Form Error and Validation
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="uncertainty.html">
+     5.2. Conceptual Tools for Handling Uncertainty
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="distributions.html">
+   6. Distributions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="marginals.html">
+     6.2. Single-uncertainties: Marginal Distributions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dependency.html">
+     6.3. Multiple-uncertainties: Copulas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="estimation.html">
+     6.4. Dealing with Limited Data: Estimation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="functions.html">
+   7. Functions
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     7.1. Model-Form Error and Validation
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Advancing
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../03_advancing/advancing.html">
-   1. Advancing
+   8. Advancing
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Bibliography
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../zbib.html">
-   1. Bibliography
+   9. Bibliography
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Appendices
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../04_appendices/cases.html">
-   1. Cases
+   10. Cases
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04_appendices/alloys.html">
+     10.10. Alloy Datasets
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../04_appendices/grama.html">
-   2. Grama
+   11. Grama Reference Materials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04_appendices/eda.html">
+   12. Basics of Exploratory Data Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../04_appendices/pr-modeling.html">
-   3. Probability Modeling
+   13. Probability and Modeling
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../04_appendices/dim-reduction.html">
-   4. Dimension Reduction
+   14. Dimension Reduction
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../04_appendices/empirical-models.html">
-   5. Empirical Models
+   15. Empirical Models
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../04_appendices/fwd-propagation.html">
-   6. Forward Propagation
+   16. Forward Propagation
   </a>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../04_appendices/inv-propagation.html">
-   7. Inverse Propagation
+   17. Inverse Propagation
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../04_appendices/nls.html">
-     7.1. Nonlinear Least Squares
+     17.1. Nonlinear Least Squares
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -270,12 +330,12 @@
 
             <!-- Source interaction buttons -->
 
-
             <!-- Full screen (wrap in <a> to have style consistency -->
-            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                    title="Fullscreen mode"><i
-                        class="fas fa-expand"></i></button></a>
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
 
@@ -301,66 +361,64 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i>
-            Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#case-study-predicting-a-projectile-trajectory">
-   3.1.1. Case Study: Predicting a projectile trajectory
+   7.1.1. Case Study: Predicting a projectile trajectory
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#define-the-model">
-   3.1.2. Define the Model
+   7.1.2. Define the Model
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#implement-the-model">
-   3.1.3. Implement the model
+   7.1.3. Implement the model
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fit-the-model-with-nonlinear-least-squares">
-   3.1.4. Fit the Model with Nonlinear Least Squares
+   7.1.4. Fit the Model with Nonlinear Least Squares
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inspect-the-residuals">
-   3.1.5. Inspect the Residuals
+   7.1.5. Inspect the Residuals
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inspect-model-with-validation-data">
-   3.1.6. Inspect Model with Validation Data
+   7.1.6. Inspect Model with Validation Data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercise">
-   3.1.7. Exercise
+   7.1.7. Exercise
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#recognize-model-form-error">
-   3.1.8. Recognize Model-form Error
+   7.1.8. Recognize Model-form Error
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#address-model-form-errors">
-   3.1.9. Address Model-form Errors
+   7.1.9. Address Model-form Errors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#key-takeaways">
-   3.1.10. Key Takeaways
+   7.1.10. Key Takeaways
   </a>
  </li>
 </ul>
 
-        </nav>
-        
+            </nav>
         </div>
     </div>
 </div>
@@ -370,7 +428,7 @@
               <div>
                 
   <div class="section" id="model-form-error-and-validation">
-<span id="model-form-error"></span><h1>3.1. Model-Form Error and Validation<a class="headerlink" href="#model-form-error-and-validation" title="Permalink to this headline">¶</a></h1>
+<span id="model-form-error"></span><h1><span class="section-number">7.1. </span>Model-Form Error and Validation<a class="headerlink" href="#model-form-error-and-validation" title="Permalink to this headline">¶</a></h1>
 <p>Most science and engineering textbooks discuss successful cases of physical modeling, but a key part of developing a model is learning how to identify and fix model errors. <em>Validation</em> is the systematic procedure of testing a model with the endgoal of either showing the model is sufficiently accurate, or of detecting errors in the model to be fixed.</p>
 <p><strong>Learning Objectives</strong> In this chapter, you will learn</p>
 <ul class="simple">
@@ -384,14 +442,14 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">grama</span> <span class="k">as</span> <span class="nn">gr</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">plotnine</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">plotnine</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">Intention</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="case-study-predicting-a-projectile-trajectory">
-<h2>3.1.1. Case Study: Predicting a projectile trajectory<a class="headerlink" href="#case-study-predicting-a-projectile-trajectory" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.1.1. </span>Case Study: Predicting a projectile trajectory<a class="headerlink" href="#case-study-predicting-a-projectile-trajectory" title="Permalink to this headline">¶</a></h2>
 <p>Our aim in this case study is to build a model to predict the trajectory of a projectile. We will use a dataset to fit unknown constants in a physics-based model, and perform validation to determine if the model is sufficiently accurate for our purposes.</p>
 <p>To start, we will first load and inspect the data.</p>
 <div class="cell docutils container">
@@ -438,7 +496,7 @@
 <p>The projectile started at coordinates <code class="docutils literal notranslate"><span class="pre">x=0,</span> <span class="pre">y=0</span></code> and was launched diagonally. We actually have two sources of data; a Full set of data from launch to landing, and a Windowed set of data that covers only a fraction of the trajectory. Based on visual inspection, we can see that the data seem to be corrupted by measurement noise.</p>
 </div>
 <div class="section" id="define-the-model">
-<h2>3.1.2. Define the Model<a class="headerlink" href="#define-the-model" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.1.2. </span>Define the Model<a class="headerlink" href="#define-the-model" title="Permalink to this headline">¶</a></h2>
 <p>We consider a projectile of fixed mass subject to gravity and drag. We consider a dynamical model for the velocity <span class="math notranslate nohighlight">\(u=dx/dt, v=dy/dt\)</span> given by</p>
 <div class="math notranslate nohighlight">
 \[m \frac{du}{dt} = F_x(u, v),\]</div>
@@ -599,7 +657,7 @@ tau:  (0.06422436149609652, 13.816485066214396)
 </div>
 </div>
 <div class="section" id="implement-the-model">
-<h2>3.1.3. Implement the model<a class="headerlink" href="#implement-the-model" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.1.3. </span>Implement the model<a class="headerlink" href="#implement-the-model" title="Permalink to this headline">¶</a></h2>
 <p>Here we implement the model described above in Grama. We will use this with a fitting routine to estimate best-fit values for <span class="math notranslate nohighlight">\(u_0, v_0, \tau\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -672,7 +730,7 @@ tau:  (0.06422436149609652, 13.816485066214396)
 </div>
 </div>
 <div class="section" id="fit-the-model-with-nonlinear-least-squares">
-<h2>3.1.4. Fit the Model with Nonlinear Least Squares<a class="headerlink" href="#fit-the-model-with-nonlinear-least-squares" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.1.4. </span>Fit the Model with Nonlinear Least Squares<a class="headerlink" href="#fit-the-model-with-nonlinear-least-squares" title="Permalink to this headline">¶</a></h2>
 <p>In the previous chapter we discussed <em>ordinary least squares</em>; fitting a model <em>linear in its features</em> to a dataset. Now we will consider <em>nonlinear least squares</em> (NLS); fitting a model <em>nonlinear in its features</em>. For more information, see the <a class="reference internal" href="../04_appendices/nls.html#nls"><span class="std std-ref">appendix entry on NLS</span></a>.</p>
 <p>We will use the <code class="docutils literal notranslate"><span class="pre">gr.fit_nls()</span></code> routine to carry out NLS to find a best-fit value for <span class="math notranslate nohighlight">\(\theta\)</span>. This function takes a model and a datset, infers the outputs (<code class="docutils literal notranslate"><span class="pre">out</span></code>), the variables to set constant (<code class="docutils literal notranslate"><span class="pre">var_fix</span></code>), the variables to treat as features in the dataset (<code class="docutils literal notranslate"><span class="pre">var_feat</span></code>), and the variables to treat as parameters for optimization. The routine uses the bound information from the model to impose during optimization, and to inform the initial guess <span class="math notranslate nohighlight">\(\theta_0\)</span>.</p>
 <p>Furthermore setting <code class="docutils literal notranslate"><span class="pre">uq_method=&quot;linpool&quot;</span></code> uses a linear approximation of the model to infer a distribution for the parameter vector <span class="math notranslate nohighlight">\(\theta\)</span>. This will allow us to simulate an ensemble of plausible trajectories that are compatible with our data.</p>
@@ -765,11 +823,11 @@ eval_df() is dropping {&#39;y&#39;, &#39;x&#39;}
 <p>There two analyses we should complete before declaring this model validated: We should <em>inspect residuals</em>, and we should check our model against <em>validation data</em>.</p>
 </div>
 <div class="section" id="inspect-the-residuals">
-<h2>3.1.5. Inspect the Residuals<a class="headerlink" href="#inspect-the-residuals" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.1.5. </span>Inspect the Residuals<a class="headerlink" href="#inspect-the-residuals" title="Permalink to this headline">¶</a></h2>
 <p>A <em>residual</em> is a discrepancy between the observed and modeled values, that is</p>
 <div class="math notranslate nohighlight">
 \[r_i = \hat{f}_i(\theta) - f_i.\]</div>
-<p>The quantity <span class="math notranslate nohighlight">\(r_i\)</span> is “residual” in the sense that it is what is “left over” after fitting a model. A classical idea in statistics is to study the residuals after fitting, in order to determine if there are patterns “left over” that the fitted model does not capture <a class="bibtex reference internal" href="../zbib.html#mosteller1977data" id="id1">[MT77]</a>. Obvious patterns may suggest our model is inadequate; or in the case of a physical model, that our modeling assumptions were erroneous.</p>
+<p>The quantity <span class="math notranslate nohighlight">\(r_i\)</span> is “residual” in the sense that it is what is “left over” after fitting a model. A classical idea in statistics is to study the residuals after fitting, in order to determine if there are patterns “left over” that the fitted model does not capture <span id="id1">[<a class="reference internal" href="../zbib.html#id2">MT77</a>]</span>. Obvious patterns may suggest our model is inadequate; or in the case of a physical model, that our modeling assumptions were erroneous.</p>
 <p>First we compute the residuals at the nominal (best-fit) model results.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -854,11 +912,11 @@ eval_df() is dropping {&#39;y&#39;, &#39;x&#39;}
 </div>
 </div>
 </div>
-<p>Since the projectile is advancing steadily, this plot is very similar to the one above. Again, we see a strong pattern in the residuals, suggesting the model is underfit, possibly by erroneous modeling choices. Note that plotting the residual against its predicted value is recommended over plotting the residual against the <em>observed</em> value, as the latter approach can lead to misleading plots <a class="bibtex reference internal" href="../zbib.html#gelman2020regression" id="id2">[GHV20]</a>.</p>
+<p>Since the projectile is advancing steadily, this plot is very similar to the one above. Again, we see a strong pattern in the residuals, suggesting the model is underfit, possibly by erroneous modeling choices. Note that plotting the residual against its predicted value is recommended over plotting the residual against the <em>observed</em> value, as the latter approach can lead to misleading plots <span id="id2">[<a class="reference internal" href="../zbib.html#id15">GHV20</a>]</span>.</p>
 </div>
 <div class="section" id="inspect-model-with-validation-data">
-<h2>3.1.6. Inspect Model with Validation Data<a class="headerlink" href="#inspect-model-with-validation-data" title="Permalink to this headline">¶</a></h2>
-<p><em>Validation data</em> are data which have been purposefully held-out of the model-building process, and set aside for the purposes of assessing the model. Ideally, the person building the model should not get to “see” these data before testing the model <a class="bibtex reference internal" href="../zbib.html#james2013introduction" id="id3">[JWHT13]</a>. As discussed in the chapter on Model Flexibility, our data-splitting scheme should be tailored to our intended use.</p>
+<h2><span class="section-number">7.1.6. </span>Inspect Model with Validation Data<a class="headerlink" href="#inspect-model-with-validation-data" title="Permalink to this headline">¶</a></h2>
+<p><em>Validation data</em> are data which have been purposefully held-out of the model-building process, and set aside for the purposes of assessing the model. Ideally, the person building the model should not get to “see” these data before testing the model <span id="id3">[<a class="reference internal" href="../zbib.html#id4">JWHT13</a>]</span>. As discussed in the chapter on Model Flexibility, our data-splitting scheme should be tailored to our intended use.</p>
 <p>Here we evaluate the model on the Full dataset and inspect the fit.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -944,12 +1002,12 @@ eval_df() is dropping {&#39;y&#39;, &#39;x&#39;}
 <p>These two plots indicate that the model is incapable of making accurate predictions for this scenario: It has <em>model-form error</em> that precludes predictive accuracy.</p>
 </div>
 <div class="section" id="exercise">
-<h2>3.1.7. Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.1.7. </span>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
 <p>We’ve seen that we can’t make a successful prediction with this model, but can the model represent the full trajectory at all? Try fitting the trajectory model <code class="docutils literal notranslate"><span class="pre">md_trajectory</span></code> to <code class="docutils literal notranslate"><span class="pre">df_full</span></code>; can you accurately represent the data using this model?</p>
 </div>
 <div class="section" id="recognize-model-form-error">
-<h2>3.1.8. Recognize Model-form Error<a class="headerlink" href="#recognize-model-form-error" title="Permalink to this headline">¶</a></h2>
-<p>Model-form error (sometimes called model discrepancy) occurs when the model in use cannot accurately represent the underlying physics <a class="bibtex reference internal" href="../zbib.html#smith2013uncertainty" id="id4">[Smi13]</a>. The inability of the linear drag model to fit the data indicates that there is model-form error.</p>
+<h2><span class="section-number">7.1.8. </span>Recognize Model-form Error<a class="headerlink" href="#recognize-model-form-error" title="Permalink to this headline">¶</a></h2>
+<p>Model-form error (sometimes called model discrepancy) occurs when the model in use cannot accurately represent the underlying physics <span id="id4">[<a class="reference internal" href="../zbib.html#id5">Smi13</a>]</span>. The inability of the linear drag model to fit the data indicates that there is model-form error.</p>
 <p>In truth, the data above were generated not with a linear drag law, but rather with a <em>quadratic</em> drag law:</p>
 <div class="math notranslate nohighlight">
 \[F_x(u, v) = - b u^2 / \sqrt{u^2+v^2}\]</div>
@@ -959,8 +1017,8 @@ eval_df() is dropping {&#39;y&#39;, &#39;x&#39;}
 <p>In general, model-form errors are simultaneously <em>the most consequential source of uncertainty</em> in physical modeling and <em>the most difficult source of uncertainty</em> to address.</p>
 </div>
 <div class="section" id="address-model-form-errors">
-<h2>3.1.9. Address Model-form Errors<a class="headerlink" href="#address-model-form-errors" title="Permalink to this headline">¶</a></h2>
-<p>There are two broad approaches to addressing model-form errors <a class="bibtex reference internal" href="../zbib.html#smith2013uncertainty" id="id5">[Smi13]</a>:</p>
+<h2><span class="section-number">7.1.9. </span>Address Model-form Errors<a class="headerlink" href="#address-model-form-errors" title="Permalink to this headline">¶</a></h2>
+<p>There are two broad approaches to addressing model-form errors <span id="id5">[<a class="reference internal" href="../zbib.html#id5">Smi13</a>]</span>:</p>
 <ol class="simple">
 <li><p>Improve the physical model</p></li>
 <li><p>Model the discrepancy</p></li>
@@ -971,7 +1029,7 @@ eval_df() is dropping {&#39;y&#39;, &#39;x&#39;}
 <p>In the chapter on principled predictions, we will demonstrate how to fit such a discrepancy model, and how to quantify uncertainty within this framework.</p>
 </div>
 <div class="section" id="key-takeaways">
-<h2>3.1.10. Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.1.10. </span>Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Nonlinear least squares (NLS) can help us find best-fit parameter values (and even a parameter distribution) for a physics-based model. However, assessing a fitted physics-based model against its training data will give an optimistic sense of accuracy.</p></li>
 <li><p>Residual plots help us detect missing patterns in a model and can help identify cases of model-form error.</p></li>
@@ -1004,12 +1062,32 @@ eval_df() is dropping {&#39;y&#39;, &#39;x&#39;}
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="functions.html" title="previous page">3. Functions</a>
-    <a class='right-next' id="next-link" href="../03_advancing/advancing.html" title="next page">1. Advancing</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="functions.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">7. </span>Functions</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../03_advancing/advancing.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">8. </span>Advancing</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>
@@ -1028,11 +1106,9 @@ eval_df() is dropping {&#39;y&#39;, &#39;x&#39;}
 
       </div>
     </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-    
-  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
-
-
-    
+  
   </body>
 </html>
