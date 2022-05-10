@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3. The Modeling Process &#8212; All Models Are Uncertain</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,30 +31,37 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="4. A Grammar of Model Analysis: Grama" href="grama-intro.html" />
     <link rel="prev" title="2. Curiosity and Skepticism: A Healthy Mindset" href="curiosity-skepticism.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -72,6 +79,7 @@
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
+      
       <h1 class="site-logo" id="site-title">All Models Are Uncertain</h1>
       
     </a>
@@ -87,7 +95,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Orienting
  </span>
@@ -114,15 +122,25 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Diagnosing
+  Developing
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02_developing/developing.html">
+   5. Developing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02_developing/uncertainty.html">
+   6. Conceptual Tools for Handling Uncertainty
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../02_diagnosing/diagnosing.html">
-   5. Diagnosing
+  <a class="reference internal" href="../02_developing/distributions.html">
+   7. Distributions
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -131,15 +149,25 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../02_diagnosing/uncertainty.html">
-     5.2. Conceptual Tools for Handling Uncertainty
+    <a class="reference internal" href="../02_developing/marginals.html">
+     7.2. Single-uncertainties: Marginal Distributions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_developing/dependency.html">
+     7.3. Multiple-uncertainties: Modeling Dependency
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_developing/sampling.html">
+     7.4. Dealing with Limited Data: Sampling Uncertainty
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../02_diagnosing/distributions.html">
-   6. Distributions
+  <a class="reference internal" href="../02_developing/functions.html">
+   8. Functions
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -148,25 +176,32 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../02_diagnosing/marginals.html">
-     6.2. Single-uncertainties: Marginal Distributions
+    <a class="reference internal" href="../02_developing/modeling-functions.html">
+     8.1. Modeling Functions
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../02_diagnosing/dependency.html">
-     6.3. Multiple-uncertainties: Copulas
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../02_diagnosing/estimation.html">
-     6.4. Dealing with Limited Data: Estimation
+    <a class="reference internal" href="../02_developing/dimension-reduction.html">
+     8.2. Dimension Reduction
     </a>
    </li>
   </ul>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02_developing/ema.html">
+   9. Exploratory Model Analysis (EMA)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Answering
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../02_diagnosing/functions.html">
-   7. Functions
+  <a class="reference internal" href="../03_answering/answering.html">
+   10. Answering
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -175,26 +210,24 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../02_diagnosing/model-form-error.html">
-     7.1. Model-Form Error and Validation
+    <a class="reference internal" href="../03_answering/decision-making.html">
+     10.2. Decision Making: Nuclear Waste Storage Case Study
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03_answering/design-codes.html">
+     10.3. Designing Procedures: Uncertainty-Informed Design Codes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03_answering/interpretable-structure.html">
+     10.4. Interpretable Structure: Solar Receiver Case Study
     </a>
    </li>
   </ul>
  </li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Advancing
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../03_advancing/advancing.html">
-   8. Advancing
-  </a>
- </li>
-</ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Bibliography
  </span>
@@ -202,11 +235,11 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../zbib.html">
-   9. Bibliography
+   11. Bibliography
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Appendices
  </span>
@@ -214,7 +247,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../04_appendices/cases.html">
-   10. Cases
+   12. Cases
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -224,44 +257,44 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../04_appendices/alloys.html">
-     10.10. Alloy Datasets
+     12.13. Alloy Datasets
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../04_appendices/grama.html">
-   11. Grama Reference Materials
+   13. Grama Reference Materials
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../04_appendices/eda.html">
-   12. Basics of Exploratory Data Analysis
+   14. Basics of Exploratory Data Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../04_appendices/pr-modeling.html">
-   13. Probability and Modeling
+   15. Concepts in Random Variable Modeling
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../04_appendices/dim-reduction.html">
-   14. Dimension Reduction
+   16. Dimension Reduction
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../04_appendices/empirical-models.html">
-   15. Empirical Models
+   17. Empirical Models
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../04_appendices/fwd-propagation.html">
-   16. Forward Propagation
+   18. Forward Propagation
   </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../04_appendices/inv-propagation.html">
-   17. Inverse Propagation
+   19. Inverse Propagation
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
@@ -271,7 +304,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../04_appendices/nls.html">
-     17.1. Nonlinear Least Squares
+     19.1. Nonlinear Least Squares
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04_appendices/fit-dist.html">
+     19.2. Distribution Fitting
     </a>
    </li>
   </ul>
@@ -322,7 +360,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -340,7 +378,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -353,25 +391,47 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#explanation">
-     3.1.1. Explanation
+    <a class="reference internal nav-link" href="#types-of-action">
+     3.1.1. Types of Action
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#prediction">
-     3.1.2. Prediction
+    <a class="reference internal nav-link" href="#specificity-of-question">
+     3.1.2. Specificity of question
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#design">
-     3.1.3. Design
+    <a class="reference internal nav-link" href="#example-modeling-questions">
+     3.1.3. Example modeling questions
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#explanation-indirect-action-general">
+       3.1.3.1. Explanation : Indirect Action, General
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#prediction-indirect-action-specific">
+       3.1.3.2. Prediction : Indirect Action, Specific
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#conceptual-design-direct-action-general">
+       3.1.3.3. Conceptual Design : Direct Action, General
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#detail-design-direct-action-specific">
+       3.1.3.4. Detail Design : Direct Action, Specific
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#check-the-context">
-   3.2. Check the context
+  <a class="reference internal nav-link" href="#choose-quantities-of-interest-qoi">
+   3.2. Choose Quantities of Interest (QOI)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -388,15 +448,17 @@
   <a class="reference internal nav-link" href="#assess-the-model">
    3.5. Assess the Model
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-much-certainty-is-needed">
+     3.5.1. How much certainty is needed?
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#use-the-model">
-   3.6. Use the Model
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#an-iterative-procedure">
-   3.7. An Iterative Procedure
+  <a class="reference internal nav-link" href="#use-the-model-iterate-as-necessary">
+   3.6. Use the Model, Iterate as Necessary
   </a>
  </li>
 </ul>
@@ -407,93 +469,273 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>The Modeling Process</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#start-with-a-modeling-question">
+   3.1. Start With a Modeling Question
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#types-of-action">
+     3.1.1. Types of Action
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#specificity-of-question">
+     3.1.2. Specificity of question
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-modeling-questions">
+     3.1.3. Example modeling questions
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#explanation-indirect-action-general">
+       3.1.3.1. Explanation : Indirect Action, General
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#prediction-indirect-action-specific">
+       3.1.3.2. Prediction : Indirect Action, Specific
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#conceptual-design-direct-action-general">
+       3.1.3.3. Conceptual Design : Direct Action, General
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#detail-design-direct-action-specific">
+       3.1.3.4. Detail Design : Direct Action, Specific
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#choose-quantities-of-interest-qoi">
+   3.2. Choose Quantities of Interest (QOI)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gather-appropriate-information">
+   3.3. Gather Appropriate Information
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#build-the-model">
+   3.4. Build the Model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assess-the-model">
+   3.5. Assess the Model
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-much-certainty-is-needed">
+     3.5.1. How much certainty is needed?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#use-the-model-iterate-as-necessary">
+   3.6. Use the Model, Iterate as Necessary
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <div class="section" id="the-modeling-process">
+  <div class="tex2jax_ignore mathjax_ignore section" id="the-modeling-process">
 <span id="modeling-process"></span><h1><span class="section-number">3. </span>The Modeling Process<a class="headerlink" href="#the-modeling-process" title="Permalink to this headline">¶</a></h1>
+<p>This chapter introduces a general <em>modeling process</em>. Much of the real work of modeling does not involve manipulating equations or running simulations, but rather focuses on broader critical inquiry. The modeling process presented here is focused on posing and answering scientific questions within a chosen context.</p>
 <div class="section" id="start-with-a-modeling-question">
 <h2><span class="section-number">3.1. </span>Start With a Modeling Question<a class="headerlink" href="#start-with-a-modeling-question" title="Permalink to this headline">¶</a></h2>
-<p>Scientific modeling is done in support of answering some form of <em>question</em>. To help steer this process, it is helpful to organize modeling questions into three broad categories: <em>explanation</em>, <em>prediction</em>, and <em>design</em> <a class="footnote-reference brackets" href="#modsim" id="id1">1</a>.</p>
-<div class="section" id="explanation">
-<h3><span class="section-number">3.1.1. </span>Explanation<a class="headerlink" href="#explanation" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Can we provide a plausible explanation for some observed phenomenon?</p></li>
-<li><p>Uncertainty matters because: Any model requires a set of assumptions, and a reasonable peer review will question those assumptions. Explicitly accounting for uncertainty helps build confidence that the author did not cherry-pick assumptions to match their desired conclusion.</p></li>
-<li><p>Example: Explanation of the “crash” in count of a particular cell during HIV infection counter to the prevailing explanation at the time <span id="id2">[<a class="reference internal" href="../zbib.html#id32">Phi96</a>]</span>.</p></li>
-</ul>
+<p>Scientific modeling is done in support of answering some form of <em>question</em>. Some examples of modeling questions include: “How can we make this design safe?” “What will the global mean temperature be in the year 2100?” “Do we need this assumption to explain this observed phenomenon?”</p>
+<p>To help steer modelling, it is helpful to first understand what sort of question we are asking. The framework below categorizes such questions based on the <em>kind</em> of action we will take based on the model, and the <em>degree of specificity</em> in our question. While these axes are in reality continuous, it is useful to sketch some discrete cases, shown in the table below.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>We are grateful to colleagues at Olin College, where the faculty developed a three category framework—explanation, prediction, design—which heavily influenced the framework here.</p>
 </div>
-<div class="section" id="prediction">
-<h3><span class="section-number">3.1.2. </span>Prediction<a class="headerlink" href="#prediction" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Can we predict an unobserved phenomenon?</p></li>
-<li><p>Uncertainty matters because: No prediction will be 100% accurate; providing uncertainties associated predicted quantities will allow decision makers to plan accordingly. Furthermore, quantitatively attributing uncertainty in the output to the various inputs will guide the collection of future data, allowing for systematic and principled reduction of uncertainty.</p></li>
-<li><p>Example: Climate change (includes both bounds and different scenarios)</p></li>
-</ul>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>No Action</strong></p></th>
+<th class="head"><p><strong>Indirect Action</strong></p></th>
+<th class="head"><p><strong>Direct Action</strong></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p></p></td>
+<td><p>Prediction</p></td>
+<td><p>Detail Design</p></td>
+<td><p><strong>Specific</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Explanation</p></td>
+<td><p>Conceptual Design</p></td>
+<td><p><strong>General</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>“School”</p></td>
+<td><p>“Analysis”</p></td>
+<td><p>“Design”</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="types-of-action">
+<h3><span class="section-number">3.1.1. </span>Types of Action<a class="headerlink" href="#types-of-action" title="Permalink to this headline">¶</a></h3>
+<p><em>No action</em> means nothing will be done with the results of the modeling question. This is not common in research or in industry, but is an essential part of the learning process: Students first learning to pose scientific questions and to build models must start with simplified problems, and it is highly unlikely they will take action on these basic modeling efforts.</p>
+<p><em>Indirect action</em> refers to the modeler’s efforts to influence others’ actions. The modeler will not be taking direct action based on the model’s results, but will instead attempt to influence the actions of others. This is often done in research, where a researcher publishes a paper explaining a specific phenomenon with the intent of inspiring other researchers to build on their ideas. This is also done in the policy space, where modelers predict the potential outcomes for different policy choices, with the aim of informing and influencing decision makers.</p>
+<p>Finally, <em>direct action</em> refers to the modeler (or modeling team) taking action on their own. In industry, designers with the power to make decisions use models to inform their decisions. The distinction between detailed and conceptual design then hinges on the specificity of questions designers are posing.</p>
+<div class="admonition-action-and-consequence admonition">
+<p class="admonition-title">Action and Consequence</p>
+<p>Different kinds of action carry with them different consequences. Direct action obviously carries direct culpability; an engineer who makes a faulty design decision carries the responsibility when that system fails. A negligent engineer will face reputational and financial damage as a consequence of their faulty actions.</p>
+<p>However, indirect action still carries consequences: Creating a financial model that leads others to make unsound investment decisions may not wreck your own finances, but it can cause suffering for millions of others. Cathy O’Neil <span id="id1">[<a class="reference internal" href="../zbib.html#id55" title="Cathy O'Neil. Weapons of math destruction: How big data increases inequality and threatens democracy. Crown, 2016.">ONeil16</a>]</span> writes in <em>Weapons of Math Destruction</em> about her dillusionment with mathematical modeling in the financial sector, where “people had deliberately wielded formulas to impress rather than clarify.” This kind of modeling opacity contributed to the 2008 financial collapse.</p>
+<p>When modeling to support direct action, it is important to carry out your work with integrity. When modeling to support indirect action you must do the same, but with the added responsibility to <em>communicate clearly and effectively</em>.</p>
 </div>
-<div class="section" id="design">
-<h3><span class="section-number">3.1.3. </span>Design<a class="headerlink" href="#design" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Can we interfere with a scenario to produce a desired outcome?</p></li>
-<li><p>Example: Aircraft design; manufacturing variability and high-consequence failures means uncertainties cannot be ignored</p></li>
-</ul>
+</div>
+<div class="section" id="specificity-of-question">
+<h3><span class="section-number">3.1.2. </span>Specificity of question<a class="headerlink" href="#specificity-of-question" title="Permalink to this headline">¶</a></h3>
+<p>A <em>specific</em> question concerns a particular scenario, while a <em>general</em> question deliberately neglects these specifics. For instance, a detailed design must include detailed drawings: a style of technical communication that specifies the dimensions and tolerances for all components in a system. Such a task is necessary but extremely laborious; modeling cannot be done at the detailed level throughout the entire design process. Therefore, engineering design first passes through a conceptual design phase: In conceptual design, a far more coarse description of the system is articulated, and consequently the questions posed and models used are far more general <span id="id2">[<a class="reference internal" href="../zbib.html#id3" title="Andy Keane and Prasanth Nair. Computational approaches for aerospace design: the pursuit of excellence. John Wiley &amp; Sons, 2005.">KN05</a>, <a class="reference internal" href="../zbib.html#id2" title="G. Pahl, W. Beitz, J. Feldhusen, and K.H. Grote. Engineering Design: A Systematic Approach. Springer, 3 edition, 2007.">PBFG07</a>]</span>.</p>
+<p>Specificity is not an absolute, but rather a relative, discipline-specific notion. In engineering design, the highest level of detail is a full geometric and material specification of a system. However, in climate modeling, it is simply not possible to produce a full geometric representation of the Earth (including every tree, every blade of grass, etc.). Furthermore, it is not <em>necessary</em> to seek this level of detail in a climate model, as an engineering-level of geometric detail would be wasted effort in a climate modeling context.</p>
+<div class="admonition-specificity-and-certainty admonition">
+<p class="admonition-title">Specificity and Certainty</p>
+<p>By their nature, questions with different levels of specificity require different levels of certainty. Conceptual design of an aircraft explicitly acknowledges that low-level details about the aircraft are not yet available, so a fully-accurate prediction of performance is not feasible. Performance assessments for a detailed design are held to a much higher standard of predicted performance, as these predictions will be used to tune the design to meet performance goals and safety requirements. This difference is one in acceptable <em>certainty</em> for the question at hand, with greater specificity enabling greater certainty.</p>
+<p>However, high specificity by itself does not imply that the appropriate level of certainty must be strict. The required level of certainty is also affected by the <em>consequences</em> of making an incorrect decision, as we will see below.</p>
 </div>
 </div>
-<div class="section" id="check-the-context">
-<h2><span class="section-number">3.2. </span>Check the context<a class="headerlink" href="#check-the-context" title="Permalink to this headline">¶</a></h2>
-<p>What are the consequences to making an incorrect conclusion?</p>
-<ul class="simple">
-<li><p>If the consequences are innocuous, then a relatively simple model may be sufficient.</p>
-<ul>
-<li><p>Explanation tends to be provisional, as it merely aims to provide a plausible answer.</p></li>
-<li><p>A first-pass prediction or proof-of-concept prediction will tend to be rough in nature. If future modeling efforts are assumed to follow—and the rough prediction will not used for critical decisions—then a simple model may suffice. Note that the general public does not tend to appreciate this nuance!</p></li>
-</ul>
-</li>
-<li><p>If there are important consequences, then you need to be appropriately cautious in your methods.</p>
-<ul>
-<li><p>Early comparative design decisions will be followed up with more detailed analysis. Modeling should be detailed enough to factor in the relevant aspects and support comparison, but not so detailed as to lead to “analysis paralysis.” <em>TODO</em> citation needed</p></li>
-<li><p>Predictions that will be released to the public should be treated as high-consequence: <em>TODO</em> <span id="id3">[<a class="reference internal" href="../zbib.html#id33">Oneil16</a>]</span>.</p></li>
-<li><p>Design of a safety-critical system should be designed using the accepted best-practices in your field. For instance: Determination of allowable properties for aerospace materials follows a very formal distribution testing procedure <span id="id4">[<a class="reference internal" href="../zbib.html#id24">MMP08</a>]</span>.</p></li>
-</ul>
-</li>
-</ul>
+<div class="section" id="example-modeling-questions">
+<h3><span class="section-number">3.1.3. </span>Example modeling questions<a class="headerlink" href="#example-modeling-questions" title="Permalink to this headline">¶</a></h3>
+<p>To illustrate the modeling question framework and the diversity of potential modeling questions, we provide a few example modeling questions here.</p>
+<div class="section" id="explanation-indirect-action-general">
+<h4><span class="section-number">3.1.3.1. </span>Explanation : Indirect Action, General<a class="headerlink" href="#explanation-indirect-action-general" title="Permalink to this headline">¶</a></h4>
+<p>In the 1990’s, HIV/AIDS was an under-researched disease. Patients with the disease were observed to experience a spike in the number of viral particles in their body, with a subsequent sharp decrease in viral particles as the disease transitioned to an inactive period. It was assumed that this decrease was due to an immune response to the virus. However, in 1996 Andrew Phillips <span id="id3">[<a class="reference internal" href="../zbib.html#id49" title="Andrew N Phillips. Reduction of hiv concentration during acute infection: independence from a specific immune response. Science, pages 497–499, 1996.">Phi96</a>]</span> presented a model for viral population dynamics that replicated the observed “spike” in viral particles, but that did not include any specific immune response. This questioned the prevailing assumptions in the HIV/AIDS research community, and raised new questions for future research.</p>
+<p>Note that the modelling work of Phillips did not attempt to make a patient-specific prediction, and yet this work was published in the journal <em>Science</em>. In this case, the modeling question was very general: is it <em>possible</em> to explain the reduction in viral particles without a specific immune response? Despite its generality, this question was of great interest to HIV/AIDS researchers.</p>
+<p>This work explicitly neglected known details about reality (specific immune responses) as a core feature of the modeling work. This example illustrates that modeling is not simply an exercise in adding complexity, or even an attempt to represent all aspects of reality in the model. Instead, it is process that must be anchored in the modeling question that one seeks to answer.</p>
+</div>
+<div class="section" id="prediction-indirect-action-specific">
+<h4><span class="section-number">3.1.3.2. </span>Prediction : Indirect Action, Specific<a class="headerlink" href="#prediction-indirect-action-specific" title="Permalink to this headline">¶</a></h4>
+<div class="margin sidebar">
+<p class="sidebar-title">“Prediction question” vs. the general act of prediction</p>
+<p>Note that we use “prediction question” to describe a type of modeling question, not to speak of the general act of prediction. Any form of modeling will include some type of prediction, but we use the term <em>prediction question</em> to refer to a modeling question that is aimed at a specific scenario, and designed to support indirect action.</p>
+</div>
+<p>The National Environmental Policy Act (NEPA) requires Federal agencies to engage in an environmental review process when making decisions <span id="id4">[<a class="reference internal" href="../zbib.html#id43" title="Council on Environmental Quality (CEQ) Executive Office of the President. A citizen's guide to nepa. 2021.">oEQCEQEOotP21</a>]</span>. Federal agencies prepare an environmental impact statement (EIS) predicting the specific impacts of proposed actions on the environment. Since these impacts are often stated in quantitative terms, such as tons of emissions, quantitative modeling is often used to answer questions such as “How much will this action reduce annual emissions?”</p>
+<p>As a specific example, we consider the final EIS of the Vineyard Wind 1 Offshore Wind Energy Project <span id="id5">[<a class="reference internal" href="../zbib.html#id42" title="United States Bureau of Ocean Energy Management. Vineyard wind 1 offshore wind energy project, eis number 20210028.">oOEM</a>]</span>. This study considered the various environmental impacts of a proposed offshore wind energy farm, attending to the specific geographic layout of the proposed generators. This EIS includes numerical predictions of the reduction in annual pollutants, such as carbon dioxide. These analyses were carried out across different proposed configurations, in order to support other decision-makers in choosing the final wind farm design.</p>
+<p>Notably, an analysis of incomplete or unavailable information is required when conducting an environmental review: The Vineyard Wind 1 EIS details this in Appendix H <span id="id6">[<a class="reference internal" href="../zbib.html#id42" title="United States Bureau of Ocean Energy Management. Vineyard wind 1 offshore wind energy project, eis number 20210028.">oOEM</a>]</span>. For instance; this EIS acknowledges that a detailed emissions inventory over a 30 year period was not conducted. This lack of analysis leads to increased uncertainty about the project outcomes; however, the authors note that such uncertainty is tolerable for decision-making, as all of the proposed project options would work to <em>improve</em> air quality. Since this source of uncertainty would not affect the decision process, a more detailed analysis was not necessary.</p>
+</div>
+<div class="section" id="conceptual-design-direct-action-general">
+<h4><span class="section-number">3.1.3.3. </span>Conceptual Design : Direct Action, General<a class="headerlink" href="#conceptual-design-direct-action-general" title="Permalink to this headline">¶</a></h4>
+<p>Engineering design passes through multiple phases, progressing from greater to lesser uncertainty in the design. Theorists of design commonly define at least two distinct phases of <em>conceptual design</em> and <em>detail design</em> <span id="id7">[<a class="reference internal" href="../zbib.html#id3" title="Andy Keane and Prasanth Nair. Computational approaches for aerospace design: the pursuit of excellence. John Wiley &amp; Sons, 2005.">KN05</a>, <a class="reference internal" href="../zbib.html#id2" title="G. Pahl, W. Beitz, J. Feldhusen, and K.H. Grote. Engineering Design: A Systematic Approach. Springer, 3 edition, 2007.">PBFG07</a>, <a class="reference internal" href="../zbib.html#id4" title="E. Torenbeek. Synthesis of Subsonic Airplane Design. Design. Delft University Press and Kluwer Academic Publishers, 1982.">Tor82</a>]</span>. These phases are distinct in their goals, hence distinct in their tools and fidelity of modeling. Engineering firms will take direct action on these design activities.</p>
+<p>Within aircraft design, the conceptual design phase is aimed at answering a single question, “Is there a business case for this proposed aircraft?” <span id="id8">[<a class="reference internal" href="../zbib.html#id3" title="Andy Keane and Prasanth Nair. Computational approaches for aerospace design: the pursuit of excellence. John Wiley &amp; Sons, 2005.">KN05</a>]</span>. All major subsystems of the aircraft are considered in conceptual design <span id="id9">[<a class="reference internal" href="../zbib.html#id4" title="E. Torenbeek. Synthesis of Subsonic Airplane Design. Design. Delft University Press and Kluwer Academic Publishers, 1982.">Tor82</a>]</span>, but at a low-level of fidelity. For instance, while a real aircraft will include millions of parts, conceptual designers may use a quantitative model for the wing system with as few as <span class="math notranslate nohighlight">\(11\)</span> variables <span id="id10">[<a class="reference internal" href="../zbib.html#id3" title="Andy Keane and Prasanth Nair. Computational approaches for aerospace design: the pursuit of excellence. John Wiley &amp; Sons, 2005.">KN05</a>]</span>. In this sense, the modeling of the aircraft is more general than specific.</p>
+<p>Aircraft conceptual design does not typically use first-principles (physics-based) models to guide decisions; rather, empirical models are typically used <span id="id11">[<a class="reference internal" href="../zbib.html#id3" title="Andy Keane and Prasanth Nair. Computational approaches for aerospace design: the pursuit of excellence. John Wiley &amp; Sons, 2005.">KN05</a>]</span>. This is sensible, based on the driving question. The level of fidelity necessary to use the appropriate physics-based models would require an enormous investment of engineering time. Rather than seek model complexity for its own sake, aircraft designers at the conceptual phase deliberately work with lower-fidelity models to make the business case for a conceptual design. If the proposed concept is promising, the next action is to proceed to detail design.</p>
+</div>
+<div class="section" id="detail-design-direct-action-specific">
+<h4><span class="section-number">3.1.3.4. </span>Detail Design : Direct Action, Specific<a class="headerlink" href="#detail-design-direct-action-specific" title="Permalink to this headline">¶</a></h4>
+<p>The detail design phase is the last of the engineering design process <span id="id12">[<a class="reference internal" href="../zbib.html#id2" title="G. Pahl, W. Beitz, J. Feldhusen, and K.H. Grote. Engineering Design: A Systematic Approach. Springer, 3 edition, 2007.">PBFG07</a>]</span>. At this stage, the goal is a completely-specified product <span id="id13">[<a class="reference internal" href="../zbib.html#id3" title="Andy Keane and Prasanth Nair. Computational approaches for aerospace design: the pursuit of excellence. John Wiley &amp; Sons, 2005.">KN05</a>]</span>; this will involve thousands of sub-questions, such as “What is an appropriate thickness for this structural member?”</p>
+<p>Within aircraft design, the detail design phase involves heavy use of computer-aided design (CAD) tools and physics-based simulations of physical performance <span id="id14">[<a class="reference internal" href="../zbib.html#id3" title="Andy Keane and Prasanth Nair. Computational approaches for aerospace design: the pursuit of excellence. John Wiley &amp; Sons, 2005.">KN05</a>]</span>. Subsystems such as the airplane wing must be fully defined: While in conceptual design the wing may have been defined in terms of a dozen variables (e.g. span, mean thickness, taper ratio), the wing detail design must specify the precise dimensions of every part. In this sense, the detail design is far more specific than the conceptual design.</p>
+<p>At the detail design phase, uncertainties such as the variability in material properties or the uncertainties in external loads must be properly factored into design. Variability in material properties is treated in aerospace engineering through the use of <em>allowable values</em> <span id="id15">[<a class="reference internal" href="../zbib.html#id40" title="Zachary del Rosario, Richard W Fenrich, and Gianluca Iaccarino. When are allowables conservative? AIAA Journal, 59(5):1760-1772, 2021. URL: https://doi.org/10.2514/1.J059578, doi:10.2514/1.J059578.">dRFI21</a>]</span>; <em>usually</em> conservative values for material properties that have some affect on adverse failure modes, such as the yield of structural members. Uncertainties in external loads are treated using factors of safety; however, these factors are often based on historical decisions and have no rational basis <span id="id16">[<a class="reference internal" href="../zbib.html#id41" title="A.J. Meyer-Jens. Factors of safety historical development, state of the art and future outlook. Technical Report 661, ADVISORY GROUP FOR AEROSPACE RESEARCH AND DEVELOPMENT NEUILLY-SUR-SEINE (FRANCE), 1978.">MJ78</a>]</span>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="choose-quantities-of-interest-qoi">
+<h2><span class="section-number">3.2. </span>Choose Quantities of Interest (QOI)<a class="headerlink" href="#choose-quantities-of-interest-qoi" title="Permalink to this headline">¶</a></h2>
+<p>After formulating our modeling question, we must pick <em>quantities of interest</em> (QOI) to help operationalize our question. A QOI should be some quantity that has relevance to the question we are trying to solve: Some examples include the trajectory of a projectile, the percent yield of a manufacturing process, the count of some cell in a body. Sometimes a QOI will be quite complicated; note that the a trajectory of a projectile is a curve through space and time. Often we need to define <em>metrics</em> to reduce a complicated QOI to a simpler quantity. For instance, we can summarize a projectile trajectory by considering its range; that is, the horizontal distance at which the projectile hits the ground.</p>
+<p>Sometimes the appropriate QOI will seem clear; the HIV/AIDS explanation question above is obviously concerned with a count of viral particles. However, even in such “obvious” cases there are important decisions to be made; are we talking about the total count of viral particles in the entire body? Or will a small representative volume of tissue suffice? You can only make this kind of decision by carefully considering your modeling question.</p>
+<p>More subtly, assumptions about human values are encoded in your choice of quantities of interest <span id="id17">[<a class="reference internal" href="../zbib.html#id58" title="Andrea Saltelli, Gabriele Bammer, Isabelle Bruno, Erica Charters, Monica Di Fiore, Emmanuel Didier, Wendy Nelson Espeland, John Kay, Samuele Lo Piano, Deborah Mayo, and others. Five ways to ensure that models serve society: a manifesto. 2020.">SBB+20</a>]</span>. For instance, profit is often taken as the sole QOI for businesses, but this neglects other factors we would want to promote in society, such as the well-being of people and the sustainability of the planet. Alternatives to a profit-only quantification of business success include the <em>triple bottom line</em> concept <span id="id18">[<a class="reference internal" href="../zbib.html#id60" title="Timothy F Slaper and Tanya J Hall. The triple bottom line: what is it and how does it work. Indiana business review, 86(1):4–8, 2011.">SH11</a>]</span>, which quantifies social and environmental impact along with profit.</p>
+<div class="warning admonition">
+<p class="admonition-title">The dangers of quantification</p>
+<p>In their modeling manifesto, Andrea Saltelli and others <span id="id19">[<a class="reference internal" href="../zbib.html#id58" title="Andrea Saltelli, Gabriele Bammer, Isabelle Bruno, Erica Charters, Monica Di Fiore, Emmanuel Didier, Wendy Nelson Espeland, John Kay, Samuele Lo Piano, Deborah Mayo, and others. Five ways to ensure that models serve society: a manifesto. 2020.">SBB+20</a>]</span> warn that “Once a number takes centre-stage with a crisp narrative, other possible explanations and estimates can disappear from view.” While modeling quantities of interest and computing metrics are useful for addressing a question, keep in mind that important factors in any situation can be difficult to quantify, and thus include in a model. Make sure when you model to keep in mind the limitations of your approach; particularly what is <em>not</em> represented in your model.</p>
+<p>As we’ll see below, model assessment can help to surface the limitations of your model.</p>
+</div>
 </div>
 <div class="section" id="gather-appropriate-information">
 <h2><span class="section-number">3.3. </span>Gather Appropriate Information<a class="headerlink" href="#gather-appropriate-information" title="Permalink to this headline">¶</a></h2>
-<p>(We can use summary statistics and distributional assumptions to make a rough model.)</p>
-<p>(We can use data in large quantities to build a more detailed distribution model.)</p>
-<p>(We can use physical principles to derive equations)</p>
-<p>(We can use data in large quantities to fit an empirical equation)</p>
+<p>Physical principles can be used to build a mathematical model to predict quantities of interest. For instance, principles from Newtonian mechanics can be used to study the motion of a projectile. To support building the model, we could build an inventory of forces that act on our projectile, and search for existing models that other researchers have used for similar problems.</p>
+<p>Through searching for relevant physical principles, we are likely to come across <em>model parameters</em> whose numerical values we will need to set in our model. For instance, a projectile will be affected by its mass, initial velocity, and aerodynamic drag characteristics. Depending on the projectile and the specificity of our modeling question, we may need to consider additional factors, such as the spin of a baseball or its surface geometry.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Note that the term “parameter” is used differently across disciplines. “Parameter” to a scientist or engineer follows the definition of “model parameter” we see above; a quantity that enters a model. However a “parameter” to a statistician refers more specifically to a deterministic quantity that describes the properties of a random variable. We will see this statistical definition in the <a class="reference internal" href="../02_developing/distributions.html#distributions"><span class="std std-ref">chapter on distributions</span></a>.</p>
+</div>
+<dl class="simple myst">
+<dt>Model Parameter</dt><dd><p>A <em>model parameter</em> is a quantity (numerical, categorical, or otherwise) in a model that must be set to some value in order to use that model.</p>
+</dd>
+</dl>
+<p>Note that we are likely to find a range of possible parameter values, or possibly repeat measurements that point to variability in the parameter values. This information is important to collect, as we will use this information to build a <a class="reference internal" href="../02_developing/distributions.html#distributions"><span class="std std-ref">distribution</span></a> representation of uncertainty.</p>
+<p>In some cases, there will not be sufficient physical theory to describe all of the physical phenomena using a first-principles approach. In these cases, one can use a particular form of data to build an <em>empirical</em> model: Repeated observations on parameters and output quantities can enable statistical modeling of the observed phenomena. If an empirical approach is necessary, then it will be necessary to obtain and curate such a dataset before moving on to building the model.</p>
 </div>
 <div class="section" id="build-the-model">
 <h2><span class="section-number">3.4. </span>Build the Model<a class="headerlink" href="#build-the-model" title="Permalink to this headline">¶</a></h2>
-<p>(The rest of this book is about tools for building a model. A brief list of what we’ll learn: TODO)</p>
+<p>With the principles and data gathered above, we can then build the model. As noted in the <a class="reference internal" href="orienting.html#orienting"><span class="std std-ref">Orientation Chapter</span></a>, we assume that you have the skills to implement domain-specific <em>deterministic</em> models from your own discipline: This will involve using physical principles to write down a mathematical model, then using a programming language to implement that model as computer code. Your deterministic models should be able to map between some input model parameters and the output quantities of interest that you seek to study. The remainder of this book is about a set of tools and understanding to complement your existing domain-specific modeling skills with rigorous tools to handle uncertainty. We will use the <a class="reference internal" href="grama-intro.html#grama-intro"><span class="std std-ref">py-grama</span></a> package to implement these ideas.</p>
+<p>As noted in the <a class="reference internal" href="grama-intro.html#grama-intro"><span class="std std-ref">introduction to Grama</span></a>, a Grama model contains information about the inputs and the map between inputs and outputs. We will use <em>distributions</em> in our models to represent uncertainty in model parameters. We will also fit <em>empirical</em> (data-driven) models to “fill the gaps” when physical principles alone are insufficient to predict our desired quantities of interest. The next part of this book—<a class="reference internal" href="../02_developing/developing.html#developing"><span class="std std-ref">Developing</span></a>—will cover these ideas in detail.</p>
+<div class="warning admonition">
+<p class="admonition-title">“Everything must be made as simple as possible, but no simpler.”</p>
+<p>This famous quote by Albert Einstein is a central tenet in modeling: Resist the urge to add complexity for complexity’s sake. All complexity in a model must be justified as necessary to answer the modeling question.</p>
+</div>
 </div>
 <div class="section" id="assess-the-model">
 <h2><span class="section-number">3.5. </span>Assess the Model<a class="headerlink" href="#assess-the-model" title="Permalink to this headline">¶</a></h2>
-<p>(While we make use of curiosity and skepticism throughout the modeling process, this is where we formally deploy mathematical techniques to put skepticism into practice.)</p>
-<p>We use the AIAA definitions of verification and validation, stated below <span id="id5">[<a class="reference internal" href="../zbib.html#id30">AIA98</a>]</span>:</p>
+<p>While we make use of curiosity and skepticism throughout the modeling process, assessing the model is where we formally deploy mathematical techniques to put skepticism into practice. Model assessment should include two key steps: <em>verification</em> and <em>validation</em>. We use the AIAA definitions of verification and validation, stated below <span id="id20">[<a class="reference internal" href="../zbib.html#id46" title="AIAA. Guide for the verification and validation of computational fluid dynamics simulations (aiaa g-077-1998). 1998.">AIA98</a>]</span>:</p>
 <dl class="simple myst">
 <dt>Verification</dt><dd><p>The process of determining that a model implementation accurately represents the developer’s conceptual description of the model and the solution to the model.</p>
 </dd>
+</dl>
+<p>In order to check that we have implemented the model in code correctly, it is important to “stress test” the code to check for correctness. The specific mechanics of verification vary based on the type of model and implementation, thus a comprehensive treatment of all verification approaches is beyond the scope of this book. However, some general principles apply: When carrying out a verification study, it is important to check <em>emergent</em> behavior of the model, rather than manually-enforced properties of the model. For instance, in a trajectory prediction code, it would <em>not</em> be a rigorous verification exercise to simply check that the parameter values of the model are set to the correct values. Instead, it would be a useful verification step to check that the code-generated solution to the model matches a hand-calculated trajectory. A more general approach to this form of correct-solution generation is the <em>method of manufactured solutions</em> <span id="id21">[<a class="reference internal" href="../zbib.html#id47" title="Patrick J Roache. Code verification by the method of manufactured solutions. J. Fluids Eng., 124(1):4–10, 2002.">Roa02</a>]</span>, often used for testing simulation codes for partial differential equations.</p>
+<p>While verification checks that the model is implemented correctly, it is also key to check that the model is an accurate representation of reality.</p>
+<dl class="simple myst">
 <dt>Validation</dt><dd><p>The process of determining the degree to which a model is an accurate representation of the real world from the perspective of the intended uses of the model.</p>
 </dd>
 </dl>
-<p>Note that the definition of validation explicitly references the “intended uses of the model”; it is commonly accepted that the accuracy of a model can only be assessed <em>in the context of an intended use</em>.</p>
+<p>Note that the definition of validation explicitly references the “intended uses of the model”; it is commonly accepted that the accuracy of a model can only be assessed <em>in the context of an intended use</em>. This means we must have our modeling question in mind when designing and executing a validation study. A modeling question requiring specific, detailed predictions should involve a validation exercise that tests for the necessary level of accuracy. For instance, when designing a bridge, it is clear that a high level of confidence is needed in the specific numerical predictions of load capacity and resilience of the structure.</p>
+<p>However, validation need not involve a direct comparison of model results to data. For instance, note that in the HIV/AIDS example mentioned above <span id="id22">[<a class="reference internal" href="../zbib.html#id49" title="Andrew N Phillips. Reduction of hiv concentration during acute infection: independence from a specific immune response. Science, pages 497–499, 1996.">Phi96</a>]</span>, the author did not carry out any explicit comparison of simulated viral particle counts against measured clinical data. Instead, the author built upon previously published models—establishing credibility based on starting from accepted models—and compared the results <em>qualitatively</em> to observed clinical trends. While this sort of validation would not be appropriate for supporting bridge design, since the author’s modeling question was quite general, this style of validation was appropriate for the intended use of the model.</p>
+<p>Finally, note that even a properly validated model is not “proven” to be correct! Validation builds confidence in the model for the tested scenario, but there is always danger in extrapolating to an unseen scenario. The problem of induction <span id="id23">[<a class="reference internal" href="../zbib.html#id54" title="Karl Popper. The logic of scientific discovery. Routledge, 2005.">Pop05</a>]</span> is an inherent limitation in the practice of science, meaning we should always maintain a bit of healthy skepticism towards any model!</p>
+<div class="admonition-a-helpful-mnemonic admonition">
+<p class="admonition-title">A helpful mnemonic</p>
+<p>It is often said that verification is an exercise in mathematics &amp; coding, while validation is an exercise in physics. It can be helpful to note that verifi<code class="docutils literal notranslate"><span class="pre">c</span></code>ation is about the <code class="docutils literal notranslate"><span class="pre">c</span></code>ode used to implement the model, while vali<code class="docutils literal notranslate"><span class="pre">d</span></code>ation often involves comparing model results against physical <code class="docutils literal notranslate"><span class="pre">d</span></code>ata.</p>
 </div>
-<div class="section" id="use-the-model">
-<h2><span class="section-number">3.6. </span>Use the Model<a class="headerlink" href="#use-the-model" title="Permalink to this headline">¶</a></h2>
-<p>(Once we have a verified and validated model, we can use it to help answer our question)</p>
+<p>We will see many examples of validation in the following parts of the book: <a class="reference internal" href="../02_developing/developing.html#developing"><span class="std std-ref">Developing</span></a> and <a class="reference internal" href="../03_answering/answering.html#answering"><span class="std std-ref">Answering</span></a>.</p>
+<div class="section" id="how-much-certainty-is-needed">
+<h3><span class="section-number">3.5.1. </span>How much certainty is needed?<a class="headerlink" href="#how-much-certainty-is-needed" title="Permalink to this headline">¶</a></h3>
+<p>In discussing validation, we saw that different levels of accuracy are needed for different types of modeling question: Clearly a general question does not need the same level of accuracy as a specific question. Related to accuracy is the concept of <em>certainty</em>.</p>
+<p>While we will discuss <a class="reference internal" href="../02_developing/uncertainty.html#uncertainty"><span class="std std-ref">uncertainty</span></a> more formally in a later chapter, it is worth noting here that the level of certainty necessary to answer a modeling question depends on more than just the specificy of the question. Here we discuss a few questions to ask yourself to help determine how much certainty is needed.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>The idea that certainty ought to vary based on the context is as old as Aristotle, see e.g. 1098a <span id="id24">[<a class="reference internal" href="../zbib.html#id56" title="Aristotle. Nichomachean Ethics. Volume 19. Harvard University Press, 1934.">Ari34</a>]</span>.</p>
 </div>
-<div class="section" id="an-iterative-procedure">
-<h2><span class="section-number">3.7. </span>An Iterative Procedure<a class="headerlink" href="#an-iterative-procedure" title="Permalink to this headline">¶</a></h2>
-<p>(You may pass through these phases multiple times)</p>
-<hr class="footnotes docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="modsim"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>I am indebted to my colleagues at Olin College, where the faculty have developed this three category framework in the first year course <em>Modeling and Simulation of the Physical World</em>.</p>
-</dd>
-</dl>
+<p><strong>What are the consequences of making an incorrect conclusion?</strong> If the consequences are innocuous—say, yours is a proof-of-concept effort—then a great deal of certainty is not needed. The HIV/AIDS example we saw above sought to provide a potential explanation for observed phenomena, and suggested further work. An incorrect conclusion in that example might mean contradictory evidence would be found that refuted the original study: This would still be a net win for the scientific community. However, a model aimed at making patient-specific predictions for surgical decisions would obviously have greater consequence. These higher consequences would demand a higher level of certainty.</p>
+<div class="tip admonition">
+<p class="admonition-title">Analogy: The Legal System</p>
+<p>In the United States legal system, there exist different “standards of proof”—codified levels of certainty. These standards are used for different types of legal cases, carrying different consequences. For instance; the highest standard “beyond reasonable doubt” is reserved for criminal cases, where the liberty of an individual is at stake <span id="id25">[<a class="reference internal" href="../zbib.html#id57" title="Henry Campbell Black. Black's Law Dictionary. West Publishing Co., 1968.">Bla68</a>]</span>. For civil cases the consequences involve financial damages; these relatively lower-stakes mean a lower standard of certainty is used: “preponderance of the evidence” (colloquially, “more probable than not”) <span id="id26">[<a class="reference internal" href="../zbib.html#id57" title="Henry Campbell Black. Black's Law Dictionary. West Publishing Co., 1968.">Bla68</a>]</span>.</p>
+</div>
+<p><strong>What have we learned so far?</strong> It is rare to be able to state a specific, numeric level of required certainty for a given modeling question <em>a priori</em>. More frequently, you will discover a lack of certainty through the modeling process. At this point, you will likely need to gather more information (to reduce uncertainty) or change your modeling question (to acknowledge limitations). It is worth keeping in mind that modeling is an iterative process, as we’ll discuss further below.</p>
+<p><strong>Do you have an answer?</strong> Sometimes in evaluating the certainty necessary for a particular question, you may find that the present uncertainty is intolerable because you simply do not have the means to answer the question. In these cases, you should be honest with yourself and any stakeholders; as Saltelli et al. <span id="id27">[<a class="reference internal" href="../zbib.html#id58" title="Andrea Saltelli, Gabriele Bammer, Isabelle Bruno, Erica Charters, Monica Di Fiore, Emmanuel Didier, Wendy Nelson Espeland, John Kay, Samuele Lo Piano, Deborah Mayo, and others. Five ways to ensure that models serve society: a manifesto. 2020.">SBB+20</a>]</span> write in their <em>modeler’s manifesto</em>, “Experts should have the courage to respond that ‘there is no number-answer to your question’.”</p>
+</div>
+</div>
+<div class="section" id="use-the-model-iterate-as-necessary">
+<h2><span class="section-number">3.6. </span>Use the Model, Iterate as Necessary<a class="headerlink" href="#use-the-model-iterate-as-necessary" title="Permalink to this headline">¶</a></h2>
+<p>Through following the process above, you will define a modeling question along with a relevant model. With all of this work in-place, you should be positioned to answer your question. <em>However</em>, it is common to discover previously unknown wrinkles while working through the modeling process. Perhaps you will determine that your original modeling question was ill-posed: that you need to refine your question. Or you may discover during information gathering that there are additional quantities of interest that you should consider.</p>
+<p><strong>You should expect to iterate on any and all pieces of the modeling process.</strong></p>
+<p>The steps in this process are not simply boxes to check in a linear process, but rather broad activity areas that you should expect to visit and revisit. Often, <em>practical time constraints</em> will factor into deciding when to stop, but ideally the process ends when your certainty in the model’s answer is sufficient for the modeling question.</p>
 </div>
 </div>
 
@@ -519,54 +761,42 @@
 
               </div>
               
-        
             
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="curiosity-skepticism.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">2. </span>Curiosity and Skepticism: A Healthy Mindset</p>
-            </div>
-        </a>
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="curiosity-skepticism.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">2. </span>Curiosity and Skepticism: A Healthy Mindset</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="grama-intro.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>A Grammar of Model Analysis: Grama</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="grama-intro.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">4. </span>A Grammar of Model Analysis: Grama</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-        
+            
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Zachary del Rosario, Gianluca Iaccarino<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+    <footer class="footer">
+  <p>
+    
+      By Zachary del Rosario, Gianluca Iaccarino<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>
