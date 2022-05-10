@@ -1,0 +1,910 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6. Conceptual Tools for Handling Uncertainty &#8212; All Models Are Uncertain</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7. Bibliography" href="../zbib.html" />
+    <link rel="prev" title="5. Developing" href="developing.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">All Models Are Uncertain</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00_frontmatter/landing-page.html">
+   All Models Are Uncertain
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Orienting
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01_orienting/orienting.html">
+   1. Orienting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01_orienting/curiosity-skepticism.html">
+   2. Curiosity and Skepticism: A Healthy Mindset
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01_orienting/modeling-process.html">
+   3. The Modeling Process
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01_orienting/grama-intro.html">
+   4. A Grammar of Model Analysis: Grama
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Developing
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="developing.html">
+   5. Developing
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   6. Conceptual Tools for Handling Uncertainty
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bibliography
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../zbib.html">
+   7. Bibliography
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/02_developing/uncertainty.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/02_developing/uncertainty.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   6.1. Uncertainty
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dichotomy-parametric-vs-model-form-nature">
+     6.1.1. Dichotomy: Parametric vs Model-form Nature
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dichotomy-chance-and-assignable-causes">
+     6.1.2. Dichotomy: Chance and Assignable Causes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dichotomy-real-and-error-sources">
+     6.1.3. Dichotomy: Real and Error Sources
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cause-source-quadrants">
+     6.1.4. Cause-Source Quadrants
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#illustrative-example-cause-and-source-in-metals-manufacturing">
+     6.1.5. Illustrative Example: Cause and Source in Metals Manufacturing
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#anomaly-real-source-assignable-cause">
+       6.1.5.1. 1. Anomaly: Real Source, Assignable Cause
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#deviation-real-source-chance-cause">
+       6.1.5.2. 2. Deviation: Real Source, Chance Cause
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mistake-error-source-assignable-cause">
+       6.1.5.3. 3. Mistake: Error Source, Assignable Cause
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#noise-error-source-chance-cause">
+       6.1.5.4. 4. Noise: Error Source, Chance Cause
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#making-use-of-nature-cause-and-source">
+     6.1.6. Making use of Nature, Cause, and Source
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#special-cases-of-uncertainty">
+   6.2. Special Cases of Uncertainty
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variability">
+     6.2.1. Variability
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#case-studies">
+   6.3. Case Studies
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vaccine-efficacy">
+     6.3.1. Vaccine Efficacy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wind-farm">
+     6.3.2. Wind Farm
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#piston-cycle-time">
+     6.3.3. Piston Cycle Time
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Conceptual Tools for Handling Uncertainty</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   6.1. Uncertainty
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dichotomy-parametric-vs-model-form-nature">
+     6.1.1. Dichotomy: Parametric vs Model-form Nature
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dichotomy-chance-and-assignable-causes">
+     6.1.2. Dichotomy: Chance and Assignable Causes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dichotomy-real-and-error-sources">
+     6.1.3. Dichotomy: Real and Error Sources
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cause-source-quadrants">
+     6.1.4. Cause-Source Quadrants
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#illustrative-example-cause-and-source-in-metals-manufacturing">
+     6.1.5. Illustrative Example: Cause and Source in Metals Manufacturing
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#anomaly-real-source-assignable-cause">
+       6.1.5.1. 1. Anomaly: Real Source, Assignable Cause
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#deviation-real-source-chance-cause">
+       6.1.5.2. 2. Deviation: Real Source, Chance Cause
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mistake-error-source-assignable-cause">
+       6.1.5.3. 3. Mistake: Error Source, Assignable Cause
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#noise-error-source-chance-cause">
+       6.1.5.4. 4. Noise: Error Source, Chance Cause
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#making-use-of-nature-cause-and-source">
+     6.1.6. Making use of Nature, Cause, and Source
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#special-cases-of-uncertainty">
+   6.2. Special Cases of Uncertainty
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variability">
+     6.2.1. Variability
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#case-studies">
+   6.3. Case Studies
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vaccine-efficacy">
+     6.3.1. Vaccine Efficacy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wind-farm">
+     6.3.2. Wind Farm
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#piston-cycle-time">
+     6.3.3. Piston Cycle Time
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="conceptual-tools-for-handling-uncertainty">
+<span id="uncertainty"></span><h1><span class="section-number">6. </span>Conceptual Tools for Handling Uncertainty<a class="headerlink" href="#conceptual-tools-for-handling-uncertainty" title="Permalink to this headline">¶</a></h1>
+<p>This book is focused on <em>applications</em>, so here we present a framing of uncertainty that is carefully chosen to <em>help you make decisions</em> <a class="footnote-reference brackets" href="#theoretical" id="id1">1</a>. The concepts here aim to describe uncertainty as <em>non-overlapping types</em>, and to make suggestions about <em>how to handle</em> each type of uncertainty. In this way, we aim to provide you with tools to handle uncertainty.</p>
+<p><strong>Learning Objectives</strong> In this chapter, you will learn</p>
+<ul class="simple">
+<li><p>the distinction between <em>parametric</em> and <em>model-form nature</em></p></li>
+<li><p>the distinction between <em>chance</em> and <em>assignable causes</em></p></li>
+<li><p>the distinction between <em>real</em> and <em>error sources</em></p></li>
+<li><p>some special cases of uncertainty: <em>variability</em> and <em>sampling</em></p></li>
+<li><p>examples of these concepts in short case studies</p></li>
+</ul>
+<div class="section" id="id2">
+<h2><span class="section-number">6.1. </span>Uncertainty<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>Let’s start with a definition for uncertainty:</p>
+<dl class="simple myst">
+<dt>Uncertainty</dt><dd><p><em>Uncertainty</em> refers to any lack of perfect knowledge.</p>
+</dd>
+</dl>
+<p>Given this definition, almost <em>everything</em> is uncertain! Our knowledge is always imperfect in a variety of ways: rounding in floating point calculations leads to a loss of precision, experimental noise corrupts our measurements, and a lack of a theory marrying quantum mechanics and relativity reflects our imperfect knowledge of physics.</p>
+<p>To make our understanding of uncertainty more <em>useful</em>, we will introduce three dichotomies to describe various <em>kinds</em> of uncertainty: <em>nature</em>, <em>cause</em>, and <em>source</em> of uncertainty.</p>
+<div class="section" id="dichotomy-parametric-vs-model-form-nature">
+<h3><span class="section-number">6.1.1. </span>Dichotomy: Parametric vs Model-form Nature<a class="headerlink" href="#dichotomy-parametric-vs-model-form-nature" title="Permalink to this headline">¶</a></h3>
+<p>It is common to distinguish between uncertainties in a quantity and in the form of equations <span id="id3">[<a class="reference internal" href="../zbib.html#id11" title="Alison C Cullen and H Christopher Frey. Probabilistic techniques in exposure assessment: a handbook for dealing with variability and uncertainty in models and inputs. Springer Science &amp; Business Media, 1999.">CF99</a>, <a class="reference internal" href="../zbib.html#id9" title="M. Granger Morgan. Theory and practice in policy analysis. Cambridge University Press, 2017.">Mor17</a>, <a class="reference internal" href="../zbib.html#id8" title="Ralph C. Smith. Uncertainty quantification: theory, implementation, and applications. SIAM, 2013.">Smi13</a>]</span>. We will call these the <em>parametric</em> and <em>model-form natures</em> of uncertainty.</p>
+<dl class="simple myst">
+<dt>Parametric uncertainty</dt><dd><p>Uncertainty that is <em>parametric</em> in nature concerns the <em>value</em> (numeric, categorical, or etc.) of a quantity.</p>
+</dd>
+</dl>
+<p>Parametric uncertainty can arise in many situations, such as the coefficients entering into a physical model, the stiffness of a manufactured part, or the range of a ballistic projectile. As noted in the definition, the quantity of interest can take numerical values (such as a material property), categorical values (such as True or False), or some other more complicated type (such as a description of surface finish of a material).</p>
+<dl class="simple myst">
+<dt>Model-form uncertainty</dt><dd><p>Uncertainty that is <em>model-form</em> in nature concerns the structure of the mathematical equations that comprise the model.</p>
+</dd>
+</dl>
+<p>Note that we use the word “model” to refer to both the description of the inputs (bounds and distribution) and the functions mapping inputs to outputs. Thus model-form uncertainty can enter into the mathematical description of the problem that maps inputs to outputs and can enter into the distributions we use to describe input uncertainty.</p>
+<p>Model-form uncertainty can also emerge when assumptions or simplifications lead to the exclusion of important processes or subsystems. One way this can occur is when important variables are left out of your model, sometimes called <em>lurking variables</em> <span id="id4">[<a class="reference internal" href="../zbib.html#id20" title="George E. P. Box. Use and abuse of regression. Technometrics, 8(4):625-629, 1966. URL: http://www.jstor.org/stable/1266635.">Box66</a>, <a class="reference internal" href="../zbib.html#id18" title="Zachary del Rosario, Minyong Lee, and Gianluca Iaccarino. Lurking variable detection via dimensional analysis. SIAM/ASA Journal on Uncertainty Quantification, 7(1):232–259, 2019. arXiv:https://doi.org/10.1137/17M1155508, doi:10.1137/17M1155508.">dRLI19</a>, <a class="reference internal" href="../zbib.html#id19" title="Brian L. Joiner. Lurking variables: some examples. The American Statistician, 35(4):227–233, 1981.">Joi81</a>]</span>.</p>
+<div class="admonition-example-natures-of-uncertainty-in-trajectory-prediction admonition">
+<p class="admonition-title">Example: Natures of uncertainty in trajectory prediction</p>
+<p>Uncertainties of both natures arise in predicting the <span class="xref myst">trajectory of a projectile</span>. A simple linear relationship for the drag force has model-form uncertainty, as true drag behavior is far more complex. The initial velocity of the projectile may not be precisely known, which would be a parametric uncertainty.</p>
+</div>
+<p>The related term <em>model-form error</em> refers to cases when a model <em>systematically</em> produces erroneous predictions; in this case we say the model does not “match” reality. A single poor prediction might be due to parametric uncertainty (a “miscalibration” of the model), but if a model is repeatedly incapable of representing observed phenomena, then there exists some model-form error. We will see a detailed example of model-form uncertainty and error in the Section on <span class="xref myst">model-form error</span>.</p>
+<div class="admonition-parametric-or-model-form-in-nature admonition">
+<p class="admonition-title">Parametric or Model-form in Nature?</p>
+<p>Determining whether an uncertainty is parametric or model-form in nature helps you determine “where” the uncertainty is in your model—and what actions you should take. If you have model-form uncertainties, you may need to update the form of your equations, add new variables, or represent unexplained phenomena with a discrepancy term. If you have parametric uncertainties, you can gather data on those quantities and model them with distributions.</p>
+</div>
+</div>
+<div class="section" id="dichotomy-chance-and-assignable-causes">
+<h3><span class="section-number">6.1.2. </span>Dichotomy: Chance and Assignable Causes<a class="headerlink" href="#dichotomy-chance-and-assignable-causes" title="Permalink to this headline">¶</a></h3>
+<p>The concept of chance and assignable causes was formulated in the statistical quality (manufacturing) community, and is tailored for making practical decisions about reducing uncertainty <span id="id5">[<a class="reference internal" href="../zbib.html#id17" title="William Edwards Deming. Quality, productivity, and competitive position. Volume 183. Massachusetts Institute of Technology, Center for advanced engineering study …, 1982.">Dem82</a>, <a class="reference internal" href="../zbib.html#id15" title="Walter Andrew Shewhart. Economic control of quality of manufactured product. Macmillan And Co Ltd, London, 1931.">She31</a>, <a class="reference internal" href="../zbib.html#id16" title="Walter Andrew Shewhart and William Edwards Deming. Statistical method from the viewpoint of quality control. Dover, 1986.">SD86</a>]</span>. The philosophy is to seek as many assignable causes as it is practical to find, and to treat the remaining uncertainties as though they had chance cause.</p>
+<dl class="simple myst">
+<dt>Assignable Cause</dt><dd><p>An uncertainty has <em>assignable cause</em> if it is practical to describe and to control / represent deterministically.</p>
+</dd>
+</dl>
+<p>Seeking assignable causes is a strategy to <em>reduce</em> uncertainty. For instance, catching an implementation error in your model reduces uncertainty (improves your state of knowledge). Assignable causes can be either parametric or model-form in nature: Detecting a lurking variable would be a model-form assignable cause, while catching a transcription error during data collection would be a parametric assignable cause.</p>
+<p>As noted above, the notion of <em>cause</em> was formulated in the pragmatic setting of manufacturing. When it is no longer practical to find assignable causes, we treat the remaining uncertainty as <em>chance cause</em>.</p>
+<dl class="simple myst">
+<dt>Chance Cause</dt><dd><p>An uncertainty has <em>chance cause</em> if it is impractical to describe deterministically and it is best-described as a random variable.</p>
+</dd>
+</dl>
+<p>Once we have identified all the assignable causes in a system that are practical to find, we are likely to have some uncertainty remaining. Rather than simply ignore that uncertainty, we can model it as a random variable (fit a distribution) to provide a <em>quantitative</em> description of that uncertainty.</p>
+<div class="admonition-example-crack-detection-as-chance-cause admonition">
+<p class="admonition-title">Example: Crack detection as chance cause</p>
+<p>In metallic components, small cracks can grow during cyclic loading, eventually leading to fatigue failure. However, it is not practical to eliminate all cracks in all parts. Thus, modern aircraft are <em>assumed</em> to have cracks of a particular size, based on the statistics of inspection programs <span id="id6">[<a class="reference internal" href="../zbib.html#id37" title="Ted L Anderson. Fracture mechanics: fundamentals and applications. CRC press, 2017.">And17</a>]</span>. The assumed size of a crack is based on practical detection rates, derived by treating detection as a random event. While exhaustive searching might <em>in principle</em> be able to detect all cracks, the presence of a crack is treated as a chance cause due to the practical nature of aircraft manufacturing and inspection.</p>
+</div>
+<p>Determining whether an uncertainty is a chance or assignable cause is a <em>modeling choice</em>, though there exist investigative tools to help you detect assignable causes. For more on chance and assignable cause, see the appendix entry on <span class="xref myst">statistical control</span>.</p>
+<div class="admonition-chance-is-not-inherently-random admonition">
+<p class="admonition-title">Chance is not inherently random</p>
+<p>We do <em>not</em> need to seriously believe that a source of uncertainty is <em>inherently</em> random to treat it as a chance cause. The philosophy of chance and assignable causes is a <em>pragmatic</em> one. A “truly” random event (such as a quantum measurement) would be justifiably described as having chance cause, but even deterministic phenomena can be treated as chance so long as they exhibit sufficient statistical regularity (i.e. satisfy the criteria of <span class="xref myst">statistical control</span>).</p>
+</div>
+<p>As a worked example of chance and assignable causes, let’s inspect the elasticity <span class="math notranslate nohighlight">\(E\)</span> and Poisson ratio <span class="math notranslate nohighlight">\(\mu\)</span> measurements from the <span class="xref myst">aluminum alloy dataset</span>.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%capture</span> --no-display
+<span class="c1"># Hide cell</span>
+<span class="kn">from</span> <span class="nn">grama.data</span> <span class="kn">import</span> <span class="n">df_stang</span>
+
+<span class="p">(</span>
+    <span class="n">df_stang</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_mutate</span><span class="p">(</span><span class="n">thick</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">as_factor</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">thick</span><span class="p">))</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">ggplot</span><span class="p">(</span><span class="n">gr</span><span class="o">.</span><span class="n">aes</span><span class="p">(</span><span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="s2">&quot;thick&quot;</span><span class="p">))</span>
+    <span class="o">+</span> <span class="n">gr</span><span class="o">.</span><span class="n">geom_point</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="o">+</span> <span class="n">gr</span><span class="o">.</span><span class="n">scale_shape_manual</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Thickness (in)&quot;</span><span class="p">,</span>
+        <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">],</span>
+    <span class="p">)</span>
+    <span class="o">+</span> <span class="n">gr</span><span class="o">.</span><span class="n">theme_minimal</span><span class="p">()</span>
+    <span class="o">+</span> <span class="n">gr</span><span class="o">.</span><span class="n">theme</span><span class="p">(</span><span class="n">figure_size</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+    <span class="o">+</span> <span class="n">gr</span><span class="o">.</span><span class="n">labs</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Elasticity (ksi)&quot;</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Poisson Ratio (-)&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8768771361338)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Since elasticity and the Poisson ratio are often assumed to be material properties—independent of part thickness—it is surprising to see the thickest samples with property values well-separated from the thinner specimens. These data exhibit both chance and assignable causes:</p>
+<ul class="simple">
+<li><p>The <span class="math notranslate nohighlight">\(0.081\)</span> inch thick specimens stand well-separated from the other observations. By reviewing the original publication reporting these data, we can see that the thickest specimens were tested using a different measurement technique, providing an assignable cause for the variability between the <span class="math notranslate nohighlight">\(0.081\)</span> inch and thinner observations <span id="id7">[<a class="reference internal" href="../zbib.html#id26" title="Ambrose H. Stang, Martin Greenspan, and Sanford B. Newman. Poisson's ratio of some structural alloys for large strains. Journal of Research of the National Bureau of Standards, 1946. URL: https://nvlpubs.nist.gov/nistpubs/jres/37/jresv37n4p211_A1b.pdf.">SGN46</a>]</span>.</p></li>
+<li><p>The remaining thinner specimens are tightly-grouped, but do not have identical values. We have no other explanations available for this variability, so we ought to treat this as chance cause.</p></li>
+</ul>
+<div class="admonition-treating-chance-and-assignable-causes admonition">
+<p class="admonition-title">Treating chance and assignable causes</p>
+<p>If you suspect that an uncertainty has an assignable cause, conduct additional studies to find and control / explain that cause of uncertainty. If you suspect that an uncertainty cannot be practically reduced <em>and</em> it is sufficiently regular to treat as random, then fit a distribution to describe that uncertainty.</p>
+</div>
+</div>
+<div class="section" id="dichotomy-real-and-error-sources">
+<h3><span class="section-number">6.1.3. </span>Dichotomy: Real and Error Sources<a class="headerlink" href="#dichotomy-real-and-error-sources" title="Permalink to this headline">¶</a></h3>
+<p>A distinction between <em>real</em> and <em>error sources</em> of uncertainty is made in the statistics education community <span id="id8">[<a class="reference internal" href="../zbib.html#id12" title="Chris J Wild and Maxine Pfannkuch. Statistical thinking in empirical enquiry. International statistical review, 67(3):223–248, 1999.">WP99</a>]</span>. Put simply, <em>real</em> sources affect the quantity we are trying to study, while <em>error</em> corrupts our quantity of interest. A more formal definition involves a bit of nomenclature.</p>
+<dl class="simple myst">
+<dt>QOI and Measurement</dt><dd><p>Our <em>quantity of interest</em> (QOI) is the quantity we seek to record, while the <em>measurement</em> is the value we manage to record.</p>
+</dd>
+</dl>
+<p>The following figure illustrates the QOI and measurement in a simple scenario with two chance cause uncertainties.</p>
+<p><img alt="Noise vs Deviation" src="../_images/noise-v-deviation-bw.png" /></p>
+<p>As noted in the <span class="xref myst">modeling process</span>, <em>you</em> are responsible for <em>choosing</em> our QOI. This requires a strong domain-specific understanding of the problem at hand: Only you can decide what quantity is worth studying in your particular application!</p>
+<div class="warning admonition">
+<p class="admonition-title">Not all QOI are equal!</p>
+<p>In Chapter TODO, we will see how a poor choice of QOI has lead to decades-standing errors in aircraft design that negatively impact safety.</p>
+</div>
+<p>Drawing a distinction between the QOI and measurement helps to emphasize that uncertainty can either <em>affect</em> or <em>corrupt</em> the quantity we seek to study, as captured in the next definition.</p>
+<dl class="simple myst">
+<dt>Real and Error Sources</dt><dd><p>An uncertainty is said to be a <em>real source</em> if it affects our QOI, while it is said to be an <em>error source</em> if it only affects our measurement.</p>
+</dd>
+</dl>
+<p>Put differently, <em>real</em> uncertainty affects the quantity we seek to study, while <em>error</em> uncertainty corrupts the value we manage to record.</p>
+<p>Error uncertainty can also be due to <em>limited</em> data collection; we might be able to carry out the desired measurements in principle, but if we only observe a fraction of the possible values, then this leads to <em>sampling</em> error.</p>
+<div class="admonition-example-real-and-error-variability-in-manufacturing admonition">
+<p class="admonition-title">Example: Real and Error variability in manufacturing</p>
+<p>When manufacturing structural components to resist fatigue, there are both real and error sources of uncertainty. The proper QOI when studying the fatigue of structural components is the <em>realized</em> strength of each component. As noted above, the presence of cracks in a part will affect fatigue strength, which will affect our QOI and create real uncertainty. However, while we can manufacture an unlimited number of components, we can only test a limited fraction. Limited testing gives rise to sampling error.</p>
+</div>
+<p>Distinguishing between real and error sources is important for both data collection and analysis.</p>
+<div class="admonition-treating-real-and-error-sources-in-data-collection admonition">
+<p class="admonition-title">Treating real and error sources in data collection</p>
+<p>If you believe that your scenario is affected by real uncertainty, then you should prepare and characterize multiple specimens according to the same specifications. If you believe that your measurements are affected by sources of error, then you should take multiple measurements on each specimen. If you have a mix of real and error sources, then you should prepare multiple specimens and measure each one multiple times <a class="footnote-reference brackets" href="#nested" id="id9">2</a>.</p>
+</div>
+<div class="admonition-treating-real-and-error-sources-in-data-analysis admonition">
+<p class="admonition-title">Treating real and error sources in data analysis</p>
+<p><strong>TODO</strong> Make this example much more concrete!</p>
+<p>It is common to treat error uncertainties as additive and <em>unbiased</em> (zero-mean); under these assumptions, taking the sample mean of measurements will result in a more accurate measurement of the QOI. However, if there is real uncertainty, then it is not valid to simply average the measurements. Instead, it is better to use multiple summary statistics (such as location and spread parameters) to describe the data, or to formally model that uncertainty as a random variable.</p>
+<p>Additionally, you should eliminate or otherwise handle assignable causes before following the steps above. An assignable cause will tend to violate the unbiasedness assumption common to treating error uncertainty.</p>
+</div>
+</div>
+<div class="section" id="cause-source-quadrants">
+<h3><span class="section-number">6.1.4. </span>Cause-Source Quadrants<a class="headerlink" href="#cause-source-quadrants" title="Permalink to this headline">¶</a></h3>
+<p>The cause and source dichotomies serve as independent axes. Using these as orthogonal axes yields the <em>cause-source quadrants</em>, visualized below. Each quadrant can be given a descriptive name: <em>noise, deviation, anomaly,</em> and <em>mistake</em>.</p>
+<p><img alt="variability quadrants" src="../_images/cause-source-quadrants-bw.png" /></p>
+<p><em>Distinctions</em></p>
+<p>To learn how to recognize each of the quadrants, it is helpful to see pairwise distinctions across each axis:</p>
+<div class="admonition-noise-v-deviation admonition">
+<p class="admonition-title">Noise v Deviation</p>
+<p>Both noise and deviation are treated as random, but deviations affect the quantity we seek to study, while noise corrupts our measurements.</p>
+</div>
+<div class="admonition-noise-v-mistake admonition">
+<p class="admonition-title">Noise v Mistake</p>
+<p>Both noise and mistakes corrupt a measurement, but noise is treated as random, while a mistake has an assignable cause.</p>
+</div>
+<div class="admonition-deviation-v-anomaly admonition">
+<p class="admonition-title">Deviation v Anomaly</p>
+<p>Both deviations and anomalies are real, but deviations are treated as random, while an anomaly has an assignable cause.</p>
+</div>
+<div class="admonition-anomaly-v-mistake admonition">
+<p class="admonition-title">Anomaly v Mistake</p>
+<p>Both anomalies and mistakes have assignable causes, but anomalies affect the quantity we seek to study, while mistakes corrupt our measurements.</p>
+</div>
+</div>
+<div class="section" id="illustrative-example-cause-and-source-in-metals-manufacturing">
+<h3><span class="section-number">6.1.5. </span>Illustrative Example: Cause and Source in Metals Manufacturing<a class="headerlink" href="#illustrative-example-cause-and-source-in-metals-manufacturing" title="Permalink to this headline">¶</a></h3>
+<p>To help make the cause and source dichotomies clear, let’s consider a specific example that illustrates examples from all four cause-source quadrants. The following image depicts stages in the manufacture and testing of metallic ingots. The quantity of interest is the <em>as-manufactured</em> fatigue strength of the parts. Uncertainty can enter in each of four stages.</p>
+<p><img alt="" src="../_images/manufacturing-examples-numbered.png" /></p>
+<div class="section" id="anomaly-real-source-assignable-cause">
+<h4><span class="section-number">6.1.5.1. </span>1. Anomaly: Real Source, Assignable Cause<a class="headerlink" href="#anomaly-real-source-assignable-cause" title="Permalink to this headline">¶</a></h4>
+<p>Here a worker has accidentally added contaminating materials during the manufacture of an alloy. These contaminants alter the composition of the alloy, leading to uncertainty in its material properties. The source is real, as the contaminants will certainly affect the performance of materials made with this corrupted batch of metal, including the fatigue strength. The cause is assignable, as we can both identify and avoid this cause of uncertainty in the future.</p>
+<p><img alt="" src="../_images/1-real-assignable.png" /></p>
+</div>
+<div class="section" id="deviation-real-source-chance-cause">
+<h4><span class="section-number">6.1.5.2. </span>2. Deviation: Real Source, Chance Cause<a class="headerlink" href="#deviation-real-source-chance-cause" title="Permalink to this headline">¶</a></h4>
+<p>During the cooling and shaping of metal ingots nicks and cracks will inevitably form. The presence and size of these cracks will affect the fatigue strength of the material. This is an unavoidable reality of manufacturing, as it is impossible to guarantee that all parts will be 100% flaw-free. The source is real, as these small defects cause uncertainty in the properties of manufactured components. The cause is chance, since it is impractical to completely eliminate these small defects.</p>
+<p><img alt="" src="../_images/2-real-chance.png" /></p>
+</div>
+<div class="section" id="mistake-error-source-assignable-cause">
+<h4><span class="section-number">6.1.5.3. </span>3. Mistake: Error Source, Assignable Cause<a class="headerlink" href="#mistake-error-source-assignable-cause" title="Permalink to this headline">¶</a></h4>
+<p>Once a material is manufactured, we must carry out physical tests in order to quantify its material properties. However, errors can occur during this testing process that mis-characterize the material properties. Here we see that the test fixture holding a part has slipped during mechanical testing, leading to error in the fatigue strength measured in this test. The source is error, as the slipping of a grip during testing would not affect the behavior of the material in its intended application. The cause is assignable, as we could eliminate this error by altering the test fixture.</p>
+<p><img alt="" src="../_images/3-error-assignable.png" /></p>
+</div>
+<div class="section" id="noise-error-source-chance-cause">
+<h4><span class="section-number">6.1.5.4. </span>4. Noise: Error Source, Chance Cause<a class="headerlink" href="#noise-error-source-chance-cause" title="Permalink to this headline">¶</a></h4>
+<p>Often in mechanical tests, physical phenomena are converted to electrical signals by way of a sensor. In mechanical tests a strain gauge is used to convert elongation into an electrical signal carried on a wire. However, radio waves in the environment can corrupt this signal, affecting the recorded fatigue strength. The source is error, as this electrical noise does not change the real material properties. The cause is chance, as it may not be practical to completely eliminate ambient electrical noise.</p>
+<p><img alt="" src="../_images/4-error-chance.png" /></p>
+</div>
+</div>
+<div class="section" id="making-use-of-nature-cause-and-source">
+<h3><span class="section-number">6.1.6. </span>Making use of Nature, Cause, and Source<a class="headerlink" href="#making-use-of-nature-cause-and-source" title="Permalink to this headline">¶</a></h3>
+<p>The nature, cause, and source dichotomies are independent axes intended to help you make informed decisions in the modeling process.</p>
+<p><em>Cause</em> determines what high-level strategy you will pursue for a particular uncertainty: seek additional information (assignable cause) or model as a random variable (chance cause).</p>
+<p><em>Nature</em> determines where in your model a particular uncertainty occurs: in the parametric factors or the form of the model.</p>
+<p><em>Source</em> determines how to analyze a particular uncertainty: summarize multiple observations to produce a better measurement (erroneous source) or propagate / quantify extreme values of the uncertainty (real source).</p>
+</div>
+</div>
+<div class="section" id="special-cases-of-uncertainty">
+<h2><span class="section-number">6.2. </span>Special Cases of Uncertainty<a class="headerlink" href="#special-cases-of-uncertainty" title="Permalink to this headline">¶</a></h2>
+<p>The following are special cases of uncertainty. Each can still be analyzed in terms of the nature, cause, and source dichotomies, but are still useful cases to recognize.</p>
+<div class="section" id="variability">
+<h3><span class="section-number">6.2.1. </span>Variability<a class="headerlink" href="#variability" title="Permalink to this headline">¶</a></h3>
+<dl class="simple myst">
+<dt>Variability</dt><dd><p><em>Variability</em> is a form of uncertainty that occurs when repeated measurements from a single chosen scenario exhibit different outcomes.</p>
+</dd>
+</dl>
+<p>There are several components to this definition, elucidated below.</p>
+<p><em>Different outcomes</em></p>
+<p>Trivially, we must have <em>different</em> outcomes for there to be variability. If repeated measurement of the same quantity produces the same value, then there is no variability.</p>
+<p><em>Repeated measurements</em></p>
+<p>Variability requires repeated measurements, implying that there must be <em>more than one</em> measurement. Uncertainty about a value that we <em>fundamentally</em> cannot measure is not variability. Additionally, unique events that will never occur again cannot be said to exhibit variability.</p>
+<p><em>A single chosen scenario</em></p>
+<p>Variability arises when we focus on a <em>single</em> scenario and take repeated measurements. Studying different scenarios means we should not expect measurements to come out the same. We might describe a scenario in terms of detailed qualitative factors (e.g. a single manufacturer) or we may index a family of scenarios with continuous variables (e.g. a continuum of feed speeds when machining).</p>
+<p>For instance, if we expect that an outcome <span class="math notranslate nohighlight">\(y\)</span> tends to vary with an input <span class="math notranslate nohighlight">\(x\)</span> as <span class="math notranslate nohighlight">\(y = x^2\)</span>, then we would not consider changes as we vary <span class="math notranslate nohighlight">\(x\)</span> to be variability, but rather a deterministic trend. However, we can observe a mixture of variability and trends, as the following figure demonstrates.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%capture</span> --no-display
+<span class="c1"># Hidden cell input</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="p">(</span>
+    <span class="n">gr</span><span class="o">.</span><span class="n">df_make</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_mutate</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">DF</span><span class="o">.</span><span class="n">x</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_mutate</span><span class="p">(</span>
+        <span class="n">y_Trend</span><span class="o">=</span><span class="n">DF</span><span class="o">.</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">y_Mixed</span><span class="o">=</span><span class="n">DF</span><span class="o">.</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">0.5</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_pivot_longer</span><span class="p">(</span>
+        <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;y_Trend&quot;</span><span class="p">,</span> <span class="s2">&quot;y_Mixed&quot;</span><span class="p">],</span>
+        <span class="n">names_to</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;.value&quot;</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">),</span>
+        <span class="n">names_sep</span><span class="o">=</span><span class="s2">&quot;_&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">ggplot</span><span class="p">(</span><span class="n">gr</span><span class="o">.</span><span class="n">aes</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="s2">&quot;type&quot;</span><span class="p">))</span>
+    <span class="o">+</span> <span class="n">gr</span><span class="o">.</span><span class="n">geom_line</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+    <span class="o">+</span> <span class="n">gr</span><span class="o">.</span><span class="n">geom_point</span><span class="p">(</span><span class="n">gr</span><span class="o">.</span><span class="n">aes</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="s2">&quot;type&quot;</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="o">+</span> <span class="n">gr</span><span class="o">.</span><span class="n">theme_minimal</span><span class="p">()</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8768795013127)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally, the scenario must be <em>chosen</em>. It could be the case that a <em>lurking variable</em>—some unknown input—is fluctuating and causing the observed variability. In principle, such an unknown variable might be controllable and predictive of the observed variability (like <span class="math notranslate nohighlight">\(y = x^2\)</span>), but until we are aware of such an unknown factor, the differing measurements are variability.</p>
+<div class="admonition-example-manufacturing-line admonition">
+<p class="admonition-title">Example: Manufacturing line</p>
+<p>Components of the same material and processing method on a manufacturing line would be expected to have <em>similar</em> but not <em>identical</em> performance. This manufacturing line would constitute a chosen scenario. Different parts, different materials, or different processing methods would constitute different scenarios, and thus we would not describe measurement differences attributed to these different scenarios as variability.</p>
+</div>
+<p>The presence of variability in a chosen scenario has an important ramification for the design of data collection:</p>
+<div class="warning admonition">
+<p class="admonition-title">Variability necessitates multiple observations!</p>
+<p>If there is variability in your chosen scenario, this implies that you should collect <em>repeated observations from the same scenario</em> to inform your modeling.</p>
+</div>
+</div>
+</div>
+<div class="section" id="case-studies">
+<h2><span class="section-number">6.3. </span>Case Studies<a class="headerlink" href="#case-studies" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<div class="section" id="vaccine-efficacy">
+<h3><span class="section-number">6.3.1. </span>Vaccine Efficacy<a class="headerlink" href="#vaccine-efficacy" title="Permalink to this headline">¶</a></h3>
+<p>Testing the efficacy of a virus-targeting vaccine, measured as the percentage of treated individuals who are not infected by the virus.</p>
+<p>Scopus: Full adult US population efficacy, as-manufactured</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Uncertainty</p></th>
+<th class="head"><p>Nature</p></th>
+<th class="head"><p>Cause</p></th>
+<th class="head"><p>Source</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Entry error</p></td>
+<td><p>Param.</p></td>
+<td><p>Assignable</p></td>
+<td><p>Induced</p></td>
+</tr>
+<tr class="row-odd"><td><p>Finite sample</p></td>
+<td><p>Param.</p></td>
+<td><p>Chance</p></td>
+<td><p>Induced</p></td>
+</tr>
+<tr class="row-even"><td><p>Biased sample</p></td>
+<td><p>Param.</p></td>
+<td><p>Assignable</p></td>
+<td><p>Induced</p></td>
+</tr>
+<tr class="row-odd"><td><p>Comorbidities</p></td>
+<td><p>Model-form</p></td>
+<td><p>Chance</p></td>
+<td><p>Real</p></td>
+</tr>
+<tr class="row-even"><td><p>Mfg. error</p></td>
+<td><p>Param.</p></td>
+<td><p>Assignable</p></td>
+<td><p>Real</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Entry error</em>: Vaccine status is recorded via paper records. A data-entry error could mistakenly record the wrong assignment (treatment rather than placebo), which would affect our conclusions, but not the vaccine efficacy. Parametric, assignable, induced. Variability</p>
+<p><em>Finite sample</em>: The full adult US population includes millions of people, but it is not feasible to test a vaccine on this full population. Practically, a subset of the full population must be chosen for testing; this constitutes our <em>sample</em>. Carefully designing this sample helps to mitigate various forms of uncertainty. Parametric, chance, induced. Sampling (TODO need to note randomness is what makes this chance!)</p>
+<p><em>Biased sample</em>: Our scopus considers the full adult US population; if our sample over-represents high-income persons, this would be a biased sample. Since income is well-correlated with health outcomes, this would affect our <em>measurement</em> of the efficacy, but would not change the efficacy for the desired population. Parametric, assignable, induced.</p>
+<p><em>Comorbidities</em>: No two adults have an identical health status. Individuals tend to have <em>comorbidities</em>, the simultaneous presence of multiple diseases. Since the presence of any disease varies over time, and a comorbidity can affect the infectiousness of a disease, comorbidities will affect the efficacy in the target population. Model-form, chance, real. Variability</p>
+<p><em>Manufacturing error</em>: If doses of the vaccine are incorrectly manufactured—say, have half the desired dosage—then the vaccine will likely be less effective than intended. Since our scopus considers the vaccine <em>as-manufactured</em> and not <em>as-designed</em>, this manufacturing error will affect our scopus. Parametric, assignable, real. Variability</p>
+</div>
+<div class="section" id="wind-farm">
+<h3><span class="section-number">6.3.2. </span>Wind Farm<a class="headerlink" href="#wind-farm" title="Permalink to this headline">¶</a></h3>
+<p>Predicting the daily power generation for a particular wind farm using an imperfect physics-based model.</p>
+<p>Scopus: Physical total power generation of the wind farm on a given day</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Uncertainty</p></th>
+<th class="head"><p>Nature</p></th>
+<th class="head"><p>Cause</p></th>
+<th class="head"><p>Source</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Aero. model</p></td>
+<td><p>Model-form</p></td>
+<td><p>Assignable</p></td>
+<td><p>Induced</p></td>
+</tr>
+<tr class="row-odd"><td><p>Wind conditions</p></td>
+<td><p>Param.</p></td>
+<td><p>Chance</p></td>
+<td><p>Real</p></td>
+</tr>
+<tr class="row-even"><td><p>Discrepancy</p></td>
+<td><p>Model-form</p></td>
+<td><p>Chance</p></td>
+<td><p>Induced</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Aerodynamic model</em>: Simulating an entire wind farm is likely to be too computationally intensive to model with the highest-fidelity aerodynamic models available. This means that reasonable approximations to the physics must be made in the name of computational tractability. Since our scopus considers the <em>physical</em> power generated, this choice of model cannot affect our scopus. Model-form, assignable, induced.</p>
+<p><em>Wind conditions</em>: To simulate performance on any day, we must have the ambient flow conditions as inputs for the physics-based model. Weather is as-of-yet not perfectly predictable, especially far in advance. The real weather conditions will set the physical power generated. Parametric, chance, real. Variability</p>
+<p><em>Discrepancy</em>: Since our model is imperfect, even if we were to do a retrospective calculation using the as-measured wind conditions and true power generated, the predicted and actual values would not match. Since it is not practical to improve the aerodynamic model further (see above), we might choose to treat this remaining discrepancy as a random process. Model-form, chance, induced.</p>
+</div>
+<div class="section" id="piston-cycle-time">
+<h3><span class="section-number">6.3.3. </span>Piston Cycle Time<a class="headerlink" href="#piston-cycle-time" title="Permalink to this headline">¶</a></h3>
+<p>Testing an internal combustion engine (ICE) for cycle time in an environment-controlled lab targeting standard temperature and pressure (STP).</p>
+<p>Scopus: Given ICE cycle time in a controlled lab at STP</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Uncertainty</p></th>
+<th class="head"><p>Nature</p></th>
+<th class="head"><p>Cause</p></th>
+<th class="head"><p>Source</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Ambient cond.</p></td>
+<td><p>Param.</p></td>
+<td><p>Assignable</p></td>
+<td><p>Induced</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fuel-air mix</p></td>
+<td><p>Param.</p></td>
+<td><p>Assignable</p></td>
+<td><p>Real</p></td>
+</tr>
+<tr class="row-even"><td><p>Switch bounce</p></td>
+<td><p>Param.</p></td>
+<td><p>Chance</p></td>
+<td><p>Induced</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Ambient conditions</em>: If ambient conditions depart from STP, then the measured cycle time will biased away from the value we are attempting to measure. Parametric, assignable, induced.</p>
+<p><em>Fuel-air mix</em>: The fuel-air mixture will certainly affect the cycle time, but was left unspecified in the description above. If left unconsidered, the fuel-air mix will not be tightly controlled, and may cause additional variability. This oversight would quickly be found, a desired fuel-air mixture decided upon, and the source of variability eliminated. Parametric, assignable, real.</p>
+<p><em>Switch bounce</em>: Mechanical switches are spring-operated and will tend to “bounce” when depressed. This creates a fluctuating waveform that must be processed to identify the “true” time at which the switch was thrown. This processing is usually done with simple assumptions rather than detailed modeling of the switch. Parametric, chance, induced.</p>
+<!-- footnote-definitions -->
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="theoretical"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>There are more theoretical treatments of uncertainty, such as the ideas of <em>aleatory</em> and <em>epistemic</em> uncertainty <span id="id10">[<a class="reference internal" href="../zbib.html#id10" title="Armen Der Kiureghian and Ove Ditlevsen. Aleatory or epistemic? does it matter? Structural safety, 31(2):105–112, 2009.">DKD09</a>]</span>. However, uncertainties can be <em>both</em> aleatory and epistemic, and there is open-conflict in the literature about when each category applies <span id="id11">[<a class="reference internal" href="../zbib.html#id10" title="Armen Der Kiureghian and Ove Ditlevsen. Aleatory or epistemic? does it matter? Structural safety, 31(2):105–112, 2009.">DKD09</a>, <a class="reference internal" href="../zbib.html#id9" title="M. Granger Morgan. Theory and practice in policy analysis. Cambridge University Press, 2017.">Mor17</a>]</span>.</p>
+</dd>
+<dt class="label" id="nested"><span class="brackets"><a class="fn-backref" href="#id9">2</a></span></dt>
+<dd><p>In statistics, this is called a “nested design of experiment” <span id="id12">[<a class="reference internal" href="../zbib.html#id24" title="Thomas P. Ryan. Modern Experimental Design. John Wiley &amp; Sons, 2007.">Rya07</a>]</span>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./02_developing"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="developing.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">5. </span>Developing</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../zbib.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Bibliography</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Zachary del Rosario, Gianluca Iaccarino<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
