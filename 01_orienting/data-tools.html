@@ -1,0 +1,3941 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5. A Brief Introduction to Data Tools &#8212; All Models Are Uncertain</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6. Conceptual Tools for Handling Uncertainty" href="../02_developing/uncertainty.html" />
+    <link rel="prev" title="4. A Grammar of Model Analysis: Grama" href="grama-intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">All Models Are Uncertain</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../preface.html">
+                    Preface
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Orienting
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="orienting.html">
+   1. Orienting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="curiosity-skepticism.html">
+   2. Curiosity and Skepticism: A Healthy Mindset
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modeling-process.html">
+   3. The Modeling Process
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="grama-intro.html">
+   4. A Grammar of Model Analysis: Grama
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   5. A Brief Introduction to Data Tools
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Developing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02_developing/uncertainty.html">
+   6. Conceptual Tools for Handling Uncertainty
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02_developing/distributions.html">
+   7. Distributions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_developing/marginals.html">
+     7.1. Single Uncertainties: Marginal Distributions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_developing/dependency.html">
+     7.2. Multiple uncertainties: Modeling dependency
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_developing/sampling.html">
+     7.3. Dealing with Limited Data: Sampling Uncertainty
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02_developing/functions.html">
+   8. Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_developing/vectorized.html">
+     8.1. Vectorizing Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_developing/modeling-functions.html">
+     8.2. Modeling Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_developing/practical-fitting.html">
+     8.3. Practical Fitting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_developing/doe-surrogates.html">
+     8.4. Sampling and Surrogates
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02_developing/models.html">
+   9. Models
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_developing/dimension-reduction.html">
+     9.1. Dimension Reduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_developing/dimensional-analysis.html">
+     9.2. Dimensional Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_developing/propagation-concepts.html">
+     9.3. Uncertainty Propagation: Concepts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_developing/propagation-algorithms.html">
+     9.4. Uncertainty Propagation: Algorithms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_developing/ema.html">
+     9.5. Exploratory Model Analysis (EMA)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Answering
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../03_answering/answering.html">
+   10. Answering
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03_answering/decision-making.html">
+     10.1. Making Decisions Under Uncertainty: Nuclear Waste Storage Safety
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03_answering/model-assumptions.html">
+     10.2. Assessing Model Assumptions: Disease Transmission and Social Connectivity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03_answering/design-codes.html">
+     10.3. Designing Procedures: Uncertainty-Informed Design Codes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03_answering/interpretable-structure.html">
+     10.4. Interpreting Model Structure: Solar Receiver
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Appendices
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../04_appendices/cases.html">
+   11. Datasets and Models
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04_appendices/alloys.html">
+     11.1. Datasets: Alloys
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04_appendices/turbulence.html">
+     11.2. Datasets: Turbulence Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04_appendices/boats.html">
+     11.3. Models: Boat hulls
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04_appendices/rlc-circuits.html">
+     11.4. Models: RLC Circuits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04_appendices/projectile-motion.html">
+     11.5. Models: Projectile Motion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04_appendices/piston.html">
+     11.6. Models: Piston cycle time
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04_appendices/solar-receiver.html">
+     11.7. Models: Solar Receiver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04_appendices/limit-state-models.html">
+     11.8. Models: Limit State Analysis and Structural Models
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04_appendices/disease-models.html">
+     11.9. Models: Agent-based Disease Transmission Model
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04_appendices/eda.html">
+   12. Fundamentals of Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04_appendices/doe-gp.html">
+   13. Sampling Plans for Gaussian Processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04_appendices/pr-modeling.html">
+   14. Concepts in Random Variable Modeling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04_appendices/nls.html">
+   15. Nonlinear Least Squares
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04_appendices/reproduce.html">
+   16. Reproducibility Details
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/01_orienting/data-tools.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/01_orienting/data-tools.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-packages">
+   5.1. Python Packages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualizing">
+   5.2. Visualizing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dataframe-constructors">
+   5.3. DataFrame Constructors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filtering">
+   5.4. Filtering
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mutating">
+   5.5. Mutating
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mutation-helpers">
+     5.5.1. Mutation helpers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#offsets">
+     5.5.2. Offsets
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rolling-summaries">
+     5.5.3. Rolling summaries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#control">
+     5.5.4. Control
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rounding-numeric-columns">
+     5.5.5. Rounding numeric columns
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grouping-and-summarizing">
+   5.6. Grouping and Summarizing
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summary-functions">
+     5.6.1. Summary functions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grouping">
+     5.6.2. Grouping
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#counting">
+     5.6.3. Counting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#re-ordering">
+   5.7. Re-ordering
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arranging">
+     5.7.1. Arranging
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#column-selection">
+     5.7.2. Column selection
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#selection-helpers">
+     5.7.3. Selection helpers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reshaping-pivoting">
+   5.8. Reshaping (Pivoting)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#further-reading">
+   5.9. Further Reading
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>A Brief Introduction to Data Tools</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-packages">
+   5.1. Python Packages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualizing">
+   5.2. Visualizing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dataframe-constructors">
+   5.3. DataFrame Constructors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filtering">
+   5.4. Filtering
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mutating">
+   5.5. Mutating
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mutation-helpers">
+     5.5.1. Mutation helpers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#offsets">
+     5.5.2. Offsets
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rolling-summaries">
+     5.5.3. Rolling summaries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#control">
+     5.5.4. Control
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rounding-numeric-columns">
+     5.5.5. Rounding numeric columns
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grouping-and-summarizing">
+   5.6. Grouping and Summarizing
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summary-functions">
+     5.6.1. Summary functions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grouping">
+     5.6.2. Grouping
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#counting">
+     5.6.3. Counting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#re-ordering">
+   5.7. Re-ordering
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arranging">
+     5.7.1. Arranging
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#column-selection">
+     5.7.2. Column selection
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#selection-helpers">
+     5.7.3. Selection helpers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reshaping-pivoting">
+   5.8. Reshaping (Pivoting)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#further-reading">
+   5.9. Further Reading
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="a-brief-introduction-to-data-tools">
+<span id="data-tools"></span><h1><span class="section-number">5. </span>A Brief Introduction to Data Tools<a class="headerlink" href="#a-brief-introduction-to-data-tools" title="Permalink to this headline">#</a></h1>
+<p>This book is about scientific modeling. However, we’ll have a much easier time working with models if we can format input data for the model and wrangle output data from the model. We will use data both to plan how to evaluate a model and to analyze the results from the model. This chapter is a brief introduction to data tools in <code class="docutils literal notranslate"><span class="pre">py-grama</span></code>.</p>
+<p><strong>Learning Objectives</strong> In this chapter, you will learn:</p>
+<ul class="simple">
+<li><p>the fundamentals of visualizing with ggplot,</p></li>
+<li><p>how to isolate rows with <code class="docutils literal notranslate"><span class="pre">gr.tf_filter()</span></code>,</p></li>
+<li><p>how to derive values with <code class="docutils literal notranslate"><span class="pre">gr.tf_mutate()</span></code>,</p></li>
+<li><p>how to derive summaries with <code class="docutils literal notranslate"><span class="pre">gr.tf_group_by()</span></code> and <code class="docutils literal notranslate"><span class="pre">gr.tf_summarize()</span></code>,</p></li>
+<li><p>how to re-order data rows (<code class="docutils literal notranslate"><span class="pre">gr.tf_arrange()</span></code>) and columns (<code class="docutils literal notranslate"><span class="pre">gr.tf_select()</span></code>), and</p></li>
+<li><p>how to reshape data with <code class="docutils literal notranslate"><span class="pre">gr.tf_pivot_longer()</span></code> and <code class="docutils literal notranslate"><span class="pre">gr.tf_pivot_wider()</span></code>.</p></li>
+</ul>
+<p><em>Note</em>: This section assumes you have already read <a class="reference internal" href="grama-intro.html#grama-intro"><span class="std std-numref">Chapter 4</span></a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">grama</span> <span class="k">as</span> <span class="nn">gr</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">DF</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">Intention</span><span class="p">()</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">myst_nb</span> <span class="kn">import</span> <span class="n">glue</span>
+<span class="n">gr</span><span class="o">.</span><span class="n">hide_traceback</span><span class="p">()</span> <span class="c1"># Shorten error traceback (for printed book)</span>
+<span class="n">gr</span><span class="o">.</span><span class="n">set_uqtheme</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="python-packages">
+<h2><span class="section-number">5.1. </span>Python Packages<a class="headerlink" href="#python-packages" title="Permalink to this headline">#</a></h2>
+<p>There are two python packages we’ll use to work with data:</p>
+<ul class="simple">
+<li><p>Pandas provides the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> object we’ll use to represent datasets <span id="id1">[<a class="reference internal" href="../zbib.html#id128">pandas development team, 2020</a>]</span>.</p></li>
+<li><p>Grama provides “verbs” to work with data <span id="id2">[<a class="reference internal" href="../zbib.html#id127">del Rosario, 2020</a>]</span>.</p></li>
+</ul>
+<p>As discussed in <a class="reference internal" href="grama-intro.html#grama-intro"><span class="std std-numref">Chapter 4</span></a>, <em>transformation</em> verbs accept a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> as their input and return a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> as their output. There are many useful types of transformation: We’ll illustrate these with the example dataset shown here:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the data</span>
+<span class="kn">from</span> <span class="nn">grama.data</span> <span class="kn">import</span> <span class="n">df_stang</span>
+<span class="c1"># Show the data</span>
+<span class="n">df_stang</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>thick</th>
+      <th>alloy</th>
+      <th>E</th>
+      <th>mu</th>
+      <th>ang</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>10600</td>
+      <td>0.321</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>10600</td>
+      <td>0.323</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.032</td>
+      <td>al_24st</td>
+      <td>10400</td>
+      <td>0.329</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.032</td>
+      <td>al_24st</td>
+      <td>10300</td>
+      <td>0.319</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.064</td>
+      <td>al_24st</td>
+      <td>10500</td>
+      <td>0.323</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>0.064</td>
+      <td>al_24st</td>
+      <td>10400</td>
+      <td>0.327</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>72</th>
+      <td>0.064</td>
+      <td>al_24st</td>
+      <td>10500</td>
+      <td>0.320</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td>0.081</td>
+      <td>al_24st</td>
+      <td>9900</td>
+      <td>0.314</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>74</th>
+      <td>0.081</td>
+      <td>al_24st</td>
+      <td>10000</td>
+      <td>0.316</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>75</th>
+      <td>0.081</td>
+      <td>al_24st</td>
+      <td>9900</td>
+      <td>0.314</td>
+      <td>90</td>
+    </tr>
+  </tbody>
+</table>
+<p>76 rows × 5 columns</p>
+</div></div></div>
+</div>
+<p>This is a dataset of the measured properties of several specimens made according to the same aluminum alloy specification. Due to manufacturing variability, the specimens do not have identical properties. Further details on this dataset are given in <a class="reference internal" href="../04_appendices/alloys.html#s-al"><span class="std std-numref">Appendix 11.1.2</span></a>.</p>
+</div>
+<div class="section" id="visualizing">
+<span id="data-ggplot"></span><h2><span class="section-number">5.2. </span>Visualizing<a class="headerlink" href="#visualizing" title="Permalink to this headline">#</a></h2>
+<span class="target" id="index-0"></span><p id="index-1">One of the most powerful tools we have for making sense of data is <strong>visualization</strong>—creating plots of our data. The <code class="docutils literal notranslate"><span class="pre">py-grama</span></code> package uses <code class="docutils literal notranslate"><span class="pre">plotnine</span></code> for data visualization. A plot is created using functional programming-style code (<a class="reference internal" href="grama-intro.html#grama-functional"><span class="std std-numref">Chapter 4.2.3</span></a>), initialized with the function <code class="docutils literal notranslate"><span class="pre">gr.ggplot()</span></code>. The following code shows how to make a simple plot of the aluminum alloy dataset:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="c1"># Start with a dataset</span>
+    <span class="n">df_stang</span>
+    <span class="c1">## Start the plot</span>
+    <span class="c1"># Assign DataFrame columns to aesthetics (aes)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">ggplot</span><span class="p">(</span><span class="n">gr</span><span class="o">.</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;thick&quot;</span><span class="p">))</span>
+    <span class="c1"># Visualize with points</span>
+    <span class="o">+</span> <span class="n">gr</span><span class="o">.</span><span class="n">geom_point</span><span class="p">()</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%capture</span> --no-display
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/data-tools_8_0.png" src="../_images/data-tools_8_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="fig-dt-vis-basic">
+<p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text">A basic plot of the aluminum alloy dataset.</span><a class="headerlink" href="#fig-dt-vis-basic" title="Permalink to this image">#</a></p>
+</div>
+<p>With three lines of code, we are able to make a simple plot of the data (<strong><a class="reference internal" href="#fig-dt-vis-basic"><span class="std std-numref">Figure 5.1</span></a></strong>). The philosophy behind this code is the <em>grammar of graphics</em>—ggplot—which is a structured way of composing elements to make a plot.</p>
+<p>The most important concept in ggplot is the set of <strong>aesthetics</strong>, which are assigned using the <code class="docutils literal notranslate"><span class="pre">gr.aes()</span></code> function. We use aesthetics to map columns in a dataset to elements of the plot. To create <a class="reference internal" href="#fig-dt-vis-basic"><span class="std std-numref">Figure 5.1</span></a>, we assigned three columns to the <em>x</em>-axis, <em>y</em>-axis, and color in the plot. Once we have chosen how to assign aesthetics, we must choose a <strong>geometry</strong> to visualize the data. We chose to use points using <code class="docutils literal notranslate"><span class="pre">gr.geom_point()</span></code>, which creates a scatterplot.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">df_stang</span>
+    <span class="c1"># Start a plot object</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">ggplot</span><span class="p">(</span>
+        <span class="n">gr</span><span class="o">.</span><span class="n">aes</span><span class="p">(</span>
+            <span class="n">x</span><span class="o">=</span><span class="s2">&quot;E&quot;</span><span class="p">,</span>         <span class="c1"># Show `E` using the x-axis</span>
+            <span class="n">y</span><span class="o">=</span><span class="s2">&quot;mu&quot;</span><span class="p">,</span>        <span class="c1"># Show `mu` using the y-axis</span>
+            <span class="n">color</span><span class="o">=</span><span class="s2">&quot;thick&quot;</span><span class="p">,</span> <span class="c1"># Show `thick` using color</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+    <span class="c1"># Visualize with points</span>
+    <span class="o">+</span> <span class="n">gr</span><span class="o">.</span><span class="n">geom_point</span><span class="p">()</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>While the code above is often quick to write, it does not produce a visually appealing graph. We can use a variety of tweaks to “beautify” the plot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="c1"># Start with a dataset</span>
+    <span class="n">df_stang</span>
+    <span class="c1"># Convert numbers to factors (for discrete color)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_mutate</span><span class="p">(</span><span class="n">thick</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">as_str</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">thick</span><span class="p">))</span>
+    <span class="c1"># Assign DataFrame columns to aesthetics (aes)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">ggplot</span><span class="p">(</span><span class="n">gr</span><span class="o">.</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;thick&quot;</span><span class="p">))</span>
+    <span class="c1"># Visualize with points</span>
+    <span class="o">+</span> <span class="n">gr</span><span class="o">.</span><span class="n">geom_point</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="c1"># Set a pleasing color scale</span>
+    <span class="o">+</span> <span class="n">gr</span><span class="o">.</span><span class="n">scale_color_brewer</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Thickness (in)&quot;</span><span class="p">,</span> 
+        <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;qual&quot;</span><span class="p">,</span>  <span class="n">palette</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="c1"># Modify the plot theme</span>
+    <span class="o">+</span> <span class="n">gr</span><span class="o">.</span><span class="n">theme_uqbook</span><span class="p">()</span>
+    <span class="c1"># Add more informative axis labels</span>
+    <span class="o">+</span> <span class="n">gr</span><span class="o">.</span><span class="n">labs</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Elasticity (ksi)&quot;</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Poisson&#39;s Ratio (-)&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%capture</span> --no-display
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/data-tools_12_0.png" src="../_images/data-tools_12_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="fig-dt-vis-prez">
+<p class="caption"><span class="caption-number">Fig. 5.2 </span><span class="caption-text">A “beautified” plot of the aluminum alloy dataset.</span><a class="headerlink" href="#fig-dt-vis-prez" title="Permalink to this image">#</a></p>
+</div>
+<p><strong><a class="reference internal" href="#fig-dt-vis-prez"><span class="std std-numref">Figure 5.2</span></a></strong> shows the “beautified” plot of the aluminum alloy data. Note that this code is much longer than the simpler version. Throughout the book, we report some—but not all—plotting code, in order to save space.</p>
+<p>For a more thorough introduction to ggplot, consult <span id="id3">Wickham and Grolemund [<a class="reference internal" href="../zbib.html#id10">2023</a>]</span>.</p>
+</div>
+<div class="section" id="dataframe-constructors">
+<h2><span class="section-number">5.3. </span>DataFrame Constructors<a class="headerlink" href="#dataframe-constructors" title="Permalink to this headline">#</a></h2>
+<p id="index-2">In some cases, we need to quickly generate a DataFrame; for instance, to make a demo plot or to set the input values for a <code class="docutils literal notranslate"><span class="pre">py-grama</span></code> model. Grama provides several <strong>DataFrame constructors</strong>. The simplest constructor is <code class="docutils literal notranslate"><span class="pre">gr.df_make()</span></code>, which makes a DataFrame based on provided arrays.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gr</span><span class="o">.</span><span class="n">df_make</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="n">c</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x</th>
+      <th>c</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>a</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>b</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>c</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Note that we can mix datatypes among the columns, just as with a Pandas DataFrame. However, the columns must all be of the same length or be length 1. Length 1 inputs will be <em>recycled</em>, as illustrated here:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Illustrate &quot;recycling&quot; a single value</span>
+<span class="n">gr</span><span class="o">.</span><span class="n">df_make</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x</th>
+      <th>c</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>a</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>a</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>a</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>We can also use the <code class="docutils literal notranslate"><span class="pre">gr.linspace()</span></code> tool to help create a linearly spaced set of values. Combined with other data tools (such as <code class="docutils literal notranslate"><span class="pre">gr.tf_mutate()</span></code>), this allows us to quickly generate small datasets:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="c1"># Create an array of 6 equispaced values</span>
+    <span class="n">gr</span><span class="o">.</span><span class="n">df_make</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="c1"># Compute y = 2x</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_mutate</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">DF</span><span class="o">.</span><span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x</th>
+      <th>y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.2</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.4</td>
+      <td>0.8</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.6</td>
+      <td>1.2</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.8</td>
+      <td>1.6</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1.0</td>
+      <td>2.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p id="index-3">While <code class="docutils literal notranslate"><span class="pre">gr.df_make()</span></code> lets us construct the columns directly, it is sometimes helpful to build a <em>grid</em> of values. This is what <code class="docutils literal notranslate"><span class="pre">gr.df_grid()</span></code> does:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Demonstrate a simple &quot;grid&quot; of data</span>
+<span class="n">gr</span><span class="o">.</span><span class="n">df_grid</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">+</span><span class="mi">1</span><span class="p">],</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x</th>
+      <th>y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">gr.df_grid()</span></code> creates a row for every combination of the inputs. For this reason, the input arrays do not need to have identical lengths.</p>
+</div>
+<div class="section" id="filtering">
+<h2><span class="section-number">5.4. </span>Filtering<a class="headerlink" href="#filtering" title="Permalink to this headline">#</a></h2>
+<span class="target" id="index-4"></span><p id="index-5">The <code class="docutils literal notranslate"><span class="pre">gr.tf_filter()</span></code> verb helps us identify rows in a dataset that satisfy some property. For instance, the following code filters the dataset to show only those aluminum plate measurements taken at an angle of <code class="docutils literal notranslate"><span class="pre">45</span></code> degrees:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_stang</span>
+    <span class="c1"># Keep only the rows with the specified angle</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_filter</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">ang</span> <span class="o">==</span> <span class="mi">45</span><span class="p">)</span>
+    <span class="c1"># Show the first 6 rows only</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>thick</th>
+      <th>alloy</th>
+      <th>E</th>
+      <th>mu</th>
+      <th>ang</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>10700</td>
+      <td>0.321</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>10500</td>
+      <td>0.323</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.032</td>
+      <td>al_24st</td>
+      <td>10400</td>
+      <td>0.329</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.032</td>
+      <td>al_24st</td>
+      <td>10500</td>
+      <td>0.319</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.064</td>
+      <td>al_24st</td>
+      <td>10400</td>
+      <td>0.323</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.064</td>
+      <td>al_24st</td>
+      <td>10500</td>
+      <td>0.328</td>
+      <td>45</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>We can combine multiple filters in a single statement, as in the following:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_stang</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_filter</span><span class="p">(</span>
+        <span class="n">DF</span><span class="o">.</span><span class="n">ang</span> <span class="o">==</span> <span class="mi">45</span><span class="p">,</span>     <span class="c1"># Specified angle</span>
+        <span class="mf">0.022</span> <span class="o">&lt;</span> <span class="n">DF</span><span class="o">.</span><span class="n">thick</span><span class="p">,</span> <span class="c1"># Minimum thickness</span>
+        <span class="n">DF</span><span class="o">.</span><span class="n">thick</span> <span class="o">&lt;</span> <span class="mf">0.081</span><span class="p">,</span> <span class="c1"># Maximum thickness</span>
+    <span class="p">)</span>
+    <span class="c1"># Show the first 6 rows only</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>thick</th>
+      <th>alloy</th>
+      <th>E</th>
+      <th>mu</th>
+      <th>ang</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.032</td>
+      <td>al_24st</td>
+      <td>10400</td>
+      <td>0.329</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.032</td>
+      <td>al_24st</td>
+      <td>10500</td>
+      <td>0.319</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.064</td>
+      <td>al_24st</td>
+      <td>10400</td>
+      <td>0.323</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.064</td>
+      <td>al_24st</td>
+      <td>10500</td>
+      <td>0.328</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.032</td>
+      <td>al_24st</td>
+      <td>10400</td>
+      <td>0.318</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.032</td>
+      <td>al_24st</td>
+      <td>10500</td>
+      <td>0.326</td>
+      <td>45</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Transformations do not edit the original data.</strong>
+Note above that calling <code class="docutils literal notranslate"><span class="pre">gr.tf_filter()</span></code> did not edit the original <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> <code class="docutils literal notranslate"><span class="pre">df_stang</span></code>. Instead, all transformation verbs return a <em>new</em> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>. If we wanted to overwrite the data, we would need to re-assign the dataset.</p>
+</div>
+<p id="index-6">Grama provides a few helper functions for use with <code class="docutils literal notranslate"><span class="pre">gr.tf_filter()</span></code>, listed in <strong><a class="reference internal" href="#tab-filter-helpers"><span class="std std-numref">Table 5.1</span></a></strong>.</p>
+<table class="colwidths-auto table" id="tab-filter-helpers">
+<caption><span class="caption-number">Table 5.1 </span><span class="caption-text">Filter helper functions.</span><a class="headerlink" href="#tab-filter-helpers" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Functions</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">NaN</span></code> detection</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gr.not_nan()</span></code>,  <code class="docutils literal notranslate"><span class="pre">gr.is_nan()</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Set inclusion</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gr.var_in()</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="docutils literal notranslate"><span class="pre">NaN</span></code> detection tools are useful for cleaning up a dataset. The set inclusion tool <code class="docutils literal notranslate"><span class="pre">gr.var_in()</span></code> simplifies looking for particular cases when it’s easiest to enumerate all desired values:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_stang</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_filter</span><span class="p">(</span>
+        <span class="c1"># Keep if `thick` is in the provided set</span>
+        <span class="n">gr</span><span class="o">.</span><span class="n">var_in</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">thick</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.022</span><span class="p">,</span> <span class="mf">0.081</span><span class="p">])</span>
+    <span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>thick</th>
+      <th>alloy</th>
+      <th>E</th>
+      <th>mu</th>
+      <th>ang</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>10600</td>
+      <td>0.321</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>10600</td>
+      <td>0.323</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.081</td>
+      <td>al_24st</td>
+      <td>10000</td>
+      <td>0.315</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.081</td>
+      <td>al_24st</td>
+      <td>10100</td>
+      <td>0.312</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.081</td>
+      <td>al_24st</td>
+      <td>10000</td>
+      <td>0.311</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>10700</td>
+      <td>0.321</td>
+      <td>45</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="mutating">
+<h2><span class="section-number">5.5. </span>Mutating<a class="headerlink" href="#mutating" title="Permalink to this headline">#</a></h2>
+<span class="target" id="index-7"></span><p id="index-8">The <code class="docutils literal notranslate"><span class="pre">gr.tf_mutate()</span></code> verb <em>changes</em> columns in the data and produces a new DataFrame. We can use this to derive new quantities or to overwrite the values of a column. For instance, the shear modulus is related to the elasticity <span class="math notranslate nohighlight">\(E\)</span> and Poisson’s ratio <span class="math notranslate nohighlight">\(\mu\)</span> via</p>
+<div class="math notranslate nohighlight">
+\[G = \frac{E}{2(1 + \mu)}.\]</div>
+<p>We can compute the shear modulus using the mutate tool with the elasticity <code class="docutils literal notranslate"><span class="pre">E</span></code> and Poisson’s ratio <code class="docutils literal notranslate"><span class="pre">mu</span></code> columns:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_stang</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_mutate</span><span class="p">(</span>
+        <span class="c1"># Compute the shear modulus</span>
+        <span class="n">G</span><span class="o">=</span><span class="n">DF</span><span class="o">.</span><span class="n">E</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">DF</span><span class="o">.</span><span class="n">mu</span><span class="p">),</span> 
+    <span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>thick</th>
+      <th>alloy</th>
+      <th>E</th>
+      <th>mu</th>
+      <th>ang</th>
+      <th>G</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>10600</td>
+      <td>0.321</td>
+      <td>0</td>
+      <td>4012.112036</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>10600</td>
+      <td>0.323</td>
+      <td>0</td>
+      <td>4006.046863</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.032</td>
+      <td>al_24st</td>
+      <td>10400</td>
+      <td>0.329</td>
+      <td>0</td>
+      <td>3912.716328</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.032</td>
+      <td>al_24st</td>
+      <td>10300</td>
+      <td>0.319</td>
+      <td>0</td>
+      <td>3904.473086</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.064</td>
+      <td>al_24st</td>
+      <td>10500</td>
+      <td>0.323</td>
+      <td>0</td>
+      <td>3968.253968</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.064</td>
+      <td>al_24st</td>
+      <td>10700</td>
+      <td>0.328</td>
+      <td>0</td>
+      <td>4028.614458</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>We can also overwrite old values. For instance, the elasticity is given in units of <span class="math notranslate nohighlight">\(\text{kips}/\text{in}^2 = \text{ksi}\)</span>. We could convert the elasticity to <span class="math notranslate nohighlight">\(\text{MPa}\)</span> with the conversion factor <span class="math notranslate nohighlight">\(1 \text{ksi} = 6.895 \text{MPa}\)</span>. Re-assigning an existing column will overwrite the old values with the new:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_stang</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_mutate</span><span class="p">(</span>
+        <span class="n">E</span><span class="o">=</span><span class="n">DF</span><span class="o">.</span><span class="n">E</span> <span class="o">*</span> <span class="mf">6.895</span><span class="p">,</span> <span class="c1"># Convert from ksi to MPa</span>
+    <span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>thick</th>
+      <th>alloy</th>
+      <th>E</th>
+      <th>mu</th>
+      <th>ang</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>73087.0</td>
+      <td>0.321</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>73087.0</td>
+      <td>0.323</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.032</td>
+      <td>al_24st</td>
+      <td>71708.0</td>
+      <td>0.329</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.032</td>
+      <td>al_24st</td>
+      <td>71018.5</td>
+      <td>0.319</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.064</td>
+      <td>al_24st</td>
+      <td>72397.5</td>
+      <td>0.323</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.064</td>
+      <td>al_24st</td>
+      <td>73776.5</td>
+      <td>0.328</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="section" id="mutation-helpers">
+<h3><span class="section-number">5.5.1. </span>Mutation helpers<a class="headerlink" href="#mutation-helpers" title="Permalink to this headline">#</a></h3>
+<p id="index-9">There are a variety of operations and helper functions that we can use with <code class="docutils literal notranslate"><span class="pre">gr.tf_mutate()</span></code>. <strong><a class="reference internal" href="#tab-mutation-helpers"><span class="std std-numref">Table 5.2</span></a></strong> lists some of the most important mutation helpers.</p>
+<table class="colwidths-auto table" id="tab-mutation-helpers">
+<caption><span class="caption-number">Table 5.2 </span><span class="caption-text">Mutation helper functions.</span><a class="headerlink" href="#tab-mutation-helpers" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Functions</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Arithmetic operations</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">DF.x</span> <span class="pre">+</span> <span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">DF.y</span> <span class="pre">-</span> <span class="pre">DF.x</span></code>, <code class="docutils literal notranslate"><span class="pre">DF.x</span> <span class="pre">*</span> <span class="pre">DF.y</span></code>, <code class="docutils literal notranslate"><span class="pre">DF.x</span> <span class="pre">/</span> <span class="pre">DF.y</span></code>, <code class="docutils literal notranslate"><span class="pre">DF.x</span> <span class="pre">**</span> <span class="pre">DF.a</span></code> (Exponentiation)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Modular arithmetic</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">DF.x</span> <span class="pre">//</span> <span class="pre">DF.y</span></code> (Floor division) <code class="docutils literal notranslate"><span class="pre">DF.x</span> <span class="pre">%</span> <span class="pre">DF.y</span></code> (Remainder)</p></td>
+</tr>
+<tr class="row-even"><td><p>Logical comparisons</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">!=</span></code>, <code class="docutils literal notranslate"><span class="pre">==</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Logarithms</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gr.log(DF.x)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Offsets</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gr.lead(DF.x)</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.lag(DF.x)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Rolling summaries</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gr.cumsum(DF.x)</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.cumprod(DF.x)</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.cummin(DF.x)</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.cummax(DF.x)</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.cummean(DF.x)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Ranking</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gr.min_rank(DF.x)</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.row_number(DF.x)</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.dense_rank(DF.x)</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.percent_rank(DF.x)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Data conversion</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gr.as_numeric(DF.x)</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.as_str(DF.x)</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.as_factor(DF.x)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Control</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gr.if_else()</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.case_when()</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Many of these helpers are intuitive. Some of the more specialized helpers are described next.</p>
+</div>
+<div class="section" id="offsets">
+<h3><span class="section-number">5.5.2. </span>Offsets<a class="headerlink" href="#offsets" title="Permalink to this headline">#</a></h3>
+<p>Offset functions allow us to access values in adjacent rows. This can be useful for approximating derivatives.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="c1"># Create a dataset of 6 linearly spaced points</span>
+    <span class="c1"># between 0 and 1</span>
+    <span class="n">gr</span><span class="o">.</span><span class="n">df_make</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="c1"># Compute y = 3x</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_mutate</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">3</span> <span class="o">*</span> <span class="n">DF</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+    <span class="c1"># Estimate the slope of dy/dx</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_mutate</span><span class="p">(</span>
+        <span class="c1"># Approximate with a forward difference</span>
+        <span class="n">dy_dx_fwd</span><span class="o">=</span><span class="p">(</span><span class="n">gr</span><span class="o">.</span><span class="n">lead</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="o">-</span> <span class="n">DF</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> 
+                 <span class="o">/</span><span class="p">(</span><span class="n">gr</span><span class="o">.</span><span class="n">lead</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="n">DF</span><span class="o">.</span><span class="n">x</span><span class="p">),</span> 
+        <span class="c1"># Approximate with a backward difference</span>
+        <span class="n">dy_dx_rev</span><span class="o">=</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">gr</span><span class="o">.</span><span class="n">lag</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">y</span><span class="p">))</span> 
+                 <span class="o">/</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">gr</span><span class="o">.</span><span class="n">lag</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">x</span><span class="p">)),</span> 
+        <span class="c1"># Approximate with a central difference</span>
+        <span class="n">dy_dx_cen</span><span class="o">=</span><span class="p">(</span><span class="n">gr</span><span class="o">.</span><span class="n">lead</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="o">-</span> <span class="n">gr</span><span class="o">.</span><span class="n">lag</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">y</span><span class="p">))</span>   
+                 <span class="o">/</span><span class="p">(</span><span class="n">gr</span><span class="o">.</span><span class="n">lead</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="n">gr</span><span class="o">.</span><span class="n">lag</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">x</span><span class="p">)),</span> 
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x</th>
+      <th>y</th>
+      <th>dy_dx_fwd</th>
+      <th>dy_dx_rev</th>
+      <th>dy_dx_cen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.2</td>
+      <td>0.6</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.4</td>
+      <td>1.2</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.6</td>
+      <td>1.8</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.8</td>
+      <td>2.4</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>NaN</td>
+      <td>3.0</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">gr.lead()</span></code> and <code class="docutils literal notranslate"><span class="pre">gr.lag()</span></code> return <code class="docutils literal notranslate"><span class="pre">NaN</span></code> (Not a Number) when attempting to access values “outside” the dataset.</p>
+<div class="admonition-exercise-re-coding-nans admonition">
+<p class="admonition-title"><strong>Exercise: Re-coding NaNs.</strong></p>
+<p>Try using <code class="docutils literal notranslate"><span class="pre">gr.if_else()</span></code> with <code class="docutils literal notranslate"><span class="pre">gr.is_nan()</span></code> to re-code the <code class="docutils literal notranslate"><span class="pre">NaN</span></code> values in the dataset just given with some other numerical value, such as <span class="math notranslate nohighlight">\(0\)</span> or <span class="math notranslate nohighlight">\(-1\)</span>.</p>
+</div>
+</div>
+<div class="section" id="rolling-summaries">
+<h3><span class="section-number">5.5.3. </span>Rolling summaries<a class="headerlink" href="#rolling-summaries" title="Permalink to this headline">#</a></h3>
+<p>These functions compute a summary over all previous rows. For instance, we can take a cumulative mean to see how additional observations affect a summary. This is useful for assessing the convergence of an estimate.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="c1"># Draw a random sample of 6 normally distributed</span>
+    <span class="c1"># observations</span>
+    <span class="n">gr</span><span class="o">.</span><span class="n">df_make</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">marg_mom</span><span class="p">(</span><span class="s2">&quot;norm&quot;</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sd</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">r</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_mutate</span><span class="p">(</span>
+        <span class="c1"># The sample mean will approach the true mean </span>
+        <span class="c1"># of 0; however, this convergence will be </span>
+        <span class="c1"># stochastic and slow. In practice, one should </span>
+        <span class="c1"># use a much larger sample, say n=10,000.</span>
+        <span class="n">mu</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">cummean</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">r</span><span class="p">),</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>r</th>
+      <th>mu</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.775939</td>
+      <td>1.775939</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1.350580</td>
+      <td>1.563260</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-0.735264</td>
+      <td>0.797085</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.621393</td>
+      <td>0.753162</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1.108096</td>
+      <td>0.824149</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.364119</td>
+      <td>0.747477</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="control">
+<h3><span class="section-number">5.5.4. </span>Control<a class="headerlink" href="#control" title="Permalink to this headline">#</a></h3>
+<p>Control helpers allow us to use programming constructs such as if/else and switch statements within <code class="docutils literal notranslate"><span class="pre">gr.tf_mutate()</span></code>. The <code class="docutils literal notranslate"><span class="pre">gr.if_else()</span></code> helper is useful for re-coding special values. It takes a comparison and provides one of two values: the first <code class="docutils literal notranslate"><span class="pre">if</span></code> the condition is met or the second if not (the <code class="docutils literal notranslate"><span class="pre">else</span></code> value).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_stang</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_mutate</span><span class="p">(</span>
+        <span class="c1"># Is the plate measurement aligned with the</span>
+        <span class="c1"># rolling direction?</span>
+        <span class="n">alignment</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">if_else</span><span class="p">(</span>
+            <span class="n">DF</span><span class="o">.</span><span class="n">ang</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span>   <span class="c1"># Condition to check</span>
+            <span class="s2">&quot;aligned&quot;</span><span class="p">,</span>     <span class="c1"># Used if condition True</span>
+            <span class="s2">&quot;not aligned&quot;</span><span class="p">,</span> <span class="c1"># Used if condition False</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+    
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_arrange</span><span class="p">(</span><span class="n">gr</span><span class="o">.</span><span class="n">desc</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">E</span><span class="p">))</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>thick</th>
+      <th>alloy</th>
+      <th>E</th>
+      <th>mu</th>
+      <th>ang</th>
+      <th>alignment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.064</td>
+      <td>al_24st</td>
+      <td>10700</td>
+      <td>0.328</td>
+      <td>0</td>
+      <td>aligned</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>10700</td>
+      <td>0.329</td>
+      <td>45</td>
+      <td>not aligned</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>10700</td>
+      <td>0.323</td>
+      <td>90</td>
+      <td>not aligned</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>10700</td>
+      <td>0.323</td>
+      <td>90</td>
+      <td>not aligned</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.064</td>
+      <td>al_24st</td>
+      <td>10700</td>
+      <td>0.328</td>
+      <td>0</td>
+      <td>aligned</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>10700</td>
+      <td>0.331</td>
+      <td>90</td>
+      <td>not aligned</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">gr.case_when()</span></code> helper is a more general version of <code class="docutils literal notranslate"><span class="pre">gr.if_else()</span></code>. This tool will run multiple conditionals until a case is met, returning the value associated with that case.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_stang</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_mutate</span><span class="p">(</span>
+        <span class="n">case</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">case_when</span><span class="p">(</span>
+            <span class="c1"># First conditional</span>
+            <span class="p">[</span>
+                <span class="n">DF</span><span class="o">.</span><span class="n">E</span> <span class="o">&lt;</span> <span class="mi">10000</span><span class="p">,</span> <span class="c1"># The condition to check</span>
+                <span class="s2">&quot;low&quot;</span><span class="p">,</span>        <span class="c1"># The value to return</span>
+            <span class="p">],</span>    
+            <span class="c1"># If first is not met, then check next</span>
+            <span class="p">[</span><span class="n">DF</span><span class="o">.</span><span class="n">E</span> <span class="o">&lt;</span> <span class="mi">10500</span><span class="p">,</span> <span class="s2">&quot;middle&quot;</span><span class="p">],</span>
+            <span class="c1"># If no conditions are met, use this value</span>
+            <span class="p">[</span><span class="kc">True</span><span class="p">,</span>         <span class="s2">&quot;high&quot;</span><span class="p">],</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+    
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>thick</th>
+      <th>alloy</th>
+      <th>E</th>
+      <th>mu</th>
+      <th>ang</th>
+      <th>case</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>10600</td>
+      <td>0.321</td>
+      <td>0</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>10600</td>
+      <td>0.323</td>
+      <td>0</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.032</td>
+      <td>al_24st</td>
+      <td>10400</td>
+      <td>0.329</td>
+      <td>0</td>
+      <td>middle</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.032</td>
+      <td>al_24st</td>
+      <td>10300</td>
+      <td>0.319</td>
+      <td>0</td>
+      <td>middle</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.064</td>
+      <td>al_24st</td>
+      <td>10500</td>
+      <td>0.323</td>
+      <td>0</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.064</td>
+      <td>al_24st</td>
+      <td>10700</td>
+      <td>0.328</td>
+      <td>0</td>
+      <td>high</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>When using <code class="docutils literal notranslate"><span class="pre">gr.case_when()</span></code>, be sure to provide a <code class="docutils literal notranslate"><span class="pre">True</span></code> case as the last option. This will be the “fallback” case if no other conditions are met.</p>
+</div>
+<div class="section" id="rounding-numeric-columns">
+<h3><span class="section-number">5.5.5. </span>Rounding numeric columns<a class="headerlink" href="#rounding-numeric-columns" title="Permalink to this headline">#</a></h3>
+<p>One useful trick with <code class="docutils literal notranslate"><span class="pre">py-grama</span></code> is the <code class="docutils literal notranslate"><span class="pre">gr.tf_mutate_if()</span></code> variant of the mutation verb. This function takes a conditional (that defines the <code class="docutils literal notranslate"><span class="pre">if</span></code> part) and a mutation helper. For all of the DataFrame columns, if the conditional is met, then the mutation is applied.</p>
+<p>Practically, this tool is helpful for rounding all of the numeric columns in a DataFrame. The following code produces rounding to two decimal places:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="c1"># Make some demonstration data</span>
+    <span class="n">gr</span><span class="o">.</span><span class="n">df_make</span><span class="p">(</span>
+        <span class="n">cat</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">],</span>
+        <span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+        <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="n">gr</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">gr</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">gr</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">2</span><span class="p">)],</span>
+    <span class="p">)</span>
+    <span class="c1"># Round all numeric columns</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_mutate_if</span><span class="p">(</span>
+        <span class="n">gr</span><span class="o">.</span><span class="n">is_numeric</span><span class="p">,</span> 
+        <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">gr</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>cat</th>
+      <th>x</th>
+      <th>y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>a</td>
+      <td>1</td>
+      <td>1.41</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>b</td>
+      <td>2</td>
+      <td>2.72</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>c</td>
+      <td>3</td>
+      <td>7.39</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="grouping-and-summarizing">
+<h2><span class="section-number">5.6. </span>Grouping and Summarizing<a class="headerlink" href="#grouping-and-summarizing" title="Permalink to this headline">#</a></h2>
+<span class="target" id="index-10"></span><span class="target" id="index-11"></span><p id="index-12">Note that <code class="docutils literal notranslate"><span class="pre">gr.tf_mutate()</span></code> returns a new column value for each original row. In some cases, we want to summarize over multiple rows. The verb <code class="docutils literal notranslate"><span class="pre">gr.tf_summarize()</span></code> allows us to use summary functions over multiple rows.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_stang</span>
+    <span class="c1"># Note that we use gr.tf_summarize() for summary</span>
+    <span class="c1"># functions, not gr.tf_mutate() </span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_summarize</span><span class="p">(</span>
+        <span class="c1"># Compute two averages</span>
+        <span class="n">E_mean</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">E</span><span class="p">),</span>
+        <span class="n">mu_mean</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">mu</span><span class="p">),</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>E_mean</th>
+      <th>mu_mean</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10344.736842</td>
+      <td>0.321461</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="section" id="summary-functions">
+<h3><span class="section-number">5.6.1. </span>Summary functions<a class="headerlink" href="#summary-functions" title="Permalink to this headline">#</a></h3>
+<p id="index-13">Grama provides a variety of summary functions. The most important ones are listed in <strong><a class="reference internal" href="#tab-summary-helpers"><span class="std std-numref">Table 5.3</span></a></strong>.</p>
+<table class="colwidths-auto table" id="tab-summary-helpers">
+<caption><span class="caption-number">Table 5.3 </span><span class="caption-text">Summary functions.</span><a class="headerlink" href="#tab-summary-helpers" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Functions</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Location</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gr.mean(DF.x)</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.median(DF.x)</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.min(DF.x)</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.max(DF.x)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spread</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gr.sd(DF.x)</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.var(DF.x)</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.IQR(DF.x)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Higher moments</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gr.skew(DF.x)</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.kurt(DF.x)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Quantile</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gr.quant(DF.x,</span> <span class="pre">p)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Order</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gr.first(DF.x)</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.nth(DF.x,</span> <span class="pre">n)</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.last(DF.x)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Counts</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gr.n_distinct(DF.x)</span></code> (Counts distinct values), <code class="docutils literal notranslate"><span class="pre">gr.n()</span></code> (Total count)</p></td>
+</tr>
+<tr class="row-even"><td><p>Logical</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gr.sum(DF.x</span> <span class="pre">==</span> <span class="pre">0)</span></code> (Count cases where x == 0), <code class="docutils literal notranslate"><span class="pre">gr.pr(DF.g</span> <span class="pre">&gt;</span> <span class="pre">0)</span></code> (Probability helper)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Confidence interval helpers</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gr.mean_lo()</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.mean_up()</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.pr_lo()</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.pr_up()</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Prediction interval helpers</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gr.pint_lo()</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.pint_up()</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Many of these summary functions are named intuitively. The descriptive statistic tools for location, spread, and higher moments are described in <a class="reference internal" href="../04_appendices/eda.html#eda"><span class="std std-numref">Appendix 12</span></a>. The interval helpers are tools for quantifying uncertainty, these are covered in <a class="reference internal" href="../02_developing/sampling.html#s-estimation"><span class="std std-numref">Section 7.3</span></a>.</p>
+<div class="admonition-exercise-filter-with-a-summary admonition">
+<p class="admonition-title"><strong>Exercise: Filter with a summary.</strong></p>
+<p>How would you use <code class="docutils literal notranslate"><span class="pre">gr.tf_filter()</span></code> with a summary function to find the rows with the <em>largest</em> <code class="docutils literal notranslate"><span class="pre">E</span></code> value in the dataset?</p>
+</div>
+</div>
+<div class="section" id="grouping">
+<h3><span class="section-number">5.6.2. </span>Grouping<a class="headerlink" href="#grouping" title="Permalink to this headline">#</a></h3>
+<p id="index-14">Summaries are even more informative when grouped according to other columns. This approach allows you to compute summaries within different “categories” of rows. The verb <code class="docutils literal notranslate"><span class="pre">gr.tf_group_by()</span></code> adds grouping metadata to a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> that <code class="docutils literal notranslate"><span class="pre">gr.tf_summarize()</span></code> can use.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_stang</span>
+    <span class="c1"># Create a grouping according to the `ang` column</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_group_by</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">ang</span><span class="p">)</span>
+    <span class="c1"># Compute summaries within each group</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_summarize</span><span class="p">(</span>
+        <span class="n">E_mean</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">E</span><span class="p">),</span>
+        <span class="n">mu_mean</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">mu</span><span class="p">),</span>
+        <span class="c1"># Compute number of rows in each group</span>
+        <span class="n">n</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">n</span><span class="p">(),</span> 
+    <span class="p">)</span>
+    <span class="c1"># Ungroup; use this if you plan to carry out other </span>
+    <span class="c1"># data operations</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_ungroup</span><span class="p">()</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ang</th>
+      <th>E_mean</th>
+      <th>mu_mean</th>
+      <th>n</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>10369.230769</td>
+      <td>0.321231</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>45</td>
+      <td>10362.500000</td>
+      <td>0.321958</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>90</td>
+      <td>10303.846154</td>
+      <td>0.321231</td>
+      <td>26</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>We can also group by multiple variables; this will create a group for each unique combination of column values.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_stang</span>
+    <span class="c1"># Group by two variables</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_group_by</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">ang</span><span class="p">,</span> <span class="n">DF</span><span class="o">.</span><span class="n">thick</span><span class="p">)</span>
+    <span class="c1"># Same summaries as before</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_summarize</span><span class="p">(</span>
+        <span class="n">E_mean</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">E</span><span class="p">),</span>
+        <span class="n">mu_mean</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">mu</span><span class="p">),</span>
+        <span class="n">n</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">n</span><span class="p">(),</span>
+    <span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_ungroup</span><span class="p">()</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>thick</th>
+      <th>ang</th>
+      <th>E_mean</th>
+      <th>mu_mean</th>
+      <th>n</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.022</td>
+      <td>0</td>
+      <td>10600.0</td>
+      <td>0.322833</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.032</td>
+      <td>0</td>
+      <td>10350.0</td>
+      <td>0.324000</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.064</td>
+      <td>0</td>
+      <td>10600.0</td>
+      <td>0.326167</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.081</td>
+      <td>0</td>
+      <td>10037.5</td>
+      <td>0.314250</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.022</td>
+      <td>45</td>
+      <td>10600.0</td>
+      <td>0.322833</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.032</td>
+      <td>45</td>
+      <td>10450.0</td>
+      <td>0.324000</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Note that the values of <code class="docutils literal notranslate"><span class="pre">n</span></code> are smaller than when we grouped by <code class="docutils literal notranslate"><span class="pre">ang</span></code> only. This is because we have more groups, due to grouping on two columns rather than one.</p>
+<div class="admonition-exercise-filter-with-a-grouped-summary admonition">
+<p class="admonition-title"><strong>Exercise: Filter with a grouped summary.</strong></p>
+<p>Can you figure out how to use <code class="docutils literal notranslate"><span class="pre">gr.tf_group_by()</span></code> and <code class="docutils literal notranslate"><span class="pre">gr.tf_filter()</span></code> with a summary function to find the rows with the <em>largest</em> <code class="docutils literal notranslate"><span class="pre">E</span></code> value in the dataset, per <code class="docutils literal notranslate"><span class="pre">thick</span></code> group?</p>
+</div>
+</div>
+<div class="section" id="counting">
+<h3><span class="section-number">5.6.3. </span>Counting<a class="headerlink" href="#counting" title="Permalink to this headline">#</a></h3>
+<p id="index-15">Combining grouping and counting rows <code class="docutils literal notranslate"><span class="pre">gr.n()</span></code> is so common that Grama provides a helper to do just that: <code class="docutils literal notranslate"><span class="pre">gr.tf_count()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_stang</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_count</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">thick</span><span class="p">)</span>
+    <span class="c1"># Equivalent to</span>
+    <span class="c1"># &gt;&gt; gr.tf_group_by(DF.thick)</span>
+    <span class="c1"># &gt;&gt; gr.tf_summarize(n=gr.n())</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>thick</th>
+      <th>n</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.022</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.032</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.064</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.081</td>
+      <td>22</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="re-ordering">
+<h2><span class="section-number">5.7. </span>Re-ordering<a class="headerlink" href="#re-ordering" title="Permalink to this headline">#</a></h2>
+<span class="target" id="index-16"></span><p id="index-17">Being to be able to re-order your data, both in terms of rows and columns, can be very helpful. The <code class="docutils literal notranslate"><span class="pre">gr.tf_arrange()</span></code> and <code class="docutils literal notranslate"><span class="pre">gr.tf_select()</span></code> tools help you re-order your data.</p>
+<div class="section" id="arranging">
+<h3><span class="section-number">5.7.1. </span>Arranging<a class="headerlink" href="#arranging" title="Permalink to this headline">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">gr.tf_arrange()</span></code> tool re-orders the rows of a dataset from smallest to largest (numerical value) or into alphabetical order, depending on the column datatype.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_stang</span>
+    <span class="c1"># Sort from smallest to largest in `E`</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_arrange</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">E</span><span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>thick</th>
+      <th>alloy</th>
+      <th>E</th>
+      <th>mu</th>
+      <th>ang</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.081</td>
+      <td>al_24st</td>
+      <td>9900</td>
+      <td>0.314</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.081</td>
+      <td>al_24st</td>
+      <td>9900</td>
+      <td>0.312</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.081</td>
+      <td>al_24st</td>
+      <td>9900</td>
+      <td>0.311</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.081</td>
+      <td>al_24st</td>
+      <td>9900</td>
+      <td>0.315</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.081</td>
+      <td>al_24st</td>
+      <td>9900</td>
+      <td>0.312</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.081</td>
+      <td>al_24st</td>
+      <td>9900</td>
+      <td>0.316</td>
+      <td>45</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">gr.tf_arrange()</span></code> verb also works on strings.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="c1"># Make a simple example dataset</span>
+    <span class="n">gr</span><span class="o">.</span><span class="n">df_make</span><span class="p">(</span>
+        <span class="n">fruit</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;blueberries&quot;</span><span class="p">,</span> <span class="s2">&quot;apples&quot;</span><span class="p">,</span> <span class="s2">&quot;carrots&quot;</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="c1"># Arrange by fruit name</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_arrange</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">fruit</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>fruit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>apples</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>blueberries</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>carrots</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>We can sort from largest to smallest by negating a variable. Because this code is a bit illegible, Grama also provides the helper <code class="docutils literal notranslate"><span class="pre">gr.desc()</span></code> to promote readability.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_stang</span>
+    <span class="c1"># This would also sort large-to-small</span>
+    <span class="c1"># &gt;&gt; gr.tf_arrange(-DF.E) </span>
+    <span class="c1"># We can use gr.desc() to reverse the sort</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_arrange</span><span class="p">(</span><span class="n">gr</span><span class="o">.</span><span class="n">desc</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">E</span><span class="p">))</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>thick</th>
+      <th>alloy</th>
+      <th>E</th>
+      <th>mu</th>
+      <th>ang</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.064</td>
+      <td>al_24st</td>
+      <td>10700</td>
+      <td>0.328</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>10700</td>
+      <td>0.329</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>10700</td>
+      <td>0.323</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>10700</td>
+      <td>0.323</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.064</td>
+      <td>al_24st</td>
+      <td>10700</td>
+      <td>0.328</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>10700</td>
+      <td>0.331</td>
+      <td>90</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">gr.desc()</span></code> helper also enables reverse alphabetical sorting.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">gr</span><span class="o">.</span><span class="n">df_make</span><span class="p">(</span>
+        <span class="n">fruit</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;blueberries&quot;</span><span class="p">,</span> <span class="s2">&quot;apples&quot;</span><span class="p">,</span> <span class="s2">&quot;carrots&quot;</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="c1"># Reverse alphabetical sort</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_arrange</span><span class="p">(</span><span class="n">gr</span><span class="o">.</span><span class="n">desc</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">fruit</span><span class="p">))</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>fruit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>carrots</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>blueberries</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>apples</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="column-selection">
+<h3><span class="section-number">5.7.2. </span>Column selection<a class="headerlink" href="#column-selection" title="Permalink to this headline">#</a></h3>
+<p id="index-18">The <code class="docutils literal notranslate"><span class="pre">gr.tf_select()</span></code> helper allows us to re-order and down-select columns. This is helpful when we have a dataset that is “wide.” For instance, the Stang et al. <span id="id4">[<a class="reference internal" href="../zbib.html#id73">Stang <em>et al.</em>, 1946</a>]</span> dataset is reported in the following wide format:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">grama.data</span> <span class="kn">import</span> <span class="n">df_stang_wide</span>
+<span class="n">df_stang_wide</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>thick</th>
+      <th>E_00</th>
+      <th>mu_00</th>
+      <th>E_45</th>
+      <th>mu_45</th>
+      <th>E_90</th>
+      <th>mu_90</th>
+      <th>alloy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.022</td>
+      <td>10600</td>
+      <td>0.321</td>
+      <td>10700</td>
+      <td>0.329</td>
+      <td>10500</td>
+      <td>0.310</td>
+      <td>al_24st</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.022</td>
+      <td>10600</td>
+      <td>0.323</td>
+      <td>10500</td>
+      <td>0.331</td>
+      <td>10700</td>
+      <td>0.323</td>
+      <td>al_24st</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.032</td>
+      <td>10400</td>
+      <td>0.329</td>
+      <td>10400</td>
+      <td>0.318</td>
+      <td>10300</td>
+      <td>0.322</td>
+      <td>al_24st</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>In this form of the data, the angle of the measurement is stored in the column name.</p>
+<p>We can select a smaller number of columns to make a more focused presentation of the data. For instance, the following code selects only those columns taken at a <span class="math notranslate nohighlight">\(0^{\circ}\)</span> angle.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_stang_wide</span>
+    <span class="c1"># Choose just three columns</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_select</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">thick</span><span class="p">,</span> <span class="n">DF</span><span class="o">.</span><span class="n">E_00</span><span class="p">,</span> <span class="n">DF</span><span class="o">.</span><span class="n">mu_00</span><span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_head</span><span class="p">()</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>thick</th>
+      <th>E_00</th>
+      <th>mu_00</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.022</td>
+      <td>10600</td>
+      <td>0.321</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.022</td>
+      <td>10600</td>
+      <td>0.323</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.032</td>
+      <td>10400</td>
+      <td>0.329</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.032</td>
+      <td>10300</td>
+      <td>0.319</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.064</td>
+      <td>10500</td>
+      <td>0.323</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="selection-helpers">
+<h3><span class="section-number">5.7.3. </span>Selection helpers<a class="headerlink" href="#selection-helpers" title="Permalink to this headline">#</a></h3>
+<p id="index-19">Grama also provides a number of selection helpers, which are listed in <strong><a class="reference internal" href="#tab-selection-helpers"><span class="std std-numref">Table 5.4</span></a></strong>.</p>
+<table class="colwidths-auto table" id="tab-selection-helpers">
+<caption><span class="caption-number">Table 5.4 </span><span class="caption-text">Selection helper functions.</span><a class="headerlink" href="#tab-selection-helpers" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Helper</strong></p></th>
+<th class="head"><p><strong>Selects</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">gr.starts_with(s)</span></code></p></td>
+<td><p>Columns that start with string <code class="docutils literal notranslate"><span class="pre">s</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">gr.ends_with(s)</span></code></p></td>
+<td><p>Columns that end with string <code class="docutils literal notranslate"><span class="pre">s</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">gr.contains(s)</span></code></p></td>
+<td><p>Columns that contain the string <code class="docutils literal notranslate"><span class="pre">s</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">gr.matches(s)</span></code></p></td>
+<td><p>Columns that match the string pattern <code class="docutils literal notranslate"><span class="pre">s</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">gr.everything()</span></code></p></td>
+<td><p>All columns not already selected</p></td>
+</tr>
+</tbody>
+</table>
+<p>For instance, we can use the <code class="docutils literal notranslate"><span class="pre">gr.contains()</span></code> helper on the <code class="docutils literal notranslate"><span class="pre">df_stang_wide</span></code> to programmatically select the <span class="math notranslate nohighlight">\(0^{\circ}\)</span> measurements.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_stang_wide</span>
+    <span class="c1"># Select all columns whose *name* contains &quot;00&quot;</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_select</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">thick</span><span class="p">,</span> <span class="n">gr</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;00&quot;</span><span class="p">))</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_head</span><span class="p">()</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>thick</th>
+      <th>E_00</th>
+      <th>mu_00</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.022</td>
+      <td>10600</td>
+      <td>0.321</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.022</td>
+      <td>10600</td>
+      <td>0.323</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.032</td>
+      <td>10400</td>
+      <td>0.329</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.032</td>
+      <td>10300</td>
+      <td>0.319</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.064</td>
+      <td>10500</td>
+      <td>0.323</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">gr.everything()</span></code> helper may seem frivolous at first, but this is <em>extremely</em> helpful for re-ordering columns. Using <code class="docutils literal notranslate"><span class="pre">gr.everything()</span></code>, we can move a set of columns to the far left of the DataFrame without dropping any columns.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_stang_wide</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_select</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">alloy</span><span class="p">,</span> <span class="n">DF</span><span class="o">.</span><span class="n">thick</span><span class="p">,</span> <span class="n">gr</span><span class="o">.</span><span class="n">everything</span><span class="p">())</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_head</span><span class="p">()</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>alloy</th>
+      <th>thick</th>
+      <th>E_00</th>
+      <th>mu_00</th>
+      <th>E_45</th>
+      <th>mu_45</th>
+      <th>E_90</th>
+      <th>mu_90</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>al_24st</td>
+      <td>0.022</td>
+      <td>10600</td>
+      <td>0.321</td>
+      <td>10700</td>
+      <td>0.329</td>
+      <td>10500</td>
+      <td>0.310</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>al_24st</td>
+      <td>0.022</td>
+      <td>10600</td>
+      <td>0.323</td>
+      <td>10500</td>
+      <td>0.331</td>
+      <td>10700</td>
+      <td>0.323</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>al_24st</td>
+      <td>0.032</td>
+      <td>10400</td>
+      <td>0.329</td>
+      <td>10400</td>
+      <td>0.318</td>
+      <td>10300</td>
+      <td>0.322</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>al_24st</td>
+      <td>0.032</td>
+      <td>10300</td>
+      <td>0.319</td>
+      <td>10500</td>
+      <td>0.326</td>
+      <td>10400</td>
+      <td>0.330</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>al_24st</td>
+      <td>0.064</td>
+      <td>10500</td>
+      <td>0.323</td>
+      <td>10400</td>
+      <td>0.331</td>
+      <td>10400</td>
+      <td>0.327</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="reshaping-pivoting">
+<h2><span class="section-number">5.8. </span>Reshaping (Pivoting)<a class="headerlink" href="#reshaping-pivoting" title="Permalink to this headline">#</a></h2>
+<p id="index-20">The <code class="docutils literal notranslate"><span class="pre">df_stang_wide</span></code> dataset just discussed illustrates an important point about data: Datasets often come in a format that is not yet usable. Grama is built around the concept of <em>tidy data</em> <span id="id5">[<a class="reference internal" href="../zbib.html#id9">Wickham, 2014</a>]</span>: that all datasets should be formatted such that</p>
+<ol class="simple">
+<li><p>Each variable forms a column.</p></li>
+<li><p>Each observation forms a row.</p></li>
+<li><p>Each type of observational unit forms a table.</p></li>
+</ol>
+<p id="index-21">The dataset we just discussed is not tidy, because one of the variables (measurement angle) is not “inside” the table but rather is misplaced in the column names. We can use a technique called <em>pivoting</em> to reshape <code class="docutils literal notranslate"><span class="pre">df_stang_wide</span></code> into a tidy dataset.</p>
+<p><em>Note:</em> What follows is a brief tour of data pivoting. For more details on pivoting, see Chapter 6 of <span id="id6">Wickham and Grolemund [<a class="reference internal" href="../zbib.html#id10">2023</a>]</span>.</p>
+<p>The following dataset is wide: Each column represents values measured in a single year.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create an example dataset with </span>
+<span class="c1"># multiple years of data</span>
+<span class="n">df_wide</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;1950&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">1e3</span><span class="p">,</span> <span class="mf">2e3</span><span class="p">],</span>
+    <span class="s2">&quot;1980&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">2e3</span><span class="p">,</span> <span class="mf">5e3</span><span class="p">],</span>
+    <span class="s2">&quot;2010&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">4e3</span><span class="p">,</span> <span class="mf">10e3</span><span class="p">],</span>
+<span class="p">})</span>
+<span class="n">df_wide</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>1950</th>
+      <th>1980</th>
+      <th>2010</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1000.0</td>
+      <td>2000.0</td>
+      <td>4000.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2000.0</td>
+      <td>5000.0</td>
+      <td>10000.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p id="index-22">We can use <code class="docutils literal notranslate"><span class="pre">gr.pivot_longer()</span></code> to take a wide dataset and make it longer by transforming column names into cell values. We provide a column name for these values with <code class="docutils literal notranslate"><span class="pre">names_to</span></code>, and specify a new name for the previous values via <code class="docutils literal notranslate"><span class="pre">values_to</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_wide</span>
+    <span class="c1"># Start a data pivot</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_pivot_longer</span><span class="p">(</span>
+        <span class="c1"># Which columns to use? (Here: all of them)</span>
+        <span class="n">columns</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">everything</span><span class="p">(),</span>
+        <span class="c1"># What to call the new column that contains</span>
+        <span class="c1"># the old column names</span>
+        <span class="n">names_to</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">,</span>
+        <span class="c1"># What to call the new column that contains</span>
+        <span class="c1"># the old column values</span>
+        <span class="n">values_to</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>year</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1950</td>
+      <td>1000.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1950</td>
+      <td>2000.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1980</td>
+      <td>2000.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1980</td>
+      <td>5000.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2010</td>
+      <td>4000.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2010</td>
+      <td>10000.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Tidying a real dataset often requires multiple rounds of pivoting and data cleanup. For instance, using <code class="docutils literal notranslate"><span class="pre">gr.tf_pivot_longer()</span></code> on <code class="docutils literal notranslate"><span class="pre">df_stang_wide</span></code> gets us closer to a tidy dataset, but not all the way there.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_stang_wide</span>
+    <span class="c1"># Create a unique index for each observation</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_mutate</span><span class="p">(</span><span class="n">rep</span><span class="o">=</span><span class="n">DF</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+    <span class="c1"># Begin the data pivot</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_pivot_longer</span><span class="p">(</span>
+        <span class="c1"># Use a regular expression to match all the</span>
+        <span class="c1"># E and mu columns, regardless of angle</span>
+        <span class="n">columns</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">matches</span><span class="p">(</span><span class="s2">&quot;E|mu&quot;</span><span class="p">),</span> 
+        <span class="n">names_to</span><span class="o">=</span><span class="s2">&quot;var&quot;</span><span class="p">,</span>
+        <span class="n">values_to</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>thick</th>
+      <th>alloy</th>
+      <th>rep</th>
+      <th>var</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>0</td>
+      <td>E_00</td>
+      <td>10600.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>1</td>
+      <td>E_00</td>
+      <td>10600.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.032</td>
+      <td>al_24st</td>
+      <td>2</td>
+      <td>E_00</td>
+      <td>10400.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.032</td>
+      <td>al_24st</td>
+      <td>3</td>
+      <td>E_00</td>
+      <td>10300.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.064</td>
+      <td>al_24st</td>
+      <td>4</td>
+      <td>E_00</td>
+      <td>10500.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.064</td>
+      <td>al_24st</td>
+      <td>5</td>
+      <td>E_00</td>
+      <td>10700.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Note that the variable names <code class="docutils literal notranslate"><span class="pre">E</span></code> and <code class="docutils literal notranslate"><span class="pre">mu</span></code> are concatenated with the angle values <code class="docutils literal notranslate"><span class="pre">&quot;00&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;45&quot;</span></code>, and <code class="docutils literal notranslate"><span class="pre">&quot;90&quot;</span></code>. We can use the <code class="docutils literal notranslate"><span class="pre">gr.tf_separate()</span></code> tool to separate these strings using a separator character <code class="docutils literal notranslate"><span class="pre">sep=&quot;_&quot;</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_stang_wide</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_mutate</span><span class="p">(</span><span class="n">rep</span><span class="o">=</span><span class="n">DF</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_pivot_longer</span><span class="p">(</span>
+        <span class="n">columns</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">matches</span><span class="p">(</span><span class="s2">&quot;E|mu&quot;</span><span class="p">),</span>
+        <span class="n">names_to</span><span class="o">=</span><span class="s2">&quot;var&quot;</span><span class="p">,</span>
+        <span class="n">values_to</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="c1"># This will separate a column of </span>
+    <span class="c1"># strings into multiple columns</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_separate</span><span class="p">(</span>
+        <span class="n">column</span><span class="o">=</span><span class="s2">&quot;var&quot;</span><span class="p">,</span>       <span class="c1"># Which column to separate</span>
+        <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;_&quot;</span><span class="p">,</span>            <span class="c1"># Character for string split</span>
+        <span class="n">into</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;ang&quot;</span><span class="p">),</span> <span class="c1"># New columns</span>
+    <span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>thick</th>
+      <th>alloy</th>
+      <th>rep</th>
+      <th>value</th>
+      <th>name</th>
+      <th>ang</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>0</td>
+      <td>10600.0</td>
+      <td>E</td>
+      <td>00</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>1</td>
+      <td>10600.0</td>
+      <td>E</td>
+      <td>00</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.032</td>
+      <td>al_24st</td>
+      <td>2</td>
+      <td>10400.0</td>
+      <td>E</td>
+      <td>00</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.032</td>
+      <td>al_24st</td>
+      <td>3</td>
+      <td>10300.0</td>
+      <td>E</td>
+      <td>00</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.064</td>
+      <td>al_24st</td>
+      <td>4</td>
+      <td>10500.0</td>
+      <td>E</td>
+      <td>00</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.064</td>
+      <td>al_24st</td>
+      <td>5</td>
+      <td>10700.0</td>
+      <td>E</td>
+      <td>00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p id="index-23">Now we can use <code class="docutils literal notranslate"><span class="pre">gr.tf_pivot_wider()</span></code> to turn the variable <code class="docutils literal notranslate"><span class="pre">name</span></code> column values back into column headers. This completes the reshaping of the data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_stang_wide</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_mutate</span><span class="p">(</span><span class="n">rep</span><span class="o">=</span><span class="n">DF</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_pivot_longer</span><span class="p">(</span>
+        <span class="n">columns</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">matches</span><span class="p">(</span><span class="s2">&quot;E|mu&quot;</span><span class="p">),</span>
+        <span class="n">names_to</span><span class="o">=</span><span class="s2">&quot;var&quot;</span><span class="p">,</span>
+        <span class="n">values_to</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_separate</span><span class="p">(</span>
+        <span class="n">column</span><span class="o">=</span><span class="s2">&quot;var&quot;</span><span class="p">,</span>
+        <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;_&quot;</span><span class="p">,</span>
+        <span class="n">into</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;ang&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="c1"># Begin another data pivot</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_pivot_wider</span><span class="p">(</span>
+        <span class="c1"># Where will the new column names come from?</span>
+        <span class="n">names_from</span><span class="o">=</span><span class="s2">&quot;name&quot;</span><span class="p">,</span>
+        <span class="c1"># Where will the new column values come from?</span>
+        <span class="n">values_from</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>thick</th>
+      <th>alloy</th>
+      <th>rep</th>
+      <th>ang</th>
+      <th>E</th>
+      <th>mu</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>0</td>
+      <td>00</td>
+      <td>10600.0</td>
+      <td>0.321</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>0</td>
+      <td>45</td>
+      <td>10700.0</td>
+      <td>0.329</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>0</td>
+      <td>90</td>
+      <td>10500.0</td>
+      <td>0.310</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>1</td>
+      <td>00</td>
+      <td>10600.0</td>
+      <td>0.323</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>1</td>
+      <td>45</td>
+      <td>10500.0</td>
+      <td>0.331</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>1</td>
+      <td>90</td>
+      <td>10700.0</td>
+      <td>0.323</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>A more concise way to tidy the <code class="docutils literal notranslate"><span class="pre">df_stang_wide</span></code> dataset is to use the <code class="docutils literal notranslate"><span class="pre">&quot;.value&quot;</span></code> special keyword in <code class="docutils literal notranslate"><span class="pre">gr.tf_pivot_longer()</span></code>. This allows us to preserve <code class="docutils literal notranslate"><span class="pre">E</span></code> and <code class="docutils literal notranslate"><span class="pre">mu</span></code> as column names. Practically, this condenses the pivot longer and wider approach into a single verb.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_stang_wide</span>
+    <span class="c1"># A more advanced way to pivot</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_pivot_longer</span><span class="p">(</span>
+        <span class="c1"># Match both E and mu</span>
+        <span class="n">columns</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">matches</span><span class="p">(</span><span class="s2">&quot;E|mu&quot;</span><span class="p">),</span>    
+        <span class="c1"># Use a regular expression with capture groups</span>
+        <span class="n">names_pattern</span><span class="o">=</span><span class="s2">&quot;(E|mu)_(</span><span class="se">\\</span><span class="s2">d+)&quot;</span><span class="p">,</span> 
+        <span class="c1"># &quot;.value&quot; preserves E|mu as column names</span>
+        <span class="n">names_to</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;.value&quot;</span><span class="p">,</span> <span class="s2">&quot;ang&quot;</span><span class="p">),</span>    
+    <span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>thick</th>
+      <th>alloy</th>
+      <th>ang</th>
+      <th>E</th>
+      <th>mu</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>00</td>
+      <td>10600.0</td>
+      <td>0.321</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>45</td>
+      <td>10700.0</td>
+      <td>0.329</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>90</td>
+      <td>10500.0</td>
+      <td>0.310</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>00</td>
+      <td>10600.0</td>
+      <td>0.323</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>45</td>
+      <td>10500.0</td>
+      <td>0.331</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.022</td>
+      <td>al_24st</td>
+      <td>90</td>
+      <td>10700.0</td>
+      <td>0.323</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="further-reading">
+<h2><span class="section-number">5.9. </span>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">#</a></h2>
+<p>Working with data is an important skillset. <span id="id7">Wickham and Grolemund [<a class="reference internal" href="../zbib.html#id10">2023</a>]</span> discuss data management in much greater detail.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./01_orienting"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="grama-intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">4. </span>A Grammar of Model Analysis: Grama</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../02_developing/uncertainty.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Conceptual Tools for Handling Uncertainty</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Zachary del Rosario, Gianluca Iaccarino<br/>
+  
+      &copy; Copyright 2023.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

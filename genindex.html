@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Index &#8212; All Models Are Uncertain</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,33 +19,27 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -60,7 +55,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -69,9 +78,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
       
@@ -84,14 +94,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="00_frontmatter/landing-page.html">
-   All Models Are Uncertain
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="preface.html">
+                    Preface
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Orienting
  </span>
@@ -117,6 +128,11 @@ const thebe_selector_output = ".output, .cell_output"
    4. A Grammar of Model Analysis: Grama
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_orienting/data-tools.html">
+   5. A Brief Introduction to Data Tools
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -125,84 +141,311 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="02_developing/developing.html">
-   5. Developing
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="02_developing/uncertainty.html">
    6. Conceptual Tools for Handling Uncertainty
   </a>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="02_developing/distributions.html">
+   7. Distributions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_developing/marginals.html">
+     7.1. Single Uncertainties: Marginal Distributions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_developing/dependency.html">
+     7.2. Multiple uncertainties: Modeling dependency
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_developing/sampling.html">
+     7.3. Dealing with Limited Data: Sampling Uncertainty
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="02_developing/functions.html">
+   8. Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_developing/vectorized.html">
+     8.1. Vectorizing Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_developing/modeling-functions.html">
+     8.2. Modeling Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_developing/practical-fitting.html">
+     8.3. Practical Fitting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_developing/doe-surrogates.html">
+     8.4. Sampling and Surrogates
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="02_developing/models.html">
+   9. Models
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_developing/dimension-reduction.html">
+     9.1. Dimension Reduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_developing/dimensional-analysis.html">
+     9.2. Dimensional Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_developing/propagation-concepts.html">
+     9.3. Uncertainty Propagation: Concepts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_developing/propagation-algorithms.html">
+     9.4. Uncertainty Propagation: Algorithms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_developing/ema.html">
+     9.5. Exploratory Model Analysis (EMA)
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Bibliography
+  Answering
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="03_answering/answering.html">
+   10. Answering
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_answering/decision-making.html">
+     10.1. Making Decisions Under Uncertainty: Nuclear Waste Storage Safety
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_answering/model-assumptions.html">
+     10.2. Assessing Model Assumptions: Disease Transmission and Social Connectivity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_answering/design-codes.html">
+     10.3. Designing Procedures: Uncertainty-Informed Design Codes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_answering/interpretable-structure.html">
+     10.4. Interpreting Model Structure: Solar Receiver
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Appendices
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="04_appendices/cases.html">
+   11. Datasets and Models
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_appendices/alloys.html">
+     11.1. Datasets: Alloys
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_appendices/turbulence.html">
+     11.2. Datasets: Turbulence Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_appendices/boats.html">
+     11.3. Models: Boat hulls
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_appendices/rlc-circuits.html">
+     11.4. Models: RLC Circuits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_appendices/projectile-motion.html">
+     11.5. Models: Projectile Motion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_appendices/piston.html">
+     11.6. Models: Piston cycle time
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_appendices/solar-receiver.html">
+     11.7. Models: Solar Receiver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_appendices/limit-state-models.html">
+     11.8. Models: Limit State Analysis and Structural Models
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_appendices/disease-models.html">
+     11.9. Models: Agent-based Disease Transmission Model
+    </a>
+   </li>
+  </ul>
+ </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="zbib.html">
-   7. Bibliography
+  <a class="reference internal" href="04_appendices/eda.html">
+   12. Fundamentals of Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_appendices/doe-gp.html">
+   13. Sampling Plans for Gaussian Processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_appendices/pr-modeling.html">
+   14. Concepts in Random Variable Modeling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_appendices/nls.html">
+   15. Nonlinear Least Squares
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_appendices/reproduce.html">
+   16. Reproducibility Details
   </a>
  </li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
             
         </div>
     </div>
+    <div id="rtd-footer-container"></div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1></h1>
+                <h1>Index</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -210,41 +453,836 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
 
 <h1 id="index">Index</h1>
 
 <div class="genindex-jumpbox">
+ <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
+ | <a href="#C"><strong>C</strong></a>
+ | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
+ | <a href="#I"><strong>I</strong></a>
+ | <a href="#L"><strong>L</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#P"><strong>P</strong></a>
+ | <a href="#Q"><strong>Q</strong></a>
+ | <a href="#R"><strong>R</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
+ | <a href="#V"><strong>V</strong></a>
  
 </div>
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="02_developing/dimensional-analysis.html#index-3">active subspaces</a>
+
+      <ul>
+        <li><a href="02_developing/dimension-reduction.html#index-3">dimension reduction</a>
+</li>
+        <li><a href="02_developing/dimension-reduction.html#index-4">shadow plot</a>
+</li>
+      </ul></li>
+      <li><a href="02_developing/propagation-concepts.html#index-2">allowable values</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    assignable cause
+
+      <ul>
+        <li>
+    see also uncertainty ; cause
+</li>
+      </ul></li>
+      <li>
+    assumptions
+
+      <ul>
+        <li><a href="01_orienting/modeling-process.html#index-6">being explicit</a>, <a href="02_developing/dependency.html#index-3">[1]</a>, <a href="02_developing/marginals.html#index-4">[2]</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="02_developing/propagation-concepts.html#index-6">basis values</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="02_developing/uncertainty.html#index-4">bias</a>
+
+      <ul>
+        <li>
+    see also model-form uncertainty
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="01_orienting/modeling-process.html#index-14">certainty</a>
+</li>
+      <li>
+    chance cause
+
+      <ul>
+        <li>
+    see also uncertainty ; cause
+</li>
+      </ul></li>
+      <li><a href="02_developing/propagation-algorithms.html#index-10">common random numbers</a>
+
+      <ul>
+        <li>
+    see also uncertainty propagation ; monte carlo
+</li>
+      </ul></li>
+      <li><a href="02_developing/propagation-concepts.html#index-5">conservative values</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="04_appendices/eda.html#index-14">control chart</a>
+
+      <ul>
+        <li>
+    see also assignable cause
+</li>
+      </ul></li>
+      <li><a href="02_developing/dependency.html#index-1">copula</a>
+</li>
+      <li><a href="02_developing/modeling-functions.html#index-22">cross-validation</a>
+
+      <ul>
+        <li>
+    see also fitting
+</li>
+      </ul></li>
+      <li>
+    curse of dimensionality
+
+      <ul>
+        <li>
+    see also dimension reduction
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="D">D</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    data
+
+      <ul>
+        <li><a href="01_orienting/curiosity-skepticism.html#index-1">experimental vs simulation data</a>
+</li>
+        <li><a href="01_orienting/data-tools.html#index-4">filtering</a>
+</li>
+        <li><a href="01_orienting/data-tools.html#index-10">grouping</a>
+</li>
+        <li><a href="01_orienting/data-tools.html#index-7">mutating</a>
+</li>
+        <li><a href="01_orienting/data-tools.html#index-16">re-ordering</a>
+</li>
+        <li><a href="01_orienting/data-tools.html#index-20">reshaping (pivoting)</a>
+</li>
+        <li><a href="01_orienting/data-tools.html#index-11">summarizing</a>
+</li>
+        <li><a href="01_orienting/data-tools.html#index-21">tidy data</a>
+</li>
+      </ul></li>
+      <li>
+    descriptive statistics
+
+      <ul>
+        <li><a href="04_appendices/eda.html#index-11">asymmetry ; skewness</a>
+</li>
+        <li><a href="04_appendices/eda.html#index-13">dependency ; correlation</a>
+</li>
+        <li><a href="04_appendices/eda.html#index-5">location ; mean</a>
+</li>
+        <li><a href="04_appendices/eda.html#index-6">location ; median</a>
+</li>
+        <li><a href="04_appendices/eda.html#index-7">quantile</a>
+</li>
+        <li><a href="04_appendices/eda.html#index-10">spread ; IQR</a>
+</li>
+        <li><a href="04_appendices/eda.html#index-9">spread ; standard deviation</a>
+</li>
+        <li><a href="04_appendices/eda.html#index-8">spread ; variance</a>
+</li>
+        <li><a href="04_appendices/eda.html#index-12">tail weight ; kurtosis</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    design
+
+      <ul>
+        <li><a href="01_orienting/modeling-process.html#index-5">conceptual design</a>, <a href="01_orienting/modeling-process.html#index-7">[1]</a>
+</li>
+        <li><a href="01_orienting/modeling-process.html#index-4">detailed design</a>
+</li>
+      </ul></li>
+      <li><a href="02_developing/doe-surrogates.html#index-4">design of computer experiments</a>
+
+      <ul>
+        <li>
+    see also sampling
+</li>
+      </ul></li>
+      <li><a href="02_developing/dimension-reduction.html#index-0">dimension reduction</a>
+
+      <ul>
+        <li><a href="02_developing/dimension-reduction.html#index-3">active subspaces</a>
+</li>
+        <li><a href="02_developing/dimension-reduction.html#index-2">Sobol&#39; indices</a>
+</li>
+      </ul></li>
+      <li><a href="02_developing/dimensional-analysis.html#index-1">dimensional analysis</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    EDA
+
+      <ul>
+        <li>
+    see also exploratory data analysis
+</li>
+      </ul></li>
+      <li>
+    EMA
+
+      <ul>
+        <li>
+    see also exploratory model analysis
+</li>
+      </ul></li>
+      <li>
+    erroneous
+
+      <ul>
+        <li>
+    see also uncertainty ; source
+</li>
+      </ul></li>
+      <li>
+    examples
+
+      <ul>
+        <li><a href="02_developing/dimension-reduction.html#index-1">angle ply composite</a>, <a href="02_developing/ema.html#index-3">[1]</a>, <a href="04_appendices/limit-state-models.html#index-3">[2]</a>
+</li>
+        <li><a href="02_developing/doe-surrogates.html#index-0">boat hull design</a>
+</li>
+        <li><a href="04_appendices/limit-state-models.html#index-1">buckling plate</a>
+</li>
+        <li><a href="03_answering/design-codes.html#index-1">cantilever beam</a>, <a href="04_appendices/limit-state-models.html#index-2">[1]</a>
+</li>
+        <li><a href="02_developing/dependency.html#index-0">cast aluminum dataset</a>, <a href="02_developing/marginals.html#index-11">[1]</a>, <a href="04_appendices/alloys.html#index-1">[2]</a>
+</li>
+        <li><a href="02_developing/dependency.html#index-5">cast steel dataset</a>, <a href="04_appendices/alloys.html#index-2">[1]</a>
+</li>
+        <li><a href="03_answering/model-assumptions.html#index-0">disease spread</a>
+</li>
+        <li><a href="02_developing/uncertainty.html#index-13">manufacturing uncertainties</a>
+</li>
+        <li><a href="02_developing/dependency.html#index-4">parallel RLC circuit</a>, <a href="02_developing/propagation-concepts.html#index-7">[1]</a>
+</li>
+        <li><a href="02_developing/dimensional-analysis.html#index-0">pipe flow</a>
+</li>
+        <li><a href="04_appendices/piston.html#index-0">piston cycle time</a>
+</li>
+        <li><a href="04_appendices/projectile-motion.html#index-0">projectile motion</a>
+</li>
+        <li><a href="04_appendices/alloys.html#index-0">rolled aluminum dataset</a>
+</li>
+        <li><a href="03_answering/interpretable-structure.html#index-0">solar receiver</a>, <a href="04_appendices/solar-receiver.html#index-0">[1]</a>
+</li>
+        <li><a href="02_developing/sampling.html#index-12">turbulence</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="02_developing/propagation-concepts.html#index-9">examples : buckling plate</a>
+</li>
+      <li><a href="04_appendices/eda.html#index-0">exploratory data analysis</a>
+
+      <ul>
+        <li>
+    see also mindset ; curiosity
+</li>
+      </ul></li>
+      <li><a href="02_developing/ema.html#index-0">exploratory model analysis</a>
+
+      <ul>
+        <li>
+    see also mindset ; curiosity
+</li>
+      </ul></li>
+      <li><a href="02_developing/modeling-functions.html#index-25">extrapolation</a>
+
+      <ul>
+        <li>
+    see also fitting
+</li>
+        <li>
+    see also mindset ; skepticism
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    feature
+
+      <ul>
+        <li>
+    see also modeling ; input
+</li>
+      </ul></li>
+      <li>
+    fitting
+
+      <ul>
+        <li><a href="02_developing/marginals.html#index-12">maximum likelihood estimation</a>, <a href="04_appendices/pr-modeling.html#index-1">[1]</a>
+</li>
+        <li><a href="02_developing/marginals.html#index-10">method of moments</a>, <a href="04_appendices/pr-modeling.html#index-0">[1]</a>
+</li>
+        <li><a href="02_developing/practical-fitting.html#index-0">nonlinear least squares</a>
+</li>
+        <li><a href="02_developing/modeling-functions.html#index-20">overfitting</a>
+</li>
+        <li><a href="02_developing/practical-fitting.html#index-2">residual</a>
+</li>
+        <li><a href="02_developing/modeling-functions.html#index-21">test-train split</a>
+</li>
+        <li><a href="02_developing/modeling-functions.html#index-19">underfitting</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="02_developing/modeling-functions.html#index-13">gaussian process</a>
+
+      <ul>
+        <li><a href="02_developing/modeling-functions.html#index-16">kernel</a>
+</li>
+        <li>
+    see also modeling ; empirical model
+</li>
+      </ul></li>
+      <li><a href="01_orienting/data-tools.html#index-1">ggplot</a>
+</li>
+      <li>
+    grama
+
+      <ul>
+        <li><a href="01_orienting/grama-intro.html#index-4">boilerplate code</a>
+</li>
+        <li><a href="02_developing/propagation-algorithms.html#index-16">df_det</a>, <a href="02_developing/propagation-concepts.html#index-4">[1]</a>
+</li>
+        <li><a href="01_orienting/data-tools.html#index-3">df_grid()</a>
+</li>
+        <li><a href="01_orienting/data-tools.html#index-2">df_make()</a>
+</li>
+        <li><a href="02_developing/propagation-algorithms.html#index-18">ev_form_ria()</a>
+</li>
+        <li><a href="02_developing/propagation-algorithms.html#index-4">ev_linup()</a>
+</li>
+        <li><a href="02_developing/propagation-algorithms.html#index-1">ev_sample()</a>, <a href="02_developing/propagation-algorithms.html#index-6">[1]</a>, <a href="02_developing/propagation-concepts.html#index-1">[2]</a>
+</li>
+        <li><a href="01_orienting/data-tools.html#index-6">filter helpers</a>
+</li>
+        <li><a href="02_developing/modeling-functions.html#index-15">ft_gp()</a>
+</li>
+        <li><a href="02_developing/practical-fitting.html#index-1">ft_nls()</a>, <a href="04_appendices/nls.html#index-0">[1]</a>
+</li>
+        <li><a href="02_developing/modeling-functions.html#index-12">ft_rf()</a>
+</li>
+        <li><a href="01_orienting/grama-intro.html#index-1">installation</a>
+</li>
+        <li><a href="01_orienting/grama-intro.html#index-8">model definition</a>
+</li>
+        <li><a href="01_orienting/data-tools.html#index-9">mutation helpers</a>
+</li>
+        <li><a href="01_orienting/grama-intro.html#index-0">py-grama</a>
+</li>
+        <li><a href="01_orienting/data-tools.html#index-19">selection helpers</a>
+</li>
+        <li><a href="02_developing/doe-surrogates.html#index-2">skip evaluation</a>, <a href="02_developing/propagation-algorithms.html#index-2">[1]</a>
+</li>
+        <li><a href="01_orienting/data-tools.html#index-13">summary functions</a>
+</li>
+        <li><a href="01_orienting/data-tools.html#index-17">tf_arrange()</a>
+</li>
+        <li><a href="01_orienting/data-tools.html#index-15">tf_count()</a>
+</li>
+        <li><a href="01_orienting/data-tools.html#index-5">tf_filter()</a>
+</li>
+        <li><a href="01_orienting/data-tools.html#index-14">tf_group_by()</a>
+</li>
+        <li><a href="02_developing/modeling-functions.html#index-24">tf_kfolds()</a>
+</li>
+        <li><a href="01_orienting/data-tools.html#index-8">tf_mutate()</a>
+</li>
+        <li><a href="02_developing/propagation-algorithms.html#index-12">tf_outer()</a>
+</li>
+        <li><a href="01_orienting/data-tools.html#index-22">tf_pivot_longer()</a>
+</li>
+        <li><a href="01_orienting/data-tools.html#index-23">tf_pivot_wider()</a>
+</li>
+        <li><a href="02_developing/propagation-algorithms.html#index-15">tf_reweight()</a>
+</li>
+        <li><a href="01_orienting/data-tools.html#index-18">tf_select()</a>
+</li>
+        <li><a href="01_orienting/data-tools.html#index-12">tf_summarize()</a>
+</li>
+        <li><a href="01_orienting/grama-intro.html#index-9">verbs</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="04_appendices/eda.html#index-3">histogram</a>
+
+      <ul>
+        <li><a href="04_appendices/eda.html#index-4">golden rule of histograms</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="01_orienting/curiosity-skepticism.html#index-2">hypothesis</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="02_developing/propagation-algorithms.html#index-13">importance sampling</a>
+
+      <ul>
+        <li>
+    see also uncertainty propagation ; monte carlo
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="L">L</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="02_developing/modeling-functions.html#index-18">least squares model fitting</a>
+</li>
+      <li><a href="02_developing/propagation-concepts.html#index-8">limit state</a>, <a href="03_answering/design-codes.html#index-2">[1]</a>, <a href="04_appendices/limit-state-models.html#index-0">[2]</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="03_answering/design-codes.html#index-0">load and resistance factor design (LRFD)</a>
+</li>
+      <li><a href="02_developing/dimensional-analysis.html#index-2">lurking variable</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="02_developing/modeling-functions.html#index-17">mean squared error</a>
+</li>
+      <li>
+    mindset
+
+      <ul>
+        <li><a href="01_orienting/curiosity-skepticism.html#index-0">curiosity</a>
+</li>
+        <li><a href="01_orienting/curiosity-skepticism.html#index-3">skepticism</a>
+</li>
+      </ul></li>
+      <li><a href="02_developing/practical-fitting.html#index-4">model-form uncertainty</a>
+
+      <ul>
+        <li>
+    see also uncertainty ; nature
+</li>
+      </ul></li>
+      <li>
+    modeling
+
+      <ul>
+        <li><a href="01_orienting/modeling-process.html#index-2">action</a>
+</li>
+        <li><a href="02_developing/marginals.html#index-0">distributions</a>
+</li>
+        <li><a href="02_developing/modeling-functions.html#index-9">empirical model</a>
+</li>
+        <li><a href="02_developing/modeling-functions.html#index-0">functions</a>
+</li>
+        <li><a href="02_developing/modeling-functions.html#index-7">hyperparameter</a>
+</li>
+        <li><a href="01_orienting/modeling-process.html#index-12">input</a>, <a href="02_developing/modeling-functions.html#index-3">[1]</a>
+</li>
+        <li><a href="01_orienting/modeling-process.html#index-11">input vs parameter</a>
+</li>
+        <li><a href="02_developing/marginals.html#index-1">marginal distribution</a>
+</li>
+        <li><a href="02_developing/modeling-functions.html#index-1">output</a>
+</li>
+        <li><a href="02_developing/modeling-functions.html#index-6">parameter</a>
+</li>
+        <li><a href="02_developing/modeling-functions.html#index-8">physical model</a>
+</li>
+        <li><a href="01_orienting/modeling-process.html#index-0">process</a>
+</li>
+        <li><a href="01_orienting/modeling-process.html#index-9">quantity of interest</a>, <a href="02_developing/uncertainty.html#index-10">[1]</a>
+</li>
+        <li><a href="01_orienting/modeling-process.html#index-1">questions</a>
+</li>
+        <li><a href="01_orienting/modeling-process.html#index-3">specificity</a>
+</li>
+        <li><a href="01_orienting/modeling-process.html#index-8">system boundary</a>
+</li>
+        <li><a href="02_developing/practical-fitting.html#index-3">validation data</a>
+</li>
+        <li><a href="01_orienting/modeling-process.html#index-13">verification and validation</a>, <a href="02_developing/vectorized.html#index-2">[1]</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    pandas
+
+      <ul>
+        <li><a href="01_orienting/grama-intro.html#index-7">DataFrame</a>
+</li>
+      </ul></li>
+      <li><a href="02_developing/marginals.html#index-2">parametric uncertainty</a>
+
+      <ul>
+        <li>
+    see also modeling ; marginal distribution
+</li>
+        <li>
+    see also uncertainty ; nature
+</li>
+      </ul></li>
+      <li><a href="01_orienting/data-tools.html#index-0">plotnine</a>
+</li>
+      <li><a href="02_developing/marginals.html#index-7">probability</a>
+
+      <ul>
+        <li><a href="02_developing/marginals.html#index-5">random variable</a>
+</li>
+        <li><a href="02_developing/marginals.html#index-6">realization</a>, <a href="02_developing/sampling.html#index-1">[1]</a>
+</li>
+        <li>
+    see also reliability
+</li>
+        <li>
+    see also uncertainty propagation
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    python
+
+      <ul>
+        <li><a href="01_orienting/grama-intro.html#index-2">anaconda distribution</a>
+</li>
+        <li><a href="01_orienting/grama-intro.html#index-6">help()</a>
+</li>
+        <li><a href="01_orienting/grama-intro.html#index-3">jupyter notebook</a>
+</li>
+        <li><a href="01_orienting/grama-intro.html#index-5">keyword arguments</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="Q">Q</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    QOI
+
+      <ul>
+        <li>
+    see also modeling ; quantity of interest
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="02_developing/marginals.html#index-13">qq plot</a>, <a href="04_appendices/eda.html#index-17">[1]</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="02_developing/modeling-functions.html#index-10">random forest</a>
+
+      <ul>
+        <li>
+    see also modeling ; empirical model
+</li>
+      </ul></li>
+      <li><a href="02_developing/propagation-algorithms.html#index-7">random seed</a>
+
+      <ul>
+        <li>
+    see also uncertainty propagation ; monte carlo
+</li>
+      </ul></li>
+      <li>
+    real
+
+      <ul>
+        <li>
+    see also uncertainty ; source
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    reliability
+
+      <ul>
+        <li><a href="02_developing/propagation-concepts.html#index-10">probability of failure</a>
+</li>
+        <li><a href="02_developing/propagation-concepts.html#index-12">reliability index</a>, <a href="03_answering/design-codes.html#index-3">[1]</a>
+</li>
+        <li>
+    see also uncertainty propagation
+</li>
+      </ul></li>
+      <li><a href="02_developing/dependency.html#index-2">reparameterization</a>, <a href="02_developing/dependency.html#index-6">[1]</a>
+</li>
+      <li>
+    response
+
+      <ul>
+        <li>
+    see also modeling ; output
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="02_developing/sampling.html#index-0">sampling</a>
+
+      <ul>
+        <li><a href="02_developing/sampling.html#index-10">bootstrap</a>, <a href="03_answering/interpretable-structure.html#index-1">[1]</a>
+</li>
+        <li><a href="02_developing/sampling.html#index-6">central limit theorem</a>
+</li>
+        <li><a href="02_developing/sampling.html#index-8">confidence interval</a>, <a href="03_answering/decision-making.html#index-0">[1]</a>
+</li>
+        <li><a href="02_developing/sampling.html#index-9">golden rule for confidence intervals</a>
+</li>
+        <li><a href="02_developing/sampling.html#index-3">population</a>
+</li>
+        <li><a href="02_developing/sampling.html#index-11">prediction interval</a>
+</li>
+        <li><a href="02_developing/doe-surrogates.html#index-7">random sample</a>
+</li>
+        <li><a href="02_developing/sampling.html#index-2">sample</a>
+</li>
+        <li><a href="02_developing/sampling.html#index-4">sampling distribution</a>
+</li>
+        <li>
+    see also uncertainty ; source
+</li>
+        <li><a href="02_developing/sampling.html#index-5">standard error</a>
+</li>
+        <li><a href="02_developing/doe-surrogates.html#index-8">support points</a>
+</li>
+        <li><a href="02_developing/sampling.html#index-14">tolerance interval</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    seed
+
+      <ul>
+        <li>
+    see also random seed
+</li>
+      </ul></li>
+      <li><a href="02_developing/ema.html#index-4">sinew plot</a>
+
+      <ul>
+        <li>
+    see also exploratory model analysis
+</li>
+      </ul></li>
+      <li>
+    single : examples
+
+      <ul>
+        <li><a href="02_developing/sampling.html#index-15">cast aluminum dataset</a>
+</li>
+        <li><a href="02_developing/vectorized.html#index-1">disease spread</a>, <a href="04_appendices/disease-models.html#index-0">[1]</a>
+</li>
+      </ul></li>
+      <li><a href="02_developing/ema.html#index-6">Sobol&#39; indices</a>
+
+      <ul>
+        <li><a href="02_developing/dimension-reduction.html#index-2">dimension reduction</a>
+</li>
+      </ul></li>
+      <li>
+    statistical control
+
+      <ul>
+        <li>
+    see also uncertainty ; cause
+</li>
+      </ul></li>
+      <li>
+    statistical interval
+
+      <ul>
+        <li>
+    see also sampling
+</li>
+      </ul></li>
+      <li><a href="02_developing/doe-surrogates.html#index-1">surrogate model</a>, <a href="02_developing/doe-surrogates.html#index-3">[1]</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="02_developing/propagation-concepts.html#index-3">typical values</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="02_developing/uncertainty.html#index-0">uncertainty</a>
+
+      <ul>
+        <li><a href="02_developing/uncertainty.html#index-6">cause</a>
+</li>
+        <li><a href="02_developing/uncertainty.html#index-1">nature</a>
+</li>
+        <li><a href="02_developing/sampling.html#index-13">source</a>, <a href="02_developing/uncertainty.html#index-9">[1]</a>
+</li>
+        <li><a href="02_developing/uncertainty.html#index-16">targeting</a>
+</li>
+        <li><a href="02_developing/uncertainty.html#index-15">variability</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="02_developing/propagation-algorithms.html#index-0">uncertainty propagation</a>
+
+      <ul>
+        <li><a href="02_developing/propagation-concepts.html#index-0">concepts</a>
+</li>
+        <li><a href="02_developing/propagation-algorithms.html#index-17">first-order reliability method</a>
+</li>
+        <li><a href="02_developing/propagation-algorithms.html#index-3">linear uncertainty propagation</a>
+</li>
+        <li><a href="02_developing/propagation-algorithms.html#index-5">monte carlo</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    variable
+
+      <ul>
+        <li>
+    see also modeling ; input
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="02_developing/vectorized.html#index-0">vectorization</a>
+</li>
+  </ul></td>
+</tr></table>
+
 
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
 <div class='prev-next-area'>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Zachary del Rosario, Gianluca Iaccarino<br/>
+  
+      &copy; Copyright 2023.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Zachary del Rosario, Gianluca Iaccarino<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

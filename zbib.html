@@ -5,10 +5,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>7. Bibliography &#8212; All Models Are Uncertain</title>
+    <title>&lt;no title&gt; &#8212; All Models Are Uncertain</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,33 +19,27 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -53,7 +48,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="6. Conceptual Tools for Handling Uncertainty" href="02_developing/uncertainty.html" />
+    <link rel="prev" title="16. Reproducibility Details" href="04_appendices/reproduce.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -61,7 +56,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -70,9 +79,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
       
@@ -85,14 +95,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="00_frontmatter/landing-page.html">
-   All Models Are Uncertain
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="preface.html">
+                    Preface
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Orienting
  </span>
@@ -118,6 +129,11 @@ const thebe_selector_output = ".output, .cell_output"
    4. A Grammar of Model Analysis: Grama
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_orienting/data-tools.html">
+   5. A Brief Introduction to Data Tools
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -126,36 +142,248 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="02_developing/developing.html">
-   5. Developing
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="02_developing/uncertainty.html">
    6. Conceptual Tools for Handling Uncertainty
   </a>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="02_developing/distributions.html">
+   7. Distributions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_developing/marginals.html">
+     7.1. Single Uncertainties: Marginal Distributions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_developing/dependency.html">
+     7.2. Multiple uncertainties: Modeling dependency
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_developing/sampling.html">
+     7.3. Dealing with Limited Data: Sampling Uncertainty
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="02_developing/functions.html">
+   8. Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_developing/vectorized.html">
+     8.1. Vectorizing Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_developing/modeling-functions.html">
+     8.2. Modeling Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_developing/practical-fitting.html">
+     8.3. Practical Fitting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_developing/doe-surrogates.html">
+     8.4. Sampling and Surrogates
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="02_developing/models.html">
+   9. Models
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_developing/dimension-reduction.html">
+     9.1. Dimension Reduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_developing/dimensional-analysis.html">
+     9.2. Dimensional Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_developing/propagation-concepts.html">
+     9.3. Uncertainty Propagation: Concepts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_developing/propagation-algorithms.html">
+     9.4. Uncertainty Propagation: Algorithms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_developing/ema.html">
+     9.5. Exploratory Model Analysis (EMA)
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Bibliography
+  Answering
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   7. Bibliography
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="03_answering/answering.html">
+   10. Answering
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_answering/decision-making.html">
+     10.1. Making Decisions Under Uncertainty: Nuclear Waste Storage Safety
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_answering/model-assumptions.html">
+     10.2. Assessing Model Assumptions: Disease Transmission and Social Connectivity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_answering/design-codes.html">
+     10.3. Designing Procedures: Uncertainty-Informed Design Codes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_answering/interpretable-structure.html">
+     10.4. Interpreting Model Structure: Solar Receiver
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Appendices
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="04_appendices/cases.html">
+   11. Datasets and Models
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_appendices/alloys.html">
+     11.1. Datasets: Alloys
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_appendices/turbulence.html">
+     11.2. Datasets: Turbulence Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_appendices/boats.html">
+     11.3. Models: Boat hulls
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_appendices/rlc-circuits.html">
+     11.4. Models: RLC Circuits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_appendices/projectile-motion.html">
+     11.5. Models: Projectile Motion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_appendices/piston.html">
+     11.6. Models: Piston cycle time
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_appendices/solar-receiver.html">
+     11.7. Models: Solar Receiver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_appendices/limit-state-models.html">
+     11.8. Models: Limit State Analysis and Structural Models
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_appendices/disease-models.html">
+     11.9. Models: Agent-based Disease Transmission Model
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_appendices/eda.html">
+   12. Fundamentals of Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_appendices/doe-gp.html">
+   13. Sampling Plans for Gaussian Processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_appendices/pr-modeling.html">
+   14. Concepts in Random Variable Modeling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_appendices/nls.html">
+   15. Nonlinear Least Squares
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_appendices/reproduce.html">
+   16. Reproducibility Details
   </a>
  </li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
@@ -163,263 +391,578 @@ const thebe_selector_output = ".output, .cell_output"
 
 
           
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+    <div class="header-article row sticky-top noprint">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/zbib.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/zbib.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-        </div>
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
     </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Bibliography</h1>
+                <h1><no title></h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="bibliography">
-<h1><span class="section-number">7. </span>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h1>
-<p id="id1"><dl class="citation">
-<dt class="label" id="id32"><span class="brackets">MMP08</span></dt>
-<dd><p><strong>missing editor in MMPDS</strong></p>
-</dd>
-<dt class="label" id="id46"><span class="brackets">AIA98</span></dt>
+  <p id="id1"><dl class="citation">
+<dt class="label" id="id102"><span class="brackets">AIA98</span></dt>
 <dd><p>AIAA. Guide for the verification and validation of computational fluid dynamics simulations (aiaa g-077-1998). 1998.</p>
 </dd>
-<dt class="label" id="id39"><span class="brackets">AM04</span></dt>
+<dt class="label" id="id19"><span class="brackets">Ala19</span></dt>
+<dd><p>Mashhour Ahmad Alazwari. <em>Interval-Based Uncertainty Modeling, Analysis and Design Optimization of Structural and Mechanical Systems</em>. PhD thesis, University of Miami, 2019.</p>
+</dd>
+<dt class="label" id="id94"><span class="brackets">AM04</span></dt>
 <dd><p>Matthew Allen and Kurt Maute. Reliability-based design optimization of aeroelastic structures. <em>Structural and Multidisciplinary Optimization</em>, 27(4):228–242, 2004. URL: <a class="reference external" href="https://doi.org/10.1007/s00158-004-0384-1">https://doi.org/10.1007/s00158-004-0384-1</a>, <a class="reference external" href="https://doi.org/10.1007/s00158-004-0384-1">doi:10.1007/s00158-004-0384-1</a>.</p>
 </dd>
-<dt class="label" id="id37"><span class="brackets">And17</span></dt>
+<dt class="label" id="id91"><span class="brackets">And17</span></dt>
 <dd><p>Ted L Anderson. <em>Fracture mechanics: fundamentals and applications</em>. CRC press, 2017.</p>
 </dd>
-<dt class="label" id="id56"><span class="brackets">Ari34</span></dt>
+<dt class="label" id="id131"><span class="brackets">Ari34</span></dt>
 <dd><p>Aristotle. <em>Nichomachean Ethics</em>. Volume 19. Harvard University Press, 1934.</p>
 </dd>
-<dt class="label" id="id25"><span class="brackets">BT00</span></dt>
+<dt class="label" id="id144"><span class="brackets">Ash05</span></dt>
+<dd><p>Michael F. Ashby. <em>Materials selection in mechanical design</em>. Butterworth-Heinemann, 3rd edition, 2005.</p>
+</dd>
+<dt class="label" id="id43"><span class="brackets">Bar96</span></dt>
+<dd><p>Grigory Isaakovich Barenblatt. <em>Scaling, self-similarity, and intermediate asymptotics: dimensional analysis and intermediate asymptotics</em>. Cambridge University Press, 1996. URL: <a class="reference external" href="https://doi.org/10.1017/CBO9781107050242">https://doi.org/10.1017/CBO9781107050242</a>, <a class="reference external" href="https://doi.org/10.1017/CBO9781107050242">doi:10.1017/CBO9781107050242</a>.</p>
+</dd>
+<dt class="label" id="id83"><span class="brackets">Bat08</span></dt>
+<dd><p>Battelle. <em>MMPDS-04 : Metallic materials properties development and standardization (MMPDS)</em>. Washington, D.C. : Federal Aviation Administration; Columbus, Ohio : Battelle Memorial Institute distributor, 2008. URL: <a class="reference external" href="https://search.library.wisc.edu/catalog/9910411964202121">https://search.library.wisc.edu/catalog/9910411964202121</a>.</p>
+</dd>
+<dt class="label" id="id106"><span class="brackets">BDI22</span></dt>
+<dd><p>M. Benjamin, S. Domino, and G. Iaccarino. Challenges in the use of neural networks for large-eddy simulations. <em>Center for Turbulence Research Annual Research Briefs</em>, 2022.</p>
+</dd>
+<dt class="label" id="id57"><span class="brackets">BT00</span></dt>
 <dd><p>Dimitri P Bertsekas and John N Tsitsiklis. <em>Introduction to probability</em>. Athena Scientinis, 2000.</p>
 </dd>
-<dt class="label" id="id57"><span class="brackets">Bla68</span></dt>
+<dt class="label" id="id132"><span class="brackets">Bla68</span></dt>
 <dd><p>Henry Campbell Black. <em>Black's Law Dictionary</em>. West Publishing Co., 1968.</p>
 </dd>
-<dt class="label" id="id20"><span class="brackets">Box66</span></dt>
+<dt class="label" id="id45"><span class="brackets">Box66</span></dt>
 <dd><p>George E. P. Box. Use and abuse of regression. <em>Technometrics</em>, 8(4):625–629, 1966. URL: <a class="reference external" href="http://www.jstor.org/stable/1266635">http://www.jstor.org/stable/1266635</a>.</p>
 </dd>
-<dt class="label" id="id27"><span class="brackets">Cli71</span></dt>
+<dt class="label" id="id50"><span class="brackets">BHH+78</span></dt>
+<dd><p>George EP Box, William H Hunter, Stuart Hunter, and others. <em>Statistics for experimenters</em>. Volume 664. John Wiley and sons New York, 1978.</p>
+</dd>
+<dt class="label" id="id70"><span class="brackets">BPK16</span></dt>
+<dd><p>Steven L Brunton, Joshua L Proctor, and J Nathan Kutz. Discovering governing equations from data by sparse identification of nonlinear dynamical systems. <em>Proceedings of the national academy of sciences</em>, 113(15):3932–3937, 2016.</p>
+</dd>
+<dt class="label" id="id27"><span class="brackets">Cam22</span></dt>
+<dd><p>Allan Campopiano. The myth of the normal curve and what to do about it. In <em>Proceedings of the 21st Python in Science Conference</em>, 64 – 68. Austin, TX USA, 2022.</p>
+</dd>
+<dt class="label" id="id25"><span class="brackets">CB02</span></dt>
+<dd><p>George Casella and Roger Berger. <em>Statistical Inference</em>. Thomson Learning, 2002. ISBN 9780534243128.</p>
+</dd>
+<dt class="label" id="id115"><span class="brackets">CFR98</span></dt>
+<dd><p>G Chen, TA Ferryman, and KM Remund. Methodology for uncertainty estimation of hanford tank chemical and radionuclide inventories and concentrations. Technical Report, Pacific Northwest National Lab., 1998.</p>
+</dd>
+<dt class="label" id="id74"><span class="brackets">Cli71</span></dt>
 <dd><p>F Clifton. <em>Strength variability in structural materials</em>. HM Stationery Office, 1971.</p>
 </dd>
-<dt class="label" id="id11"><span class="brackets">CF99</span></dt>
+<dt class="label" id="id6"><span class="brackets">Cob07</span></dt>
+<dd><p>George W Cobb. The introductory statistics course: a ptolemaic curriculum? <em>Technology innovations in statistics education</em>, 2007.</p>
+</dd>
+<dt class="label" id="id65"><span class="brackets">Con15</span></dt>
+<dd><p>Paul G. Constantine. <em>Active Subspaces: Emerging Ideas for Dimension Reduction in Parameter Studies</em>. SIAM Philadelphia, 2015.</p>
+</dd>
+<dt class="label" id="id21"><span class="brackets">CF99</span></dt>
 <dd><p>Alison C Cullen and H Christopher Frey. <em>Probabilistic techniques in exposure assessment: a handbook for dealing with variability and uncertainty in models and inputs</em>. Springer Science &amp; Business Media, 1999.</p>
 </dd>
-<dt class="label" id="id40"><span class="brackets">dRFI21</span></dt>
+<dt class="label" id="id141"><span class="brackets">Dan52</span></dt>
+<dd><p>Gilbert S Daniels. The&quot; average man&quot;? Technical Report, Air Force Aerospace Medical Research Lab Wright-Patterson AFB OH, 1952.</p>
+</dd>
+<dt class="label" id="id127"><span class="brackets">dR20a</span></dt>
+<dd><p>Zachary del Rosario. Grama: a grammar of model analysis. <em>Journal of Open Source Software</em>, 5(51):2462, 2020. URL: <a class="reference external" href="https://doi.org/10.21105/joss.02462">https://doi.org/10.21105/joss.02462</a>, <a class="reference external" href="https://doi.org/10.21105/joss.02462">doi:10.21105/joss.02462</a>.</p>
+</dd>
+<dt class="label" id="id93"><span class="brackets">dR20b</span></dt>
+<dd><p>Zachary del Rosario. <em>Precision Margin: First-Principles Margins for Aircraft Design Under Uncertainty</em>. Stanford University, 2020.</p>
+</dd>
+<dt class="label" id="id30"><span class="brackets">dR23</span></dt>
+<dd><p>Zachary del Rosario. A mixed-methods investigation of engineers targeting the consequences of variability. In <em>ASEE Annual Conference and Exposition</em>. 2023. <a class="reference external" href="https://arxiv.org/abs/https://nemo.asee.org/public/conferences/327/papers/36726/view">arXiv:https://nemo.asee.org/public/conferences/327/papers/36726/view</a>.</p>
+</dd>
+<dt class="label" id="id95"><span class="brackets">dRFI21</span></dt>
 <dd><p>Zachary del Rosario, Richard W Fenrich, and Gianluca Iaccarino. When are allowables conservative? <em>AIAA Journal</em>, 59(5):1760–1772, 2021. URL: <a class="reference external" href="https://doi.org/10.2514/1.J059578">https://doi.org/10.2514/1.J059578</a>, <a class="reference external" href="https://doi.org/10.2514/1.J059578">doi:10.2514/1.J059578</a>.</p>
 </dd>
-<dt class="label" id="id18"><span class="brackets">dRLI19</span></dt>
+<dt class="label" id="id42"><span class="brackets">dRLI19</span></dt>
 <dd><p>Zachary del Rosario, Minyong Lee, and Gianluca Iaccarino. Lurking variable detection via dimensional analysis. <em>SIAM/ASA Journal on Uncertainty Quantification</em>, 7(1):232–259, 2019. <a class="reference external" href="https://arxiv.org/abs/https://doi.org/10.1137/17M1155508">arXiv:https://doi.org/10.1137/17M1155508</a>, <a class="reference external" href="https://doi.org/10.1137/17M1155508">doi:10.1137/17M1155508</a>.</p>
 </dd>
-<dt class="label" id="id17"><span class="brackets">Dem82</span></dt>
+<dt class="label" id="id41"><span class="brackets">Dem82</span></dt>
 <dd><p>William Edwards Deming. <em>Quality, productivity, and competitive position</em>. Volume 183. Massachusetts Institute of Technology, Center for advanced engineering study …, 1982.</p>
 </dd>
-<dt class="label" id="id10"><span class="brackets">DKD09</span></dt>
+<dt class="label" id="id18"><span class="brackets">DKD09</span></dt>
 <dd><p>Armen Der Kiureghian and Ove Ditlevsen. Aleatory or epistemic? does it matter? <em>Structural safety</em>, 31(2):105–112, 2009.</p>
 </dd>
-<dt class="label" id="id35"><span class="brackets">DM05</span></dt>
+<dt class="label" id="id38"><span class="brackets">DBW22</span></dt>
+<dd><p>Nicolas Dewolf, Bernard De Baets, and Willem Waegeman. Valid prediction intervals for regression problems. <em>Artificial Intelligence Review</em>, pages 1–37, 2022.</p>
+</dd>
+<dt class="label" id="id89"><span class="brackets">DM05</span></dt>
 <dd><p>Ove Ditlevsen and Henrik O Madsen. <em>Structural reliability methods</em>. Internet Edition, 2.2.5 edition, 2005.</p>
 </dd>
-<dt class="label" id="id14"><span class="brackets">ET94</span></dt>
+<dt class="label" id="id59"><span class="brackets">DT14</span></dt>
+<dd><p>Vincent Dumoulin and Félix Thouin. A ballistic monte carlo approximation of $\$$\backslash $pi$\$. <em>arXiv preprint arXiv:1404.1499</em>, 2014.</p>
+</dd>
+<dt class="label" id="id35"><span class="brackets">Duv14</span></dt>
+<dd><p>David Duvenaud. <em>Automatic model construction with Gaussian processes</em>. PhD thesis, University of Cambridge, 2014.</p>
+</dd>
+<dt class="label" id="id32"><span class="brackets">ET94</span></dt>
 <dd><p>Bradley Efron and Robert J Tibshirani. <em>An introduction to the bootstrap</em>. CRC press, 1994. URL: <a class="reference external" href="https://doi.org/10.1201/9780429246593">https://doi.org/10.1201/9780429246593</a>, <a class="reference external" href="https://doi.org/10.1201/9780429246593">doi:10.1201/9780429246593</a>.</p>
 </dd>
-<dt class="label" id="id51"><span class="brackets">FSI17</span></dt>
+<dt class="label" id="id20"><span class="brackets">FKGS03</span></dt>
+<dd><p>Scott Ferson, VLADIK KREINOVICK, Lev Ginzburg, and FARI SENTZ. Constructing probability boxes and dempster-shafer structures. Technical Report, Sandia National Lab.(SNL-NM), Albuquerque, NM (United States); Sandia …, 2003.</p>
+</dd>
+<dt class="label" id="id111"><span class="brackets">FSI17</span></dt>
 <dd><p>A Frankel, D Sharp, and G Iaccarino. Application of qmu to the design of a nuclear waste storage tank. <em>Nuclear Engineering and Design</em>, 324:379–389, 2017.</p>
 </dd>
-<dt class="label" id="id44"><span class="brackets">GR81</span></dt>
-<dd><p>Theodore V. Galambos and M.K. Ravindra. Load and resistance factor design. <em>Engineering Journal, AISC</em>, 18(3):78–84, 1981.</p>
+<dt class="label" id="id143"><span class="brackets">Gai07</span></dt>
+<dd><p>Julie Gainsburg. The mathematical disposition of structural engineers. <em>Journal for Research in Mathematics Education</em>, 38(5):477–506, 2007.</p>
 </dd>
-<dt class="label" id="id21"><span class="brackets">GHV20</span></dt>
+<dt class="label" id="id100"><span class="brackets">Gal81</span></dt>
+<dd><p>Theodore V. Galambos. Load and resistance factor design. <em>Engineering Journal, AISC</em>, 18(3):78–84, 1981.</p>
+</dd>
+<dt class="label" id="id113"><span class="brackets">GBD+15</span></dt>
+<dd><p>Phillip A Gauglitz, Jagannadha R Bontha, Richard C Daniel, Lenna A Mahoney, Scot D Rassat, Beric E Wells, Jie Bao, Gregory K Boeringa, William C Buchmiller, Carolyn A Burns, and others. Hydrogen gas retention and release from wtp vessels: summary of preliminary studies. Technical Report, Pacific Northwest National Lab.(PNNL), Richland, WA (United States), 2015.</p>
+</dd>
+<dt class="label" id="id46"><span class="brackets">GHV20</span></dt>
 <dd><p>Andrew Gelman, Jennifer Hill, and Aki Vehtari. <em>Regression and other stories</em>. Cambridge University Press, 2020.</p>
 </dd>
-<dt class="label" id="id52"><span class="brackets">Hu06</span></dt>
+<dt class="label" id="id139"><span class="brackets">GH80</span></dt>
+<dd><p>Mary L Gick and Keith J Holyoak. Analogical problem solving. <em>Cognitive psychology</em>, 12(3):306–355, 1980.</p>
+</dd>
+<dt class="label" id="id86"><span class="brackets">Giu16</span></dt>
+<dd><p>Victor Giurgiutiu. <em>Structural Health Monitoring of Aerospace Composites</em>. Academic Press, Oxford, 2016. ISBN 978-0-12-409605-9. URL: <a class="reference external" href="https://doi.org/10.1016/B978-0-12-409605-9.00001-5">https://doi.org/10.1016/B978-0-12-409605-9.00001-5</a>, <a class="reference external" href="https://doi.org/10.1016/B978-0-12-409605-9.00001-5">doi:10.1016/B978-0-12-409605-9.00001-5</a>.</p>
+</dd>
+<dt class="label" id="id67"><span class="brackets">GVL13</span></dt>
+<dd><p>Gene H Golub and Charles F Van Loan. <em>Matrix computations</em>. Volume 4. JHU press, 2013.</p>
+</dd>
+<dt class="label" id="id124"><span class="brackets">HSS08</span></dt>
+<dd><p>Aric A. Hagberg, Daniel A. Schult, and Pieter J. Swart. Exploring network structure, dynamics, and function using networkx. In Gaël Varoquaux, Travis Vaught, and Jarrod Millman, editors, <em>Proceedings of the 7th Python in Science Conference</em>, 11 – 15. Pasadena, CA USA, 2008.</p>
+</dd>
+<dt class="label" id="id108"><span class="brackets">Ho17</span></dt>
+<dd><p>Clifford K Ho. Advances in central receivers for concentrating solar applications. <em>Solar energy</em>, 152:38–56, 2017.</p>
+</dd>
+<dt class="label" id="id66"><span class="brackets">HC18</span></dt>
+<dd><p>Jeffrey M Hokanson and Paul G Constantine. Data-driven polynomial ridge approximation using variable projection. <em>SIAM Journal on Scientific Computing</em>, 40(3):A1566–A1589, 2018.</p>
+</dd>
+<dt class="label" id="id54"><span class="brackets">Hol04</span></dt>
+<dd><p>Wendland Holger. <em>Scattered Data Approximation</em>. Cambridge Monographs on Applied and Computational Mathematics. Cambridge University Press, 2004. URL: <a class="reference external" href="https://doi.org/10.1017/CBO9780511617539">https://doi.org/10.1017/CBO9780511617539</a>, <a class="reference external" href="https://doi.org/10.1017/CBO9780511617539">doi:10.1017/CBO9780511617539</a>.</p>
+</dd>
+<dt class="label" id="id112"><span class="brackets">Hu06</span></dt>
 <dd><p>T.A. Hu. Steady-state flammable gas release rate calculation and lower flammability level evaluation for hanford tank waste, rev. 6. Technical Report, CH2M HILL Hanford Group, 2006.</p>
 </dd>
-<dt class="label" id="id7"><span class="brackets">JWHT13</span></dt>
+<dt class="label" id="id62"><span class="brackets">IP19</span></dt>
+<dd><p>Bertrand Iooss and Clementine Prieur. Shapley effects for sensitivity analysis with correlated inputs: comparisons with sobol' indices, numerical estimation and applications. <em>International Journal for Uncertainty Quantification</em>, 9(5):493–514, 2019.</p>
+</dd>
+<dt class="label" id="id12"><span class="brackets">JWHT13</span></dt>
 <dd><p>Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani. <em>An introduction to statistical learning</em>. Volume 112. Springer, 2013.</p>
 </dd>
-<dt class="label" id="id48"><span class="brackets">JCdelRosarioI20</span></dt>
+<dt class="label" id="id107"><span class="brackets">JCdelRosarioI20</span></dt>
 <dd><p>Lluis Jofre-Cruanyes, Zachary del Rosario, and Gianluca Iaccarino. Data-driven dimensional analysis of heat transfer in irradiated particle-laden turbulent flow. <em>International Journal of Multiphase Flow</em>, 04 2020. <a class="reference external" href="https://doi.org/10.1016/j.ijmultiphaseflow.2019.103198">doi:10.1016/j.ijmultiphaseflow.2019.103198</a>.</p>
 </dd>
-<dt class="label" id="id19"><span class="brackets">Joi81</span></dt>
+<dt class="label" id="id44"><span class="brackets">Joi81</span></dt>
 <dd><p>Brian L. Joiner. Lurking variables: some examples. <em>The American Statistician</em>, 35(4):227–233, 1981.</p>
+</dd>
+<dt class="label" id="id52"><span class="brackets">JJ09</span></dt>
+<dd><p>Bradley Jones and Rachel T Johnson. Design and analysis for the gaussian process model. <em>Quality and Reliability Engineering International</em>, 25(5):515–524, 2009.</p>
+</dd>
+<dt class="label" id="id116"><span class="brackets">Kaz11</span></dt>
+<dd><p>R. Kazban. Heat transfer analysis for process vessels in the pretreatment facility, waste treatment and immobilization plant, hanford site. Technical Report, Defense Nuclear Facilities Safety Board, 2011.</p>
 </dd>
 <dt class="label" id="id3"><span class="brackets">KN05</span></dt>
 <dd><p>Andy Keane and Prasanth Nair. <em>Computational approaches for aerospace design: the pursuit of excellence</em>. John Wiley &amp; Sons, 2005.</p>
 </dd>
-<dt class="label" id="id61"><span class="brackets">Lan95</span></dt>
+<dt class="label" id="id5"><span class="brackets">KZA13</span></dt>
+<dd><p>Ron S Kenett, Shelemyahu Zacks, and Daniele Amberti. <em>Modern Industrial Statistics: with applications in R, MINITAB and JMP</em>. John Wiley &amp; Sons, 2013.</p>
+</dd>
+<dt class="label" id="id11"><span class="brackets">KLK+22</span></dt>
+<dd><p>Hassan Kibirige, Greg Lamp, Jan Katins, gdowding, austin, Florian Finkernagel, matthias-k, Tyler Funnell, Jonas Arnfred, Dan Blanchard, Paul Natsuo Kishimoto, Sergey Astanin, Eric Chiang, Evan Sheehan, stonebig, Bernard Willers, Robert Gibboni, smutch, Yaroslav Halchenko, Pavel, Josh Hartmann, Brian King, Hugo van Kemenade, and Jonathan Soma. has2k1/plotnine: See the [changelog](https://plotn ine.readthedocs.io/en/stable/changelog.html#v0-9-0 ). September 2022. URL: <a class="reference external" href="https://doi.org/10.5281/zenodo.7124918">https://doi.org/10.5281/zenodo.7124918</a>, <a class="reference external" href="https://doi.org/10.5281/zenodo.7124918">doi:10.5281/zenodo.7124918</a>.</p>
+</dd>
+<dt class="label" id="id60"><span class="brackets">KSN99</span></dt>
+<dd><p>Nathan L Kleinman, James C Spall, and Daniel Q Naiman. Simulation-based optimization with stochastic approximation using common random numbers. <em>Management Science</em>, 45(11):1570–1578, 1999.</p>
+</dd>
+<dt class="label" id="id136"><span class="brackets">Lan95</span></dt>
 <dd><p>Ann Langley. Between 'paralysis by analysis' and 'extinction by instinct'. <em>MIT Sloan Management Review</em>, 36(3):63, 1995.</p>
 </dd>
-<dt class="label" id="id28"><span class="brackets">LS16</span></dt>
+<dt class="label" id="id123"><span class="brackets">LE00</span></dt>
+<dd><p>Lars Larsson and Rolf Eliasson. <em>Principles of Yacht Design</em>. McGraw Hill Companies, 2000. ISBN 978-0071353939.</p>
+</dd>
+<dt class="label" id="id75"><span class="brackets">LS16</span></dt>
 <dd><p>John J Lewandowski and Mohsen Seifi. Metal additive manufacturing: a review of mechanical properties. <em>Annual Review of Materials Research</em>, 46:151–186, 2016. URL: <a class="reference external" href="https://doi.org/10.1146/annurev-matsci-070115-032024">https://doi.org/10.1146/annurev-matsci-070115-032024</a>, <a class="reference external" href="https://doi.org/10.1146/annurev-matsci-070115-032024">doi:10.1146/annurev-matsci-070115-032024</a>.</p>
 </dd>
-<dt class="label" id="id62"><span class="brackets">Lew92</span></dt>
+<dt class="label" id="id137"><span class="brackets">Lew92</span></dt>
 <dd><p>Harold Warren Lewis. <em>Technological risk</em>. WW Norton &amp; Company, 1992.</p>
 </dd>
-<dt class="label" id="id50"><span class="brackets">MBR+09</span></dt>
+<dt class="label" id="id78"><span class="brackets">LWD10</span></dt>
+<dd><p>Chao Liu, Ryen W White, and Susan Dumais. Understanding web browsing behaviors through weibull analysis of dwell time. In <em>Proceedings of the 33rd international ACM SIGIR conference on Research and development in information retrieval</em>, 379–386. 2010.</p>
+</dd>
+<dt class="label" id="id36"><span class="brackets">Lou14</span></dt>
+<dd><p>Gilles Louppe. Understanding random forests. <em>Cornell University Library</em>, 2014.</p>
+</dd>
+<dt class="label" id="id68"><span class="brackets">Lum07</span></dt>
+<dd><p>John L. Lumley. <em>Stochastic tools in turbulence</em>. Courier Corporation, 2007.</p>
+</dd>
+<dt class="label" id="id114"><span class="brackets">MS02</span></dt>
+<dd><p>Lenna A Mahoney and Charles W Stewart. Review of the technical basis of the hydrogen control limit for operations in hanford tank farms. Technical Report, Pacific Northwest National Lab., Richland, WA (US), 2002.</p>
+</dd>
+<dt class="label" id="id56"><span class="brackets">MJ18a</span></dt>
+<dd><p>Simon Mak and V Roshan Joseph. Support points. <em>The Annals of Statistics</em>, 46(6A):2562–2592, 2018.</p>
+</dd>
+<dt class="label" id="id55"><span class="brackets">MJ18b</span></dt>
+<dd><p>Simon Mak and V. Roshan Joseph. Minimax and minimax projection designs using clustering. <em>Journal of Computational and Graphical Statistics</em>, 27(1):166–178, 2018. URL: <a class="reference external" href="https://doi.org/10.1080/10618600.2017.1302881">https://doi.org/10.1080/10618600.2017.1302881</a>, <a class="reference external" href="https://arxiv.org/abs/https://doi.org/10.1080/10618600.2017.1302881">arXiv:https://doi.org/10.1080/10618600.2017.1302881</a>, <a class="reference external" href="https://doi.org/10.1080/10618600.2017.1302881">doi:10.1080/10618600.2017.1302881</a>.</p>
+</dd>
+<dt class="label" id="id110"><span class="brackets">MBR+09</span></dt>
 <dd><p>Alison L Marsden, Adam J Bernstein, V Mohan Reddy, Shawn C Shadden, Ryan L Spilker, Frandics P Chan, Charles A Taylor, and Jeffrey A Feinstein. Evaluation of a novel y-shaped extracardiac fontan baffle using computational fluid dynamics. <em>The Journal of thoracic and cardiovascular surgery</em>, 137(2):394–403, 2009.</p>
 </dd>
-<dt class="label" id="id13"><span class="brackets">MHE17</span></dt>
+<dt class="label" id="id122"><span class="brackets">Mar15</span></dt>
+<dd><p>Maia Martcheva. <em>An introduction to mathematical epidemiology</em>. Volume 61. Springer, 2015.</p>
+</dd>
+<dt class="label" id="id31"><span class="brackets">MHE17</span></dt>
 <dd><p>William Q Meeker, Gerald J Hahn, and Luis A Escobar. <em>Statistical intervals: a guide for practitioners and researchers</em>. Volume 541. John Wiley &amp; Sons, 2017. URL: <a class="reference external" href="https://doi.org/10.1002/9781118594841">https://doi.org/10.1002/9781118594841</a>, <a class="reference external" href="https://doi.org/10.1002/9781118594841">doi:10.1002/9781118594841</a>.</p>
 </dd>
-<dt class="label" id="id41"><span class="brackets">MJ78</span></dt>
+<dt class="label" id="id14"><span class="brackets">MAC+18</span></dt>
+<dd><p>Bryce Meredig, Erin Antono, Carena Church, Maxwell Hutchinson, Julia Ling, Sean Paradiso, Ben Blaiszik, Ian Foster, Brenna Gibbons, Jason Hattrick-Simpers, and others. Can machine learning identify the next high-temperature superconductor? examining extrapolation performance for materials discovery. <em>Molecular Systems Design &amp; Engineering</em>, 3(5):819–825, 2018.</p>
+</dd>
+<dt class="label" id="id96"><span class="brackets">MJ78</span></dt>
 <dd><p>A.J. Meyer-Jens. Factors of safety historical development, state of the art and future outlook. Technical Report 661, ADVISORY GROUP FOR AEROSPACE RESEARCH AND DEVELOPMENT NEUILLY-SUR-SEINE (FRANCE), 1978.</p>
 </dd>
-<dt class="label" id="id9"><span class="brackets">Mor17</span></dt>
+<dt class="label" id="id26"><span class="brackets">Mic89</span></dt>
+<dd><p>Theodore Micceri. The unicorn, the normal curve, and other improbable creatures. <em>Psychological bulletin</em>, 105(1):156, 1989.</p>
+</dd>
+<dt class="label" id="id17"><span class="brackets">Mor17</span></dt>
 <dd><p>M. Granger Morgan. <em>Theory and practice in policy analysis</em>. Cambridge University Press, 2017.</p>
 </dd>
-<dt class="label" id="id5"><span class="brackets">MT77</span></dt>
+<dt class="label" id="id7"><span class="brackets">MT77</span></dt>
 <dd><p>Frederick Mosteller and John Wilder Tukey. Data analysis and regression: a second course in statistics. <em>Addison-Wesley Series in Behavioral Science: Quantitative Methods</em>, 1977.</p>
 </dd>
-<dt class="label" id="id55"><span class="brackets">ONeil16</span></dt>
+<dt class="label" id="id28"><span class="brackets">Nel06</span></dt>
+<dd><p>Roger Nelsen. <em>An Introduction to Copulas</em>. Springer-Verlag, New York, 2 edition, 2006.</p>
+</dd>
+<dt class="label" id="id118"><span class="brackets">NIH23</span></dt>
+<dd><p>NIH. The basics. <span><a class="reference external" href="#"></a></span>https://www.nih.gov/health-information/nih-clinical-research-trials-you/basics, 2023. accessed 2023-09-01.</p>
+</dd>
+<dt class="label" id="id24"><span class="brackets">Nol18</span></dt>
+<dd><p>J. P. Nolan. <em>Stable Distributions - Models for Heavy Tailed Data</em>. Birkhauser, Boston, 2018. In progress, Chapter 1 online at http://fs2.american.edu/jpnolan/www/stable/stable.html.</p>
+</dd>
+<dt class="label" id="id130"><span class="brackets">ONeil16</span></dt>
 <dd><p>Cathy O'Neil. <em>Weapons of math destruction: How big data increases inequality and threatens democracy</em>. Crown, 2016.</p>
 </dd>
-<dt class="label" id="id42"><span class="brackets">oOEM</span></dt>
-<dd><p>United States Bureau of Ocean Energy Management. Vineyard wind 1 offshore wind energy project, eis number 20210028.</p>
+<dt class="label" id="id117"><span class="brackets">oE08</span></dt>
+<dd><p>Washington State Department of Ecology. Hanford quick facts. <span><a class="reference external" href="#"></a></span>https://web.archive.org/web/20080624232748/http://www.ecy.wa.gov/features/hanford/hanfordfacts.html, 2008. 2008 website captured by the Internet Archive.</p>
 </dd>
-<dt class="label" id="id43"><span class="brackets">oEQCEQEOotP21</span></dt>
+<dt class="label" id="id119"><span class="brackets">oE12</span></dt>
+<dd><p>U.S. Department of Energy. Hanford overview. <span><a class="reference external" href="#"></a></span>https://web.archive.org/web/20120511135540/http://www.hanford.gov/page.cfm/HanfordOverview, 2012. 2012 website captured by the Internet Archive.</p>
+</dd>
+<dt class="label" id="id97"><span class="brackets">oOEM21</span></dt>
+<dd><p>Bureau of Ocean Energy Management. Vineyard wind 1 offshore wind energy project, eis number 20210028. 2021.</p>
+</dd>
+<dt class="label" id="id98"><span class="brackets">oEQCEQEOotP21</span></dt>
 <dd><p>Council on Environmental Quality (CEQ) Executive Office of the President. A citizen's guide to nepa. 2021.</p>
 </dd>
-<dt class="label" id="id23"><span class="brackets">Owe13</span></dt>
-<dd><p><strong>missing publisher in owen2013montecarlo</strong></p>
+<dt class="label" id="id48"><span class="brackets">Owe13a</span></dt>
+<dd><p>Art B. Owen. Monte carlo theory, methods and examples. 2013. URL: <a class="reference external" href="https://statweb.stanford.edu/~owen/mc/">https://statweb.stanford.edu/~owen/mc/</a>.</p>
+</dd>
+<dt class="label" id="id63"><span class="brackets">Owe13b</span></dt>
+<dd><p>Art B. Owen. Variance components and generalized sobol' indices. <em>SIAM/ASA Journal on Uncertainty Quantification</em>, 1(1):19–41, 2013.</p>
+</dd>
+<dt class="label" id="id71"><span class="brackets">OP17</span></dt>
+<dd><p>Art B. Owen and Clémentine Prieur. On shapley value for measuring importance of dependent inputs. <em>SIAM/ASA Journal on Uncertainty Quantification</em>, 5(1):986–1002, 2017.</p>
 </dd>
 <dt class="label" id="id2"><span class="brackets">PBFG07</span></dt>
 <dd><p>G. Pahl, W. Beitz, J. Feldhusen, and K.H. Grote. <em>Engineering Design: A Systematic Approach</em>. Springer, 3 edition, 2007.</p>
 </dd>
-<dt class="label" id="id53"><span class="brackets">PFK+17</span></dt>
+<dt class="label" id="id128"><span class="brackets">pdt20</span></dt>
+<dd><p>The pandas development team. Pandas-dev/pandas: pandas. February 2020. URL: <a class="reference external" href="https://doi.org/10.5281/zenodo.3509134">https://doi.org/10.5281/zenodo.3509134</a>, <a class="reference external" href="https://doi.org/10.5281/zenodo.3509134">doi:10.5281/zenodo.3509134</a>.</p>
+</dd>
+<dt class="label" id="id120"><span class="brackets">PFK+17</span></dt>
 <dd><p>Ryan S Park, William M Folkner, Alexander S Konopliv, James G Williams, David E Smith, and Maria T Zuber. Precession of mercury’s perihelion from ranging to the messenger spacecraft. <em>The Astronomical Journal</em>, 153(3):121, 2017.</p>
 </dd>
-<dt class="label" id="id30"><span class="brackets">Pee11</span></dt>
+<dt class="label" id="id58"><span class="brackets">Pea16</span></dt>
+<dd><p>Karl Pearson. Ix. mathematical contributions to the theory of evolution.—xix. second supplement to a memoir on skew variation. <em>Philosophical Transactions of the Royal Society of London. Series A, Containing Papers of a Mathematical or Physical Character</em>, 216(538-548):429–457, 1916.</p>
+</dd>
+<dt class="label" id="id126"><span class="brackets">PVG+11</span></dt>
+<dd><p>F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, M. Blondel, P. Prettenhofer, R. Weiss, V. Dubourg, J. Vanderplas, A. Passos, D. Cournapeau, M. Brucher, M. Perrot, and E. Duchesnay. Scikit-learn: machine learning in Python. <em>Journal of Machine Learning Research</em>, 12:2825–2830, 2011.</p>
+</dd>
+<dt class="label" id="id79"><span class="brackets">Pee11</span></dt>
 <dd><p>David J Peery. <em>Aircraft structures</em>. Courier Corporation, 2011. ISBN 978-0-486-48580-5.</p>
 </dd>
-<dt class="label" id="id49"><span class="brackets">Phi96</span></dt>
+<dt class="label" id="id109"><span class="brackets">Phi96</span></dt>
 <dd><p>Andrew N Phillips. Reduction of hiv concentration during acute infection: independence from a specific immune response. <em>Science</em>, pages 497–499, 1996.</p>
 </dd>
-<dt class="label" id="id54"><span class="brackets">Pop05</span></dt>
+<dt class="label" id="id82"><span class="brackets">Phi08</span></dt>
+<dd><p>Timothy A Philpot. <em>Mechanics of materials: an integrated learning system</em>. John Wiley &amp; Sons, 2008.</p>
+</dd>
+<dt class="label" id="id105"><span class="brackets">Pop00</span></dt>
+<dd><p>Stephen B Pope. <em>Turbulent flows</em>. Cambridge university press, 2000.</p>
+</dd>
+<dt class="label" id="id129"><span class="brackets">Pop05</span></dt>
 <dd><p>Karl Popper. <em>The logic of scientific discovery</em>. Routledge, 2005.</p>
 </dd>
-<dt class="label" id="id59"><span class="brackets">Por20</span></dt>
+<dt class="label" id="id134"><span class="brackets">Por20</span></dt>
 <dd><p>Theodore M Porter. <em>Trust in numbers</em>. Princeton University Press, 2020.</p>
 </dd>
-<dt class="label" id="id36"><span class="brackets">Rac01</span></dt>
+<dt class="label" id="id23"><span class="brackets">Pro11</span></dt>
+<dd><p>Yu Prokhorov. Central limit theorem. 2011. <a class="reference external" href="https://arxiv.org/abs/http://encyclopediaofmath.org/index.php?title=About&amp;oldid=19481">arXiv:http://encyclopediaofmath.org/index.php?title=About&amp;oldid=19481</a>.</p>
+</dd>
+<dt class="label" id="id90"><span class="brackets">Rac01</span></dt>
 <dd><p>Rüdiger Rackwitz. Reliability analysis - a review and some perspectives. <em>Structural safety</em>, 23(4):365–395, 2001. URL: <a class="reference external" href="https://doi.org/10.1016/S0167-4730(02)00009-7">https://doi.org/10.1016/S0167-4730(02)00009-7</a>, <a class="reference external" href="https://doi.org/10.1016/S0167-4730(02)00009-7">doi:10.1016/S0167-4730(02)00009-7</a>.</p>
 </dd>
-<dt class="label" id="id47"><span class="brackets">Roa02</span></dt>
+<dt class="label" id="id34"><span class="brackets">RW05</span></dt>
+<dd><p>Carl Edward Rasmussen and Christopher K. I. Williams. <em>Gaussian Processes for Machine Learning</em>. The MIT Press, 11 2005. ISBN 9780262256834. URL: <a class="reference external" href="https://doi.org/10.7551/mitpress/3206.001.0001">https://doi.org/10.7551/mitpress/3206.001.0001</a>, <a class="reference external" href="https://doi.org/10.7551/mitpress/3206.001.0001">doi:10.7551/mitpress/3206.001.0001</a>.</p>
+</dd>
+<dt class="label" id="id103"><span class="brackets">Roa02</span></dt>
 <dd><p>Patrick J Roache. Code verification by the method of manufactured solutions. <em>J. Fluids Eng.</em>, 124(1):4–10, 2002.</p>
 </dd>
-<dt class="label" id="id22"><span class="brackets">Ruc10</span></dt>
+<dt class="label" id="id142"><span class="brackets">Ros16</span></dt>
+<dd><p>Todd Rose. <em>The end of average: How to succeed in a world that values sameness</em>. Penguin UK, 2016.</p>
+</dd>
+<dt class="label" id="id77"><span class="brackets">Ros33</span></dt>
+<dd><p>Paul Rosin. The laws governing the fineness of powdered coal. <em>J. Inst. Fuel</em>, 7(31):29–36, 1933.</p>
+</dd>
+<dt class="label" id="id13"><span class="brackets">Ruc10a</span></dt>
+<dd><p>Andreas Ruckstuhl. Introduction to nonlinear regression. <em>IDP Institut für Datenanalyse und Prozessdesign</em>, 2010.</p>
+</dd>
+<dt class="label" id="id47"><span class="brackets">Ruc10b</span></dt>
 <dd><p>Andreas Ruckstuhl. Introduction to nonlinear regression. <em>IDP Institut für Datenanalyse und Prozessdesign. ZHAW Zürcher Hochschule für Angewandte Wissenschaften. stat. ethz. ch/˜ stahel/courses/cheming/nlreg10E. pdf</em>, 2010.</p>
 </dd>
-<dt class="label" id="id24"><span class="brackets">Rya07</span></dt>
+<dt class="label" id="id88"><span class="brackets">Ruf84</span></dt>
+<dd><p>Paul E Ruff. An overview of the mil-hdbk-5 program. Technical Report, Battelle Columbus Div OH, 1984. URL: <a class="reference external" href="https://apps.dtic.mil/sti/citations/ADA147788">https://apps.dtic.mil/sti/citations/ADA147788</a>.</p>
+</dd>
+<dt class="label" id="id49"><span class="brackets">Rya07</span></dt>
 <dd><p>Thomas P. Ryan. <em>Modern Experimental Design</em>. John Wiley &amp; Sons, 2007.</p>
 </dd>
-<dt class="label" id="id58"><span class="brackets">SBB+20</span></dt>
+<dt class="label" id="id72"><span class="brackets">STI22</span></dt>
+<dd><p>Ettore Saetta, Renato Tognaccini, and Gianluca Iaccarino. Machine learning to predict aerodynamic stall. <em>arXiv preprint arXiv:2207.03424</em>, 2022.</p>
+</dd>
+<dt class="label" id="id99"><span class="brackets">SJM08</span></dt>
+<dd><p>Charles Salmon, Johnson, John, and Faris Malhas. <em>Steel Structures: Design and Behavior Emphasizing Load &amp; Resistance Factor Design</em>. Pearson, 2008. ISBN 9780131885561.</p>
+</dd>
+<dt class="label" id="id133"><span class="brackets">SBB+20</span></dt>
 <dd><p>Andrea Saltelli, Gabriele Bammer, Isabelle Bruno, Erica Charters, Monica Di Fiore, Emmanuel Didier, Wendy Nelson Espeland, John Kay, Samuele Lo Piano, Deborah Mayo, and others. Five ways to ensure that models serve society: a manifesto. 2020.</p>
 </dd>
-<dt class="label" id="id15"><span class="brackets">She31</span></dt>
+<dt class="label" id="id64"><span class="brackets">STCR04</span></dt>
+<dd><p>Andrea Saltelli, Stefano Tarantola, Francesca Campolongo, and Marco Ratto. <em>Sensitivity analysis in practice: a guide to assessing scientific models</em>. John Wiley &amp; Sons, 2004.</p>
+</dd>
+<dt class="label" id="id69"><span class="brackets">SSWD21</span></dt>
+<dd><p>A. Scillitoe, P. Seshadri, C. Y. Wong, and A. Duncan. Polynomial ridge flowfield estimation. <em>Physics of Fluids</em>, 33(12):127110, 2021. URL: <a class="reference external" href="https://doi.org/10.1063/5.0064000">https://doi.org/10.1063/5.0064000</a>, <a class="reference external" href="https://arxiv.org/abs/https://doi.org/10.1063/5.0064000">arXiv:https://doi.org/10.1063/5.0064000</a>, <a class="reference external" href="https://doi.org/10.1063/5.0064000">doi:10.1063/5.0064000</a>.</p>
+</dd>
+<dt class="label" id="id53"><span class="brackets">Set09</span></dt>
+<dd><p>Burr Settles. Active learning literature survey. Technical Report, University of Wisconsin-Madison Department of Computer Sciences, 2009.</p>
+</dd>
+<dt class="label" id="id80"><span class="brackets">ST06</span></dt>
+<dd><p>Sheri D Sheppard and Benson H Tongue. <em>Statics: Analysis and Design of Systems in Equilibrium</em>. Wiley, 2006. ISBN 978-0-471-94721-9.</p>
+</dd>
+<dt class="label" id="id39"><span class="brackets">She31</span></dt>
 <dd><p>Walter Andrew Shewhart. <em>Economic control of quality of manufactured product</em>. Macmillan And Co Ltd, London, 1931.</p>
 </dd>
-<dt class="label" id="id16"><span class="brackets">SD86</span></dt>
+<dt class="label" id="id40"><span class="brackets">SD86</span></dt>
 <dd><p>Walter Andrew Shewhart and William Edwards Deming. <em>Statistical method from the viewpoint of quality control</em>. Dover, 1986.</p>
 </dd>
-<dt class="label" id="id60"><span class="brackets">SH11</span></dt>
+<dt class="label" id="id135"><span class="brackets">SH11</span></dt>
 <dd><p>Timothy F Slaper and Tanya J Hall. The triple bottom line: what is it and how does it work. <em>Indiana business review</em>, 86(1):4–8, 2011.</p>
 </dd>
-<dt class="label" id="id8"><span class="brackets">Smi13</span></dt>
+<dt class="label" id="id16"><span class="brackets">Smi13</span></dt>
 <dd><p>Ralph C. Smith. <em>Uncertainty quantification: theory, implementation, and applications</em>. SIAM, 2013.</p>
 </dd>
-<dt class="label" id="id26"><span class="brackets">SGN46</span></dt>
+<dt class="label" id="id61"><span class="brackets">Sob93</span></dt>
+<dd><p>I.M. Sobol. Sensitivity estimates for nonlinear mathematical models. <em>Mathematical Modelling and Computational Experiments</em>, 1(4):407–414, 1993.</p>
+</dd>
+<dt class="label" id="id87"><span class="brackets">Spe12</span></dt>
+<dd><p>Paul R Spendley. <em>Design allowables for composite aerospace structures</em>. PhD thesis, University of Surrey, 2012. URL: <a class="reference external" href="https://ethos.bl.uk/OrderDetails.do?uin=uk.bl.ethos.604017">https://ethos.bl.uk/OrderDetails.do?uin=uk.bl.ethos.604017</a>.</p>
+</dd>
+<dt class="label" id="id73"><span class="brackets">SGN46</span></dt>
 <dd><p>Ambrose H. Stang, Martin Greenspan, and Sanford B. Newman. Poisson's ratio of some structural alloys for large strains. <em>Journal of Research of the National Bureau of Standards</em>, 1946. URL: <a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/jres/37/jresv37n4p211_A1b.pdf">https://nvlpubs.nist.gov/nistpubs/jres/37/jresv37n4p211_A1b.pdf</a>.</p>
 </dd>
-<dt class="label" id="id31"><span class="brackets">Sun06</span></dt>
+<dt class="label" id="id140"><span class="brackets">Sta20</span></dt>
+<dd><p>Transportation Statistics. Transportation fatalities by mode. 2020. Accessed 2023-01-12. <a class="reference external" href="https://arxiv.org/abs/https://www.bts.gov/content/transportation-fatalities-mode">arXiv:https://www.bts.gov/content/transportation-fatalities-mode</a>.</p>
+</dd>
+<dt class="label" id="id81"><span class="brackets">Sun06</span></dt>
 <dd><p>Chin-Teh Sun. <em>Mechanics of aircraft structures</em>. J. Wiley, 2006. ISBN 978-0-471-69966-8. URL: <a class="reference external" href="https://www.wiley.com/en-us/Mechanics+of+Aircraft+Structures%2C+2nd+Edition-p-9780471699668">https://www.wiley.com/en-us/Mechanics+of+Aircraft+Structures%2C+2nd+Edition-p-9780471699668</a>.</p>
 </dd>
-<dt class="label" id="id45"><span class="brackets">Sorensen02</span></dt>
+<dt class="label" id="id101"><span class="brackets">Sorensen02</span></dt>
 <dd><p>John Dalsgaard Sørensen. Calibration of partial safety factors in danish structural codes. In <em>JCSS Workshop on Reliability Based Code Calibration</em>, volume 21, 2002. Citeseer, 2002.</p>
+</dd>
+<dt class="label" id="id138"><span class="brackets">TT08</span></dt>
+<dd><p>Ambler Thompson and Barry N. Taylor. Guide for the use of the international system of units (si). Technical Report, National Institute of Standards and Technology, 2008.</p>
 </dd>
 <dt class="label" id="id4"><span class="brackets">Tor82</span></dt>
 <dd><p>E. Torenbeek. <em>Synthesis of Subsonic Airplane Design</em>. Design. Delft University Press and Kluwer Academic Publishers, 1982.</p>
 </dd>
-<dt class="label" id="id6"><span class="brackets">Tuk77</span></dt>
+<dt class="label" id="id8"><span class="brackets">Tuk77</span></dt>
 <dd><p>John W. Tukey. <em>Exploratory data analysis</em>. Volume 2. Reading, Mass., 1977.</p>
 </dd>
-<dt class="label" id="id29"><span class="brackets">Wei</span></dt>
-<dd><p><strong>missing journal in weibull1939theory</strong></p>
+<dt class="label" id="id22"><span class="brackets">VdV98</span></dt>
+<dd><p>Aad W. Van der Vaart. <em>Asymptotic statistics</em>. Volume 3. Cambridge University Press, 1998. URL: <a class="reference external" href="https://doi.org/10.1017/CBO9780511802256">https://doi.org/10.1017/CBO9780511802256</a>, <a class="reference external" href="https://doi.org/10.1017/CBO9780511802256">doi:10.1017/CBO9780511802256</a>.</p>
 </dd>
-<dt class="label" id="id12"><span class="brackets">WP99</span></dt>
+<dt class="label" id="id15"><span class="brackets">VGH10</span></dt>
+<dd><p>Felipe AC Viana, Christian Gogu, and Raphael T Haftka. Making the most out of surrogate models: tricks of the trade. In <em>International design engineering technical conferences and computers and information in engineering conference</em>, volume 44090, 587–598. 2010.</p>
+</dd>
+<dt class="label" id="id125"><span class="brackets">VGO+20</span></dt>
+<dd><p>Pauli Virtanen, Ralf Gommers, Travis E. Oliphant, Matt Haberland, Tyler Reddy, David Cournapeau, Evgeni Burovski, Pearu Peterson, Warren Weckesser, Jonathan Bright, Stéfan J. van der Walt, Matthew Brett, Joshua Wilson, K. Jarrod Millman, Nikolay Mayorov, Andrew R. J. Nelson, Eric Jones, Robert Kern, Eric Larson, C J Carey, İlhan Polat, Yu Feng, Eric W. Moore, Jake VanderPlas, Denis Laxalde, Josef Perktold, Robert Cimrman, Ian Henriksen, E. A. Quintero, Charles R. Harris, Anne M. Archibald, Antônio H. Ribeiro, Fabian Pedregosa, Paul van Mulbregt, and SciPy 1.0 Contributors. SciPy 1.0: Fundamental Algorithms for Scientific Computing in Python. <em>Nature Methods</em>, 17:261–272, 2020. <a class="reference external" href="https://doi.org/10.1038/s41592-019-0686-2">doi:10.1038/s41592-019-0686-2</a>.</p>
+</dd>
+<dt class="label" id="id37"><span class="brackets">WMZT22</span></dt>
+<dd><p>Qi Wang, Yue Ma, Kun Zhao, and Yingjie Tian. A comprehensive survey of loss functions in machine learning. <em>Annals of Data Science</em>, 9(2):187–212, 2022.</p>
+</dd>
+<dt class="label" id="id76"><span class="brackets">Wei39</span></dt>
+<dd><p>Waloddi Weibull. A statistical theory of the strength of materials. <em>Generalstabens Litografiska Anstalts Förlag</em>, 1939.</p>
+</dd>
+<dt class="label" id="id104"><span class="brackets">Whi11</span></dt>
+<dd><p>Frank M. White. <em>Fluid Mechanics</em>. McGraw-Hill, New York, 2011.</p>
+</dd>
+<dt class="label" id="id9"><span class="brackets">Wic14</span></dt>
+<dd><p>Hadley Wickham. Tidy data. <em>Journal of Statistical Software</em>, 59(10):1–23, 2014. <a class="reference external" href="https://doi.org/10.18637/jss.v059.i10">doi:10.18637/jss.v059.i10</a>.</p>
+</dd>
+<dt class="label" id="id10"><span class="brackets">WG23</span></dt>
+<dd><p>Hadley Wickham and Garrett Grolemund. <em>R for Data Science</em>. O'Reilly, 2023. <a class="reference external" href="https://arxiv.org/abs/https://r4ds.hadley.nz/">arXiv:https://r4ds.hadley.nz/</a>.</p>
+</dd>
+<dt class="label" id="id29"><span class="brackets">WP99</span></dt>
 <dd><p>Chris J Wild and Maxine Pfannkuch. Statistical thinking in empirical enquiry. <em>International statistical review</em>, 67(3):223–248, 1999.</p>
 </dd>
-<dt class="label" id="id38"><span class="brackets">delRosario21</span></dt>
-<dd><p>Zachary del Rosario. Precision materials indices: materials selection with statistically-rigorous reliability analysis. <em>AIAA Journal, in press</em>, 2021.</p>
+<dt class="label" id="id51"><span class="brackets">Wil27</span></dt>
+<dd><p>Edwin B Wilson. Probable inference, the law of succession, and statistical inference. <em>Journal of the American Statistical Association</em>, 22(158):209–212, 1927.</p>
 </dd>
-<dt class="label" id="id33"><span class="brackets">WichitaSUniversity12a</span></dt>
-<dd><p><strong>missing journal in cmh-17-1g</strong></p>
+<dt class="label" id="id121"><span class="brackets">WW45</span></dt>
+<dd><p>Edwin B Wilson and Jane Worcester. The law of mass action in epidemiology. <em>Proceedings of the National Academy of Sciences</em>, 31(1):24–34, 1945.</p>
 </dd>
-<dt class="label" id="id34"><span class="brackets">WichitaSUniversity12b</span></dt>
-<dd><p><strong>missing journal in cmh-17-3g</strong></p>
+<dt class="label" id="id33"><span class="brackets">Zha20</span></dt>
+<dd><p>Boya Zhang. <em>Computer Experimental Design for Gaussian Process Surrogates</em>. PhD thesis, Virginia Tech, 2020.</p>
+</dd>
+<dt class="label" id="id92"><span class="brackets">delRosario21</span></dt>
+<dd><p>Zachary del Rosario. Precision materials indices: materials selection with statistically-rigorous reliability analysis. <em>AIAA Journal</em>, 2021.</p>
+</dd>
+<dt class="label" id="id84"><span class="brackets">WichitaSUniversity12a</span></dt>
+<dd><p>Wichita State University. Composite materials handbook volume 1. polymer matrix composites guidelines for characterization of structural materials. 2012.</p>
+</dd>
+<dt class="label" id="id85"><span class="brackets">WichitaSUniversity12b</span></dt>
+<dd><p>Wichita State University. Composite materials handbook volume 3. polymer matrix composites materials usage, design, and analysis. 2012.</p>
 </dd>
 </dl>
 </p>
-</div>
 
     <script type="text/x-thebe-config">
     {
@@ -443,35 +986,41 @@ const thebe_selector_output = ".output, .cell_output"
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="02_developing/uncertainty.html" title="previous page">
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="04_appendices/reproduce.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">6. </span>Conceptual Tools for Handling Uncertainty</p>
+            <p class="prev-next-title"><span class="section-number">16. </span>Reproducibility Details</p>
         </div>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Zachary del Rosario, Gianluca Iaccarino<br/>
+  
+      &copy; Copyright 2023.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Zachary del Rosario, Gianluca Iaccarino<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
